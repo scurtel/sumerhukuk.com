@@ -1,0 +1,2562 @@
+[
+  {
+    "title": "Gayrimenkul Hukuku Nedir? Davalar, Süreçler ve Haklar",
+    "primaryKeyword": "gayrimenkul hukuku",
+    "secondaryKeywords": [
+      "Gayrimenkul Hukuku",
+      "Gayrimenkul Hukuku"
+    ],
+    "pillar": "Gayrimenkul Hukuku",
+    "pillarSlug": "/adana-gayrimenkul-avukati/",
+    "searchIntent": "informational",
+    "audience": "taşınmaz sahipleri",
+    "priority": 10,
+    "suggestedSlug": "gayrimenkul-hukuku-nedir-davalar-surecler-ve-haklar",
+    "topicSimilarityKey": "pillar-gayrimenkul-hukuku",
+    "internalLinks": [
+      "/adana-gayrimenkul-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": true
+  },
+  {
+    "title": "Ortaklığın Giderilmesi Davası Nedir? İzale-i Şuyu Rehberi",
+    "primaryKeyword": "ortaklığın giderilmesi davası",
+    "secondaryKeywords": [
+      "Ortaklığın Giderilmesi Davası",
+      "Ortaklığın Giderilmesi"
+    ],
+    "pillar": "Ortaklığın Giderilmesi Davası",
+    "pillarSlug": "/ortakligin-giderilmesi-davasi/",
+    "searchIntent": "informational",
+    "audience": "taşınmaz sahipleri",
+    "priority": 10,
+    "suggestedSlug": "ortakligin-giderilmesi-davasi-nedir-izale-i-suyu-rehberi",
+    "topicSimilarityKey": "pillar-ortakligin-giderilmesi",
+    "internalLinks": [
+      "/ortakligin-giderilmesi-davasi/",
+      "/makaleler/"
+    ],
+    "isPillar": true
+  },
+  {
+    "title": "Miras Hukuku Nedir? Mirasçıların Hakları ve Dava Süreçleri",
+    "primaryKeyword": "miras hukuku",
+    "secondaryKeywords": [
+      "Miras Hukuku",
+      "Miras Hukuku"
+    ],
+    "pillar": "Miras Hukuku",
+    "pillarSlug": "/adana-miras-avukati/",
+    "searchIntent": "informational",
+    "audience": "taşınmaz sahipleri",
+    "priority": 10,
+    "suggestedSlug": "miras-hukuku-nedir-mirascilarin-haklari-ve-dava-surecleri",
+    "topicSimilarityKey": "pillar-miras-hukuku",
+    "internalLinks": [
+      "/adana-miras-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": true
+  },
+  {
+    "title": "Boşanmada Mal Paylaşımı Nasıl Yapılır?",
+    "primaryKeyword": "boşanmada mal paylaşımı",
+    "secondaryKeywords": [
+      "Boşanmada Mal Paylaşımı",
+      "Aile Hukuku"
+    ],
+    "pillar": "Boşanmada Mal Paylaşımı",
+    "pillarSlug": "/mal-paylasimi/",
+    "searchIntent": "informational",
+    "audience": "taşınmaz sahipleri",
+    "priority": 9,
+    "suggestedSlug": "bosanmada-mal-paylasimi-nasil-yapilir",
+    "topicSimilarityKey": "pillar-bosanmada-mal-paylasimi",
+    "internalLinks": [
+      "/mal-paylasimi/",
+      "/makaleler/"
+    ],
+    "isPillar": true
+  },
+  {
+    "title": "Mal Rejiminin Tasfiyesi ve Katılma Alacağı Rehberi",
+    "primaryKeyword": "mal rejiminin tasfiyesi",
+    "secondaryKeywords": [
+      "Mal Rejiminin Tasfiyesi",
+      "Aile Hukuku"
+    ],
+    "pillar": "Mal Rejiminin Tasfiyesi",
+    "pillarSlug": "/mal-paylasimi/",
+    "searchIntent": "informational",
+    "audience": "taşınmaz sahipleri",
+    "priority": 9,
+    "suggestedSlug": "mal-rejiminin-tasfiyesi-ve-katilma-alacagi-rehberi",
+    "topicSimilarityKey": "pillar-mal-rejiminin-tasfiyesi",
+    "internalLinks": [
+      "/mal-paylasimi/",
+      "/makaleler/"
+    ],
+    "isPillar": true
+  },
+  {
+    "title": "Tapu İptal ve Tescil Davası Nedir?",
+    "primaryKeyword": "tapu iptal ve tescil davası",
+    "secondaryKeywords": [
+      "Tapu İptal ve Tescil Davası",
+      "Tapu Davaları"
+    ],
+    "pillar": "Tapu İptal ve Tescil Davası",
+    "pillarSlug": "/tapu-iptal-ve-tescil-davasi/",
+    "searchIntent": "informational",
+    "audience": "taşınmaz sahipleri",
+    "priority": 10,
+    "suggestedSlug": "tapu-iptal-ve-tescil-davasi-nedir",
+    "topicSimilarityKey": "pillar-tapu-iptal-tescil",
+    "internalLinks": [
+      "/tapu-iptal-ve-tescil-davasi/",
+      "/makaleler/"
+    ],
+    "isPillar": true
+  },
+  {
+    "title": "Miras Kalan Taşınmazların Paylaşımı Nasıl Yapılır?",
+    "primaryKeyword": "miras kalan taşınmaz paylaşımı",
+    "secondaryKeywords": [
+      "Miras Kalan Taşınmazlar",
+      "Miras Hukuku"
+    ],
+    "pillar": "Miras Kalan Taşınmazlar",
+    "pillarSlug": "/adana-miras-avukati/",
+    "searchIntent": "informational",
+    "audience": "taşınmaz sahipleri",
+    "priority": 9,
+    "suggestedSlug": "miras-kalan-tasinmazlarin-paylasimi-nasil-yapilir",
+    "topicSimilarityKey": "pillar-miras-tasinmaz-paylasimi",
+    "internalLinks": [
+      "/adana-miras-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": true
+  },
+  {
+    "title": "Paylı Mülkiyet ve Elbirliği Mülkiyeti Arasındaki Farklar",
+    "primaryKeyword": "paylı mülkiyet elbirliği mülkiyeti farkı",
+    "secondaryKeywords": [
+      "Paylı Mülkiyet ve Elbirliği Mülkiyeti",
+      "Gayrimenkul Hukuku"
+    ],
+    "pillar": "Paylı Mülkiyet ve Elbirliği Mülkiyeti",
+    "pillarSlug": "/adana-gayrimenkul-avukati/",
+    "searchIntent": "informational",
+    "audience": "taşınmaz sahipleri",
+    "priority": 8,
+    "suggestedSlug": "payli-mulkiyet-ve-elbirligi-mulkiyeti-arasindaki-farklar",
+    "topicSimilarityKey": "pillar-payli-elbirligi-mulkiyet",
+    "internalLinks": [
+      "/adana-gayrimenkul-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": true
+  },
+  {
+    "title": "Gayrimenkul hukuku nedir",
+    "primaryKeyword": "gayrimenkul hukuku nedir",
+    "secondaryKeywords": [
+      "Gayrimenkul Hukuku",
+      "taşınmaz sahipleri"
+    ],
+    "pillar": "Gayrimenkul Hukuku",
+    "pillarSlug": "/adana-gayrimenkul-avukati/",
+    "searchIntent": "informational",
+    "audience": "taşınmaz sahipleri",
+    "priority": 5,
+    "suggestedSlug": "gayrimenkul-hukuku-nedir",
+    "topicSimilarityKey": "gayrimenkul-hukuku-gayrimenkul-hukuku-nedir",
+    "internalLinks": [
+      "/adana-gayrimenkul-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Gayrimenkul avukatı ne iş yapar",
+    "primaryKeyword": "gayrimenkul avukatı ne iş yapar",
+    "secondaryKeywords": [
+      "Gayrimenkul Hukuku",
+      "taşınmaz sahipleri"
+    ],
+    "pillar": "Gayrimenkul Hukuku",
+    "pillarSlug": "/adana-gayrimenkul-avukati/",
+    "searchIntent": "informational",
+    "audience": "taşınmaz sahipleri",
+    "priority": 5,
+    "suggestedSlug": "gayrimenkul-avukati-ne-is-yapar",
+    "topicSimilarityKey": "gayrimenkul-hukuku-gayrimenkul-avukati-ne-is-yapar",
+    "internalLinks": [
+      "/adana-gayrimenkul-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Gayrimenkul davası nasıl açılır",
+    "primaryKeyword": "gayrimenkul davası nasıl açılır",
+    "secondaryKeywords": [
+      "Gayrimenkul Hukuku",
+      "taşınmaz sahipleri"
+    ],
+    "pillar": "Gayrimenkul Hukuku",
+    "pillarSlug": "/adana-gayrimenkul-avukati/",
+    "searchIntent": "informational",
+    "audience": "taşınmaz sahipleri",
+    "priority": 5,
+    "suggestedSlug": "gayrimenkul-davasi-nasil-acilir",
+    "topicSimilarityKey": "gayrimenkul-hukuku-gayrimenkul-davasi-nasil-acilir",
+    "internalLinks": [
+      "/adana-gayrimenkul-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Tapu davası nasıl açılır",
+    "primaryKeyword": "tapu davası nasıl açılır",
+    "secondaryKeywords": [
+      "Gayrimenkul Hukuku",
+      "taşınmaz sahipleri"
+    ],
+    "pillar": "Gayrimenkul Hukuku",
+    "pillarSlug": "/adana-gayrimenkul-avukati/",
+    "searchIntent": "informational",
+    "audience": "taşınmaz sahipleri",
+    "priority": 5,
+    "suggestedSlug": "tapu-davasi-nasil-acilir",
+    "topicSimilarityKey": "gayrimenkul-hukuku-tapu-davasi-nasil-acilir",
+    "internalLinks": [
+      "/adana-gayrimenkul-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Tapu iptal ve tescil davası",
+    "primaryKeyword": "tapu iptal ve tescil davası",
+    "secondaryKeywords": [
+      "Gayrimenkul Hukuku",
+      "taşınmaz sahipleri"
+    ],
+    "pillar": "Gayrimenkul Hukuku",
+    "pillarSlug": "/adana-gayrimenkul-avukati/",
+    "searchIntent": "informational",
+    "audience": "taşınmaz sahipleri",
+    "priority": 5,
+    "suggestedSlug": "tapu-iptal-ve-tescil-davasi",
+    "topicSimilarityKey": "gayrimenkul-hukuku-tapu-iptal-ve-tescil-davasi",
+    "internalLinks": [
+      "/adana-gayrimenkul-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Tapu iptal davası ne kadar sürer",
+    "primaryKeyword": "tapu iptal davası ne kadar sürer",
+    "secondaryKeywords": [
+      "Gayrimenkul Hukuku",
+      "taşınmaz sahipleri"
+    ],
+    "pillar": "Gayrimenkul Hukuku",
+    "pillarSlug": "/adana-gayrimenkul-avukati/",
+    "searchIntent": "informational",
+    "audience": "taşınmaz sahipleri",
+    "priority": 5,
+    "suggestedSlug": "tapu-iptal-davasi-ne-kadar-surer",
+    "topicSimilarityKey": "gayrimenkul-hukuku-tapu-iptal-davasi-ne-kadar-surer",
+    "internalLinks": [
+      "/adana-gayrimenkul-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Tapuda hisse devri nasıl yapılır",
+    "primaryKeyword": "tapuda hisse devri nasıl yapılır",
+    "secondaryKeywords": [
+      "Gayrimenkul Hukuku",
+      "taşınmaz sahipleri"
+    ],
+    "pillar": "Gayrimenkul Hukuku",
+    "pillarSlug": "/adana-gayrimenkul-avukati/",
+    "searchIntent": "informational",
+    "audience": "taşınmaz sahipleri",
+    "priority": 5,
+    "suggestedSlug": "tapuda-hisse-devri-nasil-yapilir",
+    "topicSimilarityKey": "gayrimenkul-hukuku-tapuda-hisse-devri-nasil-yapilir",
+    "internalLinks": [
+      "/adana-gayrimenkul-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Hisseli tapu satışı",
+    "primaryKeyword": "hisseli tapu satışı",
+    "secondaryKeywords": [
+      "Gayrimenkul Hukuku",
+      "taşınmaz sahipleri"
+    ],
+    "pillar": "Gayrimenkul Hukuku",
+    "pillarSlug": "/adana-gayrimenkul-avukati/",
+    "searchIntent": "informational",
+    "audience": "taşınmaz sahipleri",
+    "priority": 5,
+    "suggestedSlug": "hisseli-tapu-satisi",
+    "topicSimilarityKey": "gayrimenkul-hukuku-hisseli-tapu-satisi",
+    "internalLinks": [
+      "/adana-gayrimenkul-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Hisseli tapuda anlaşmazlık",
+    "primaryKeyword": "hisseli tapuda anlaşmazlık",
+    "secondaryKeywords": [
+      "Gayrimenkul Hukuku",
+      "taşınmaz sahipleri"
+    ],
+    "pillar": "Gayrimenkul Hukuku",
+    "pillarSlug": "/adana-gayrimenkul-avukati/",
+    "searchIntent": "informational",
+    "audience": "taşınmaz sahipleri",
+    "priority": 5,
+    "suggestedSlug": "hisseli-tapuda-anlasmazlik",
+    "topicSimilarityKey": "gayrimenkul-hukuku-hisseli-tapuda-anlasmazlik",
+    "internalLinks": [
+      "/adana-gayrimenkul-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Hisseli tapu nasıl satılır",
+    "primaryKeyword": "hisseli tapu nasıl satılır",
+    "secondaryKeywords": [
+      "Gayrimenkul Hukuku",
+      "taşınmaz sahipleri"
+    ],
+    "pillar": "Gayrimenkul Hukuku",
+    "pillarSlug": "/adana-gayrimenkul-avukati/",
+    "searchIntent": "informational",
+    "audience": "taşınmaz sahipleri",
+    "priority": 5,
+    "suggestedSlug": "hisseli-tapu-nasil-satilir",
+    "topicSimilarityKey": "gayrimenkul-hukuku-hisseli-tapu-nasil-satilir",
+    "internalLinks": [
+      "/adana-gayrimenkul-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Aile içinde tapu devri",
+    "primaryKeyword": "aile içinde tapu devri",
+    "secondaryKeywords": [
+      "Gayrimenkul Hukuku",
+      "taşınmaz sahipleri"
+    ],
+    "pillar": "Gayrimenkul Hukuku",
+    "pillarSlug": "/adana-gayrimenkul-avukati/",
+    "searchIntent": "informational",
+    "audience": "taşınmaz sahipleri",
+    "priority": 5,
+    "suggestedSlug": "aile-icinde-tapu-devri",
+    "topicSimilarityKey": "gayrimenkul-hukuku-aile-icinde-tapu-devri",
+    "internalLinks": [
+      "/adana-gayrimenkul-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Taşınmaz satış vaadi sözleşmesi",
+    "primaryKeyword": "taşınmaz satış vaadi sözleşmesi",
+    "secondaryKeywords": [
+      "Gayrimenkul Hukuku",
+      "taşınmaz sahipleri"
+    ],
+    "pillar": "Gayrimenkul Hukuku",
+    "pillarSlug": "/adana-gayrimenkul-avukati/",
+    "searchIntent": "informational",
+    "audience": "taşınmaz sahipleri",
+    "priority": 5,
+    "suggestedSlug": "tasinmaz-satis-vaadi-sozlesmesi",
+    "topicSimilarityKey": "gayrimenkul-hukuku-tasinmaz-satis-vaadi-sozlesmesi",
+    "internalLinks": [
+      "/adana-gayrimenkul-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Tapu kaydının düzeltilmesi davası",
+    "primaryKeyword": "tapu kaydının düzeltilmesi davası",
+    "secondaryKeywords": [
+      "Gayrimenkul Hukuku",
+      "taşınmaz sahipleri"
+    ],
+    "pillar": "Gayrimenkul Hukuku",
+    "pillarSlug": "/adana-gayrimenkul-avukati/",
+    "searchIntent": "informational",
+    "audience": "taşınmaz sahipleri",
+    "priority": 5,
+    "suggestedSlug": "tapu-kaydinin-duzeltilmesi-davasi",
+    "topicSimilarityKey": "gayrimenkul-hukuku-tapu-kaydinin-duzeltilmesi-davasi",
+    "internalLinks": [
+      "/adana-gayrimenkul-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Kadastro tespitine itiraz",
+    "primaryKeyword": "kadastro tespitine itiraz",
+    "secondaryKeywords": [
+      "Gayrimenkul Hukuku",
+      "taşınmaz sahipleri"
+    ],
+    "pillar": "Gayrimenkul Hukuku",
+    "pillarSlug": "/adana-gayrimenkul-avukati/",
+    "searchIntent": "informational",
+    "audience": "taşınmaz sahipleri",
+    "priority": 5,
+    "suggestedSlug": "kadastro-tespitine-itiraz",
+    "topicSimilarityKey": "gayrimenkul-hukuku-kadastro-tespitine-itiraz",
+    "internalLinks": [
+      "/adana-gayrimenkul-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Arsa payı uyuşmazlığı",
+    "primaryKeyword": "arsa payı uyuşmazlığı",
+    "secondaryKeywords": [
+      "Gayrimenkul Hukuku",
+      "taşınmaz sahipleri"
+    ],
+    "pillar": "Gayrimenkul Hukuku",
+    "pillarSlug": "/adana-gayrimenkul-avukati/",
+    "searchIntent": "informational",
+    "audience": "taşınmaz sahipleri",
+    "priority": 5,
+    "suggestedSlug": "arsa-payi-uyusmazligi",
+    "topicSimilarityKey": "gayrimenkul-hukuku-arsa-payi-uyusmazligi",
+    "internalLinks": [
+      "/adana-gayrimenkul-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Arsa tapusu sorunları",
+    "primaryKeyword": "arsa tapusu sorunları",
+    "secondaryKeywords": [
+      "Gayrimenkul Hukuku",
+      "taşınmaz sahipleri"
+    ],
+    "pillar": "Gayrimenkul Hukuku",
+    "pillarSlug": "/adana-gayrimenkul-avukati/",
+    "searchIntent": "informational",
+    "audience": "taşınmaz sahipleri",
+    "priority": 5,
+    "suggestedSlug": "arsa-tapusu-sorunlari",
+    "topicSimilarityKey": "gayrimenkul-hukuku-arsa-tapusu-sorunlari",
+    "internalLinks": [
+      "/adana-gayrimenkul-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Taşınmazın tahliyesi",
+    "primaryKeyword": "taşınmazın tahliyesi",
+    "secondaryKeywords": [
+      "Gayrimenkul Hukuku",
+      "taşınmaz sahipleri"
+    ],
+    "pillar": "Gayrimenkul Hukuku",
+    "pillarSlug": "/adana-gayrimenkul-avukati/",
+    "searchIntent": "informational",
+    "audience": "taşınmaz sahipleri",
+    "priority": 5,
+    "suggestedSlug": "tasinmazin-tahliyesi",
+    "topicSimilarityKey": "gayrimenkul-hukuku-tasinmazin-tahliyesi",
+    "internalLinks": [
+      "/adana-gayrimenkul-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Ecrimisil davası",
+    "primaryKeyword": "ecrimisil davası",
+    "secondaryKeywords": [
+      "Gayrimenkul Hukuku",
+      "taşınmaz sahipleri"
+    ],
+    "pillar": "Gayrimenkul Hukuku",
+    "pillarSlug": "/adana-gayrimenkul-avukati/",
+    "searchIntent": "informational",
+    "audience": "taşınmaz sahipleri",
+    "priority": 5,
+    "suggestedSlug": "ecrimisil-davasi",
+    "topicSimilarityKey": "gayrimenkul-hukuku-ecrimisil-davasi",
+    "internalLinks": [
+      "/adana-gayrimenkul-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Haksız işgal tazminatı",
+    "primaryKeyword": "haksız işgal tazminatı",
+    "secondaryKeywords": [
+      "Gayrimenkul Hukuku",
+      "taşınmaz sahipleri"
+    ],
+    "pillar": "Gayrimenkul Hukuku",
+    "pillarSlug": "/adana-gayrimenkul-avukati/",
+    "searchIntent": "informational",
+    "audience": "taşınmaz sahipleri",
+    "priority": 5,
+    "suggestedSlug": "haksiz-isgal-tazminati",
+    "topicSimilarityKey": "gayrimenkul-hukuku-haksiz-isgal-tazminati",
+    "internalLinks": [
+      "/adana-gayrimenkul-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Gayrimenkul alım satımında hukuki riskler",
+    "primaryKeyword": "gayrimenkul alım satımında hukuki riskler",
+    "secondaryKeywords": [
+      "Gayrimenkul Hukuku",
+      "taşınmaz sahipleri"
+    ],
+    "pillar": "Gayrimenkul Hukuku",
+    "pillarSlug": "/adana-gayrimenkul-avukati/",
+    "searchIntent": "informational",
+    "audience": "taşınmaz sahipleri",
+    "priority": 5,
+    "suggestedSlug": "gayrimenkul-alim-satiminda-hukuki-riskler",
+    "topicSimilarityKey": "gayrimenkul-hukuku-gayrimenkul-alim-satiminda-hukuki-riskler",
+    "internalLinks": [
+      "/adana-gayrimenkul-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Ortaklığın giderilmesi davası nedir",
+    "primaryKeyword": "ortaklığın giderilmesi davası nedir",
+    "secondaryKeywords": [
+      "Ortaklığın Giderilmesi Davası",
+      "paydaşlar"
+    ],
+    "pillar": "Ortaklığın Giderilmesi Davası",
+    "pillarSlug": "/ortakligin-giderilmesi-davasi/",
+    "searchIntent": "informational",
+    "audience": "paydaşlar",
+    "priority": 7,
+    "suggestedSlug": "ortakligin-giderilmesi-davasi-nedir",
+    "topicSimilarityKey": "ortakligin-giderilmesi-ortakligin-giderilmesi-davasi-nedir",
+    "internalLinks": [
+      "/ortakligin-giderilmesi-davasi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Izale-i şuyu davası nedir",
+    "primaryKeyword": "izale-i şuyu davası nedir",
+    "secondaryKeywords": [
+      "Ortaklığın Giderilmesi Davası",
+      "paydaşlar"
+    ],
+    "pillar": "Ortaklığın Giderilmesi Davası",
+    "pillarSlug": "/ortakligin-giderilmesi-davasi/",
+    "searchIntent": "informational",
+    "audience": "paydaşlar",
+    "priority": 7,
+    "suggestedSlug": "izale-i-suyu-davasi-nedir",
+    "topicSimilarityKey": "ortakligin-giderilmesi-izale-i-suyu-davasi-nedir",
+    "internalLinks": [
+      "/ortakligin-giderilmesi-davasi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Ortaklığın giderilmesi davası nasıl açılır",
+    "primaryKeyword": "ortaklığın giderilmesi davası nasıl açılır",
+    "secondaryKeywords": [
+      "Ortaklığın Giderilmesi Davası",
+      "paydaşlar"
+    ],
+    "pillar": "Ortaklığın Giderilmesi Davası",
+    "pillarSlug": "/ortakligin-giderilmesi-davasi/",
+    "searchIntent": "informational",
+    "audience": "paydaşlar",
+    "priority": 7,
+    "suggestedSlug": "ortakligin-giderilmesi-davasi-nasil-acilir",
+    "topicSimilarityKey": "ortakligin-giderilmesi-ortakligin-giderilmesi-davasi-nasil-acilir",
+    "internalLinks": [
+      "/ortakligin-giderilmesi-davasi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Ortaklığın giderilmesi davasını kim açabilir",
+    "primaryKeyword": "ortaklığın giderilmesi davasını kim açabilir",
+    "secondaryKeywords": [
+      "Ortaklığın Giderilmesi Davası",
+      "paydaşlar"
+    ],
+    "pillar": "Ortaklığın Giderilmesi Davası",
+    "pillarSlug": "/ortakligin-giderilmesi-davasi/",
+    "searchIntent": "informational",
+    "audience": "paydaşlar",
+    "priority": 7,
+    "suggestedSlug": "ortakligin-giderilmesi-davasini-kim-acabilir",
+    "topicSimilarityKey": "ortakligin-giderilmesi-ortakligin-giderilmesi-davasini-kim-acabilir",
+    "internalLinks": [
+      "/ortakligin-giderilmesi-davasi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Ortaklığın giderilmesi davası ne kadar sürer",
+    "primaryKeyword": "ortaklığın giderilmesi davası ne kadar sürer",
+    "secondaryKeywords": [
+      "Ortaklığın Giderilmesi Davası",
+      "paydaşlar"
+    ],
+    "pillar": "Ortaklığın Giderilmesi Davası",
+    "pillarSlug": "/ortakligin-giderilmesi-davasi/",
+    "searchIntent": "informational",
+    "audience": "paydaşlar",
+    "priority": 7,
+    "suggestedSlug": "ortakligin-giderilmesi-davasi-ne-kadar-surer",
+    "topicSimilarityKey": "ortakligin-giderilmesi-ortakligin-giderilmesi-davasi-ne-kadar-surer",
+    "internalLinks": [
+      "/ortakligin-giderilmesi-davasi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Ortaklığın giderilmesi davasında satış nasıl yapılır",
+    "primaryKeyword": "ortaklığın giderilmesi davasında satış nasıl yapılır",
+    "secondaryKeywords": [
+      "Ortaklığın Giderilmesi Davası",
+      "paydaşlar"
+    ],
+    "pillar": "Ortaklığın Giderilmesi Davası",
+    "pillarSlug": "/ortakligin-giderilmesi-davasi/",
+    "searchIntent": "informational",
+    "audience": "paydaşlar",
+    "priority": 7,
+    "suggestedSlug": "ortakligin-giderilmesi-davasinda-satis-nasil-yapilir",
+    "topicSimilarityKey": "ortakligin-giderilmesi-ortakligin-giderilmesi-davasinda-satis-nasil-yapilir",
+    "internalLinks": [
+      "/ortakligin-giderilmesi-davasi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Ortaklığın giderilmesi davasında açık artırma",
+    "primaryKeyword": "ortaklığın giderilmesi davasında açık artırma",
+    "secondaryKeywords": [
+      "Ortaklığın Giderilmesi Davası",
+      "paydaşlar"
+    ],
+    "pillar": "Ortaklığın Giderilmesi Davası",
+    "pillarSlug": "/ortakligin-giderilmesi-davasi/",
+    "searchIntent": "informational",
+    "audience": "paydaşlar",
+    "priority": 7,
+    "suggestedSlug": "ortakligin-giderilmesi-davasinda-acik-artirma",
+    "topicSimilarityKey": "ortakligin-giderilmesi-ortakligin-giderilmesi-davasinda-acik-artirma",
+    "internalLinks": [
+      "/ortakligin-giderilmesi-davasi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Ortaklığın giderilmesi davasında masraflar",
+    "primaryKeyword": "ortaklığın giderilmesi davasında masraflar",
+    "secondaryKeywords": [
+      "Ortaklığın Giderilmesi Davası",
+      "paydaşlar"
+    ],
+    "pillar": "Ortaklığın Giderilmesi Davası",
+    "pillarSlug": "/ortakligin-giderilmesi-davasi/",
+    "searchIntent": "informational",
+    "audience": "paydaşlar",
+    "priority": 7,
+    "suggestedSlug": "ortakligin-giderilmesi-davasinda-masraflar",
+    "topicSimilarityKey": "ortakligin-giderilmesi-ortakligin-giderilmesi-davasinda-masraflar",
+    "internalLinks": [
+      "/ortakligin-giderilmesi-davasi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Ortaklığın giderilmesi davasında avukatlık ücreti",
+    "primaryKeyword": "ortaklığın giderilmesi davasında avukatlık ücreti",
+    "secondaryKeywords": [
+      "Ortaklığın Giderilmesi Davası",
+      "paydaşlar"
+    ],
+    "pillar": "Ortaklığın Giderilmesi Davası",
+    "pillarSlug": "/ortakligin-giderilmesi-davasi/",
+    "searchIntent": "informational",
+    "audience": "paydaşlar",
+    "priority": 7,
+    "suggestedSlug": "ortakligin-giderilmesi-davasinda-avukatlik-ucreti",
+    "topicSimilarityKey": "ortakligin-giderilmesi-ortakligin-giderilmesi-davasinda-avukatlik-ucreti",
+    "internalLinks": [
+      "/ortakligin-giderilmesi-davasi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Ortaklığın giderilmesi davasında bilirkişi",
+    "primaryKeyword": "ortaklığın giderilmesi davasında bilirkişi",
+    "secondaryKeywords": [
+      "Ortaklığın Giderilmesi Davası",
+      "paydaşlar"
+    ],
+    "pillar": "Ortaklığın Giderilmesi Davası",
+    "pillarSlug": "/ortakligin-giderilmesi-davasi/",
+    "searchIntent": "informational",
+    "audience": "paydaşlar",
+    "priority": 7,
+    "suggestedSlug": "ortakligin-giderilmesi-davasinda-bilirkisi",
+    "topicSimilarityKey": "ortakligin-giderilmesi-ortakligin-giderilmesi-davasinda-bilirkisi",
+    "internalLinks": [
+      "/ortakligin-giderilmesi-davasi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Ortaklığın giderilmesi davasında kıymet takdiri",
+    "primaryKeyword": "ortaklığın giderilmesi davasında kıymet takdiri",
+    "secondaryKeywords": [
+      "Ortaklığın Giderilmesi Davası",
+      "paydaşlar"
+    ],
+    "pillar": "Ortaklığın Giderilmesi Davası",
+    "pillarSlug": "/ortakligin-giderilmesi-davasi/",
+    "searchIntent": "informational",
+    "audience": "paydaşlar",
+    "priority": 7,
+    "suggestedSlug": "ortakligin-giderilmesi-davasinda-kiymet-takdiri",
+    "topicSimilarityKey": "ortakligin-giderilmesi-ortakligin-giderilmesi-davasinda-kiymet-takdiri",
+    "internalLinks": [
+      "/ortakligin-giderilmesi-davasi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Ortaklığın giderilmesi davasında istinaf",
+    "primaryKeyword": "ortaklığın giderilmesi davasında istinaf",
+    "secondaryKeywords": [
+      "Ortaklığın Giderilmesi Davası",
+      "paydaşlar"
+    ],
+    "pillar": "Ortaklığın Giderilmesi Davası",
+    "pillarSlug": "/ortakligin-giderilmesi-davasi/",
+    "searchIntent": "informational",
+    "audience": "paydaşlar",
+    "priority": 7,
+    "suggestedSlug": "ortakligin-giderilmesi-davasinda-istinaf",
+    "topicSimilarityKey": "ortakligin-giderilmesi-ortakligin-giderilmesi-davasinda-istinaf",
+    "internalLinks": [
+      "/ortakligin-giderilmesi-davasi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Ortaklığın giderilmesi davasında karar sonrası süreç",
+    "primaryKeyword": "ortaklığın giderilmesi davasında karar sonrası süreç",
+    "secondaryKeywords": [
+      "Ortaklığın Giderilmesi Davası",
+      "paydaşlar"
+    ],
+    "pillar": "Ortaklığın Giderilmesi Davası",
+    "pillarSlug": "/ortakligin-giderilmesi-davasi/",
+    "searchIntent": "informational",
+    "audience": "paydaşlar",
+    "priority": 7,
+    "suggestedSlug": "ortakligin-giderilmesi-davasinda-karar-sonrasi-surec",
+    "topicSimilarityKey": "ortakligin-giderilmesi-ortakligin-giderilmesi-davasinda-karar-sonrasi-surec",
+    "internalLinks": [
+      "/ortakligin-giderilmesi-davasi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Ortaklığın giderilmesi davasında satış bedeli nasıl paylaşılır",
+    "primaryKeyword": "ortaklığın giderilmesi davasında satış bedeli nasıl paylaşılır",
+    "secondaryKeywords": [
+      "Ortaklığın Giderilmesi Davası",
+      "paydaşlar"
+    ],
+    "pillar": "Ortaklığın Giderilmesi Davası",
+    "pillarSlug": "/ortakligin-giderilmesi-davasi/",
+    "searchIntent": "informational",
+    "audience": "paydaşlar",
+    "priority": 7,
+    "suggestedSlug": "ortakligin-giderilmesi-davasinda-satis-bedeli-nasil-paylasilir",
+    "topicSimilarityKey": "ortakligin-giderilmesi-ortakligin-giderilmesi-davasinda-satis-bedeli-nasil-payla",
+    "internalLinks": [
+      "/ortakligin-giderilmesi-davasi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Ortaklığın giderilmesi davasında paydaşlardan biri almak isterse",
+    "primaryKeyword": "ortaklığın giderilmesi davasında paydaşlardan biri almak isterse",
+    "secondaryKeywords": [
+      "Ortaklığın Giderilmesi Davası",
+      "paydaşlar"
+    ],
+    "pillar": "Ortaklığın Giderilmesi Davası",
+    "pillarSlug": "/ortakligin-giderilmesi-davasi/",
+    "searchIntent": "informational",
+    "audience": "paydaşlar",
+    "priority": 7,
+    "suggestedSlug": "ortakligin-giderilmesi-davasinda-paydaslardan-biri-almak-isterse",
+    "topicSimilarityKey": "ortakligin-giderilmesi-ortakligin-giderilmesi-davasinda-paydaslardan-biri-almak-",
+    "internalLinks": [
+      "/ortakligin-giderilmesi-davasi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Ortaklığın giderilmesi davasında aynen taksim",
+    "primaryKeyword": "ortaklığın giderilmesi davasında aynen taksim",
+    "secondaryKeywords": [
+      "Ortaklığın Giderilmesi Davası",
+      "paydaşlar"
+    ],
+    "pillar": "Ortaklığın Giderilmesi Davası",
+    "pillarSlug": "/ortakligin-giderilmesi-davasi/",
+    "searchIntent": "informational",
+    "audience": "paydaşlar",
+    "priority": 7,
+    "suggestedSlug": "ortakligin-giderilmesi-davasinda-aynen-taksim",
+    "topicSimilarityKey": "ortakligin-giderilmesi-ortakligin-giderilmesi-davasinda-aynen-taksim",
+    "internalLinks": [
+      "/ortakligin-giderilmesi-davasi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Ortaklığın giderilmesi davasında satış suretiyle paylaşım",
+    "primaryKeyword": "ortaklığın giderilmesi davasında satış suretiyle paylaşım",
+    "secondaryKeywords": [
+      "Ortaklığın Giderilmesi Davası",
+      "paydaşlar"
+    ],
+    "pillar": "Ortaklığın Giderilmesi Davası",
+    "pillarSlug": "/ortakligin-giderilmesi-davasi/",
+    "searchIntent": "informational",
+    "audience": "paydaşlar",
+    "priority": 7,
+    "suggestedSlug": "ortakligin-giderilmesi-davasinda-satis-suretiyle-paylasim",
+    "topicSimilarityKey": "ortakligin-giderilmesi-ortakligin-giderilmesi-davasinda-satis-suretiyle-paylasim",
+    "internalLinks": [
+      "/ortakligin-giderilmesi-davasi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Hisseli taşınmazda ortaklığın giderilmesi",
+    "primaryKeyword": "hisseli taşınmazda ortaklığın giderilmesi",
+    "secondaryKeywords": [
+      "Ortaklığın Giderilmesi Davası",
+      "paydaşlar"
+    ],
+    "pillar": "Ortaklığın Giderilmesi Davası",
+    "pillarSlug": "/ortakligin-giderilmesi-davasi/",
+    "searchIntent": "informational",
+    "audience": "paydaşlar",
+    "priority": 7,
+    "suggestedSlug": "hisseli-tasinmazda-ortakligin-giderilmesi",
+    "topicSimilarityKey": "ortakligin-giderilmesi-hisseli-tasinmazda-ortakligin-giderilmesi",
+    "internalLinks": [
+      "/ortakligin-giderilmesi-davasi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Hisseli evde ortaklığın giderilmesi",
+    "primaryKeyword": "hisseli evde ortaklığın giderilmesi",
+    "secondaryKeywords": [
+      "Ortaklığın Giderilmesi Davası",
+      "paydaşlar"
+    ],
+    "pillar": "Ortaklığın Giderilmesi Davası",
+    "pillarSlug": "/ortakligin-giderilmesi-davasi/",
+    "searchIntent": "informational",
+    "audience": "paydaşlar",
+    "priority": 7,
+    "suggestedSlug": "hisseli-evde-ortakligin-giderilmesi",
+    "topicSimilarityKey": "ortakligin-giderilmesi-hisseli-evde-ortakligin-giderilmesi",
+    "internalLinks": [
+      "/ortakligin-giderilmesi-davasi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Hisseli arsada ortaklığın giderilmesi",
+    "primaryKeyword": "hisseli arsada ortaklığın giderilmesi",
+    "secondaryKeywords": [
+      "Ortaklığın Giderilmesi Davası",
+      "paydaşlar"
+    ],
+    "pillar": "Ortaklığın Giderilmesi Davası",
+    "pillarSlug": "/ortakligin-giderilmesi-davasi/",
+    "searchIntent": "informational",
+    "audience": "paydaşlar",
+    "priority": 7,
+    "suggestedSlug": "hisseli-arsada-ortakligin-giderilmesi",
+    "topicSimilarityKey": "ortakligin-giderilmesi-hisseli-arsada-ortakligin-giderilmesi",
+    "internalLinks": [
+      "/ortakligin-giderilmesi-davasi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Hisseli tarlada ortaklığın giderilmesi",
+    "primaryKeyword": "hisseli tarlada ortaklığın giderilmesi",
+    "secondaryKeywords": [
+      "Ortaklığın Giderilmesi Davası",
+      "paydaşlar"
+    ],
+    "pillar": "Ortaklığın Giderilmesi Davası",
+    "pillarSlug": "/ortakligin-giderilmesi-davasi/",
+    "searchIntent": "informational",
+    "audience": "paydaşlar",
+    "priority": 7,
+    "suggestedSlug": "hisseli-tarlada-ortakligin-giderilmesi",
+    "topicSimilarityKey": "ortakligin-giderilmesi-hisseli-tarlada-ortakligin-giderilmesi",
+    "internalLinks": [
+      "/ortakligin-giderilmesi-davasi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Miras kalan evde ortaklığın giderilmesi",
+    "primaryKeyword": "miras kalan evde ortaklığın giderilmesi",
+    "secondaryKeywords": [
+      "Ortaklığın Giderilmesi Davası",
+      "paydaşlar"
+    ],
+    "pillar": "Ortaklığın Giderilmesi Davası",
+    "pillarSlug": "/ortakligin-giderilmesi-davasi/",
+    "searchIntent": "informational",
+    "audience": "paydaşlar",
+    "priority": 7,
+    "suggestedSlug": "miras-kalan-evde-ortakligin-giderilmesi",
+    "topicSimilarityKey": "ortakligin-giderilmesi-miras-kalan-evde-ortakligin-giderilmesi",
+    "internalLinks": [
+      "/ortakligin-giderilmesi-davasi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Miras kalan arsada ortaklığın giderilmesi",
+    "primaryKeyword": "miras kalan arsada ortaklığın giderilmesi",
+    "secondaryKeywords": [
+      "Ortaklığın Giderilmesi Davası",
+      "paydaşlar"
+    ],
+    "pillar": "Ortaklığın Giderilmesi Davası",
+    "pillarSlug": "/ortakligin-giderilmesi-davasi/",
+    "searchIntent": "informational",
+    "audience": "paydaşlar",
+    "priority": 7,
+    "suggestedSlug": "miras-kalan-arsada-ortakligin-giderilmesi",
+    "topicSimilarityKey": "ortakligin-giderilmesi-miras-kalan-arsada-ortakligin-giderilmesi",
+    "internalLinks": [
+      "/ortakligin-giderilmesi-davasi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Miras kalan tarlada ortaklığın giderilmesi",
+    "primaryKeyword": "miras kalan tarlada ortaklığın giderilmesi",
+    "secondaryKeywords": [
+      "Ortaklığın Giderilmesi Davası",
+      "paydaşlar"
+    ],
+    "pillar": "Ortaklığın Giderilmesi Davası",
+    "pillarSlug": "/ortakligin-giderilmesi-davasi/",
+    "searchIntent": "informational",
+    "audience": "paydaşlar",
+    "priority": 7,
+    "suggestedSlug": "miras-kalan-tarlada-ortakligin-giderilmesi",
+    "topicSimilarityKey": "ortakligin-giderilmesi-miras-kalan-tarlada-ortakligin-giderilmesi",
+    "internalLinks": [
+      "/ortakligin-giderilmesi-davasi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Kardeşler arasında ortaklığın giderilmesi",
+    "primaryKeyword": "kardeşler arasında ortaklığın giderilmesi",
+    "secondaryKeywords": [
+      "Ortaklığın Giderilmesi Davası",
+      "paydaşlar"
+    ],
+    "pillar": "Ortaklığın Giderilmesi Davası",
+    "pillarSlug": "/ortakligin-giderilmesi-davasi/",
+    "searchIntent": "informational",
+    "audience": "paydaşlar",
+    "priority": 7,
+    "suggestedSlug": "kardesler-arasinda-ortakligin-giderilmesi",
+    "topicSimilarityKey": "ortakligin-giderilmesi-kardesler-arasinda-ortakligin-giderilmesi",
+    "internalLinks": [
+      "/ortakligin-giderilmesi-davasi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Mirasçılar arasında izale-i şuyu",
+    "primaryKeyword": "mirasçılar arasında izale-i şuyu",
+    "secondaryKeywords": [
+      "Ortaklığın Giderilmesi Davası",
+      "paydaşlar"
+    ],
+    "pillar": "Ortaklığın Giderilmesi Davası",
+    "pillarSlug": "/ortakligin-giderilmesi-davasi/",
+    "searchIntent": "informational",
+    "audience": "paydaşlar",
+    "priority": 7,
+    "suggestedSlug": "mirascilar-arasinda-izale-i-suyu",
+    "topicSimilarityKey": "ortakligin-giderilmesi-mirascilar-arasinda-izale-i-suyu",
+    "internalLinks": [
+      "/ortakligin-giderilmesi-davasi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Paylı mülkiyette ortaklığın giderilmesi",
+    "primaryKeyword": "paylı mülkiyette ortaklığın giderilmesi",
+    "secondaryKeywords": [
+      "Ortaklığın Giderilmesi Davası",
+      "paydaşlar"
+    ],
+    "pillar": "Ortaklığın Giderilmesi Davası",
+    "pillarSlug": "/ortakligin-giderilmesi-davasi/",
+    "searchIntent": "informational",
+    "audience": "paydaşlar",
+    "priority": 7,
+    "suggestedSlug": "payli-mulkiyette-ortakligin-giderilmesi",
+    "topicSimilarityKey": "ortakligin-giderilmesi-payli-mulkiyette-ortakligin-giderilmesi",
+    "internalLinks": [
+      "/ortakligin-giderilmesi-davasi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Elbirliği mülkiyetinde ortaklığın giderilmesi",
+    "primaryKeyword": "elbirliği mülkiyetinde ortaklığın giderilmesi",
+    "secondaryKeywords": [
+      "Ortaklığın Giderilmesi Davası",
+      "paydaşlar"
+    ],
+    "pillar": "Ortaklığın Giderilmesi Davası",
+    "pillarSlug": "/ortakligin-giderilmesi-davasi/",
+    "searchIntent": "informational",
+    "audience": "paydaşlar",
+    "priority": 7,
+    "suggestedSlug": "elbirligi-mulkiyetinde-ortakligin-giderilmesi",
+    "topicSimilarityKey": "ortakligin-giderilmesi-elbirligi-mulkiyetinde-ortakligin-giderilmesi",
+    "internalLinks": [
+      "/ortakligin-giderilmesi-davasi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Ortaklığın giderilmesi davasında anlaşma mümkün mü",
+    "primaryKeyword": "ortaklığın giderilmesi davasında anlaşma mümkün mü",
+    "secondaryKeywords": [
+      "Ortaklığın Giderilmesi Davası",
+      "paydaşlar"
+    ],
+    "pillar": "Ortaklığın Giderilmesi Davası",
+    "pillarSlug": "/ortakligin-giderilmesi-davasi/",
+    "searchIntent": "informational",
+    "audience": "paydaşlar",
+    "priority": 7,
+    "suggestedSlug": "ortakligin-giderilmesi-davasinda-anlasma-mumkun-mu",
+    "topicSimilarityKey": "ortakligin-giderilmesi-ortakligin-giderilmesi-davasinda-anlasma-mumkun-mu",
+    "internalLinks": [
+      "/ortakligin-giderilmesi-davasi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Ortaklığın giderilmesi davası açılmadan satış yapılabilir mi",
+    "primaryKeyword": "ortaklığın giderilmesi davası açılmadan satış yapılabilir mi",
+    "secondaryKeywords": [
+      "Ortaklığın Giderilmesi Davası",
+      "paydaşlar"
+    ],
+    "pillar": "Ortaklığın Giderilmesi Davası",
+    "pillarSlug": "/ortakligin-giderilmesi-davasi/",
+    "searchIntent": "informational",
+    "audience": "paydaşlar",
+    "priority": 7,
+    "suggestedSlug": "ortakligin-giderilmesi-davasi-acilmadan-satis-yapilabilir-mi",
+    "topicSimilarityKey": "ortakligin-giderilmesi-ortakligin-giderilmesi-davasi-acilmadan-satis-yapilabilir",
+    "internalLinks": [
+      "/ortakligin-giderilmesi-davasi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Miras hukuku nedir",
+    "primaryKeyword": "miras hukuku nedir",
+    "secondaryKeywords": [
+      "Miras Hukuku",
+      "mirasçılar"
+    ],
+    "pillar": "Miras Hukuku",
+    "pillarSlug": "/adana-miras-avukati/",
+    "searchIntent": "informational",
+    "audience": "mirasçılar",
+    "priority": 7,
+    "suggestedSlug": "miras-hukuku-nedir",
+    "topicSimilarityKey": "miras-hukuku-miras-hukuku-nedir",
+    "internalLinks": [
+      "/adana-miras-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Miras paylaşımı nasıl yapılır",
+    "primaryKeyword": "miras paylaşımı nasıl yapılır",
+    "secondaryKeywords": [
+      "Miras Hukuku",
+      "mirasçılar"
+    ],
+    "pillar": "Miras Hukuku",
+    "pillarSlug": "/adana-miras-avukati/",
+    "searchIntent": "informational",
+    "audience": "mirasçılar",
+    "priority": 7,
+    "suggestedSlug": "miras-paylasimi-nasil-yapilir",
+    "topicSimilarityKey": "miras-hukuku-miras-paylasimi-nasil-yapilir",
+    "internalLinks": [
+      "/adana-miras-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Miras kalan ev nasıl paylaşılır",
+    "primaryKeyword": "miras kalan ev nasıl paylaşılır",
+    "secondaryKeywords": [
+      "Miras Hukuku",
+      "mirasçılar"
+    ],
+    "pillar": "Miras Hukuku",
+    "pillarSlug": "/adana-miras-avukati/",
+    "searchIntent": "informational",
+    "audience": "mirasçılar",
+    "priority": 7,
+    "suggestedSlug": "miras-kalan-ev-nasil-paylasilir",
+    "topicSimilarityKey": "miras-hukuku-miras-kalan-ev-nasil-paylasilir",
+    "internalLinks": [
+      "/adana-miras-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Miras kalan arsa nasıl paylaşılır",
+    "primaryKeyword": "miras kalan arsa nasıl paylaşılır",
+    "secondaryKeywords": [
+      "Miras Hukuku",
+      "mirasçılar"
+    ],
+    "pillar": "Miras Hukuku",
+    "pillarSlug": "/adana-miras-avukati/",
+    "searchIntent": "informational",
+    "audience": "mirasçılar",
+    "priority": 7,
+    "suggestedSlug": "miras-kalan-arsa-nasil-paylasilir",
+    "topicSimilarityKey": "miras-hukuku-miras-kalan-arsa-nasil-paylasilir",
+    "internalLinks": [
+      "/adana-miras-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Miras kalan tarla nasıl paylaşılır",
+    "primaryKeyword": "miras kalan tarla nasıl paylaşılır",
+    "secondaryKeywords": [
+      "Miras Hukuku",
+      "mirasçılar"
+    ],
+    "pillar": "Miras Hukuku",
+    "pillarSlug": "/adana-miras-avukati/",
+    "searchIntent": "informational",
+    "audience": "mirasçılar",
+    "priority": 7,
+    "suggestedSlug": "miras-kalan-tarla-nasil-paylasilir",
+    "topicSimilarityKey": "miras-hukuku-miras-kalan-tarla-nasil-paylasilir",
+    "internalLinks": [
+      "/adana-miras-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Mirasçılar anlaşamazsa ne olur",
+    "primaryKeyword": "mirasçılar anlaşamazsa ne olur",
+    "secondaryKeywords": [
+      "Miras Hukuku",
+      "mirasçılar"
+    ],
+    "pillar": "Miras Hukuku",
+    "pillarSlug": "/adana-miras-avukati/",
+    "searchIntent": "informational",
+    "audience": "mirasçılar",
+    "priority": 7,
+    "suggestedSlug": "mirascilar-anlasamazsa-ne-olur",
+    "topicSimilarityKey": "miras-hukuku-mirascilar-anlasamazsa-ne-olur",
+    "internalLinks": [
+      "/adana-miras-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Miras kalan taşınmaz nasıl satılır",
+    "primaryKeyword": "miras kalan taşınmaz nasıl satılır",
+    "secondaryKeywords": [
+      "Miras Hukuku",
+      "mirasçılar"
+    ],
+    "pillar": "Miras Hukuku",
+    "pillarSlug": "/adana-miras-avukati/",
+    "searchIntent": "informational",
+    "audience": "mirasçılar",
+    "priority": 7,
+    "suggestedSlug": "miras-kalan-tasinmaz-nasil-satilir",
+    "topicSimilarityKey": "miras-hukuku-miras-kalan-tasinmaz-nasil-satilir",
+    "internalLinks": [
+      "/adana-miras-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Miras kalan ev satılabilir mi",
+    "primaryKeyword": "miras kalan ev satılabilir mi",
+    "secondaryKeywords": [
+      "Miras Hukuku",
+      "mirasçılar"
+    ],
+    "pillar": "Miras Hukuku",
+    "pillarSlug": "/adana-miras-avukati/",
+    "searchIntent": "informational",
+    "audience": "mirasçılar",
+    "priority": 7,
+    "suggestedSlug": "miras-kalan-ev-satilabilir-mi",
+    "topicSimilarityKey": "miras-hukuku-miras-kalan-ev-satilabilir-mi",
+    "internalLinks": [
+      "/adana-miras-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Miras kalan taşınmazda hissedarların hakları",
+    "primaryKeyword": "miras kalan taşınmazda hissedarların hakları",
+    "secondaryKeywords": [
+      "Miras Hukuku",
+      "mirasçılar"
+    ],
+    "pillar": "Miras Hukuku",
+    "pillarSlug": "/adana-miras-avukati/",
+    "searchIntent": "informational",
+    "audience": "mirasçılar",
+    "priority": 7,
+    "suggestedSlug": "miras-kalan-tasinmazda-hissedarlarin-haklari",
+    "topicSimilarityKey": "miras-hukuku-miras-kalan-tasinmazda-hissedarlarin-haklari",
+    "internalLinks": [
+      "/adana-miras-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Miras ortaklığı nasıl sona erer",
+    "primaryKeyword": "miras ortaklığı nasıl sona erer",
+    "secondaryKeywords": [
+      "Miras Hukuku",
+      "mirasçılar"
+    ],
+    "pillar": "Miras Hukuku",
+    "pillarSlug": "/adana-miras-avukati/",
+    "searchIntent": "informational",
+    "audience": "mirasçılar",
+    "priority": 7,
+    "suggestedSlug": "miras-ortakligi-nasil-sona-erer",
+    "topicSimilarityKey": "miras-hukuku-miras-ortakligi-nasil-sona-erer",
+    "internalLinks": [
+      "/adana-miras-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Miras ortaklığının giderilmesi",
+    "primaryKeyword": "miras ortaklığının giderilmesi",
+    "secondaryKeywords": [
+      "Miras Hukuku",
+      "mirasçılar"
+    ],
+    "pillar": "Miras Hukuku",
+    "pillarSlug": "/adana-miras-avukati/",
+    "searchIntent": "informational",
+    "audience": "mirasçılar",
+    "priority": 7,
+    "suggestedSlug": "miras-ortakliginin-giderilmesi",
+    "topicSimilarityKey": "miras-hukuku-miras-ortakliginin-giderilmesi",
+    "internalLinks": [
+      "/adana-miras-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Mirasçılar arasında mal paylaşımı",
+    "primaryKeyword": "mirasçılar arasında mal paylaşımı",
+    "secondaryKeywords": [
+      "Miras Hukuku",
+      "mirasçılar"
+    ],
+    "pillar": "Miras Hukuku",
+    "pillarSlug": "/adana-miras-avukati/",
+    "searchIntent": "informational",
+    "audience": "mirasçılar",
+    "priority": 7,
+    "suggestedSlug": "mirascilar-arasinda-mal-paylasimi",
+    "topicSimilarityKey": "miras-hukuku-mirascilar-arasinda-mal-paylasimi",
+    "internalLinks": [
+      "/adana-miras-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Kardeşler arasında miras anlaşmazlığı",
+    "primaryKeyword": "kardeşler arasında miras anlaşmazlığı",
+    "secondaryKeywords": [
+      "Miras Hukuku",
+      "mirasçılar"
+    ],
+    "pillar": "Miras Hukuku",
+    "pillarSlug": "/adana-miras-avukati/",
+    "searchIntent": "informational",
+    "audience": "mirasçılar",
+    "priority": 7,
+    "suggestedSlug": "kardesler-arasinda-miras-anlasmazligi",
+    "topicSimilarityKey": "miras-hukuku-kardesler-arasinda-miras-anlasmazligi",
+    "internalLinks": [
+      "/adana-miras-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Miras paylaşım davası",
+    "primaryKeyword": "miras paylaşım davası",
+    "secondaryKeywords": [
+      "Miras Hukuku",
+      "mirasçılar"
+    ],
+    "pillar": "Miras Hukuku",
+    "pillarSlug": "/adana-miras-avukati/",
+    "searchIntent": "informational",
+    "audience": "mirasçılar",
+    "priority": 7,
+    "suggestedSlug": "miras-paylasim-davasi",
+    "topicSimilarityKey": "miras-hukuku-miras-paylasim-davasi",
+    "internalLinks": [
+      "/adana-miras-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Miras kalan malın satışı",
+    "primaryKeyword": "miras kalan malın satışı",
+    "secondaryKeywords": [
+      "Miras Hukuku",
+      "mirasçılar"
+    ],
+    "pillar": "Miras Hukuku",
+    "pillarSlug": "/adana-miras-avukati/",
+    "searchIntent": "informational",
+    "audience": "mirasçılar",
+    "priority": 7,
+    "suggestedSlug": "miras-kalan-malin-satisi",
+    "topicSimilarityKey": "miras-hukuku-miras-kalan-malin-satisi",
+    "internalLinks": [
+      "/adana-miras-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Miras kalan taşınmazda ecrimisil",
+    "primaryKeyword": "miras kalan taşınmazda ecrimisil",
+    "secondaryKeywords": [
+      "Miras Hukuku",
+      "mirasçılar"
+    ],
+    "pillar": "Miras Hukuku",
+    "pillarSlug": "/adana-miras-avukati/",
+    "searchIntent": "informational",
+    "audience": "mirasçılar",
+    "priority": 7,
+    "suggestedSlug": "miras-kalan-tasinmazda-ecrimisil",
+    "topicSimilarityKey": "miras-hukuku-miras-kalan-tasinmazda-ecrimisil",
+    "internalLinks": [
+      "/adana-miras-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Mirasçının taşınmazı kullanması",
+    "primaryKeyword": "mirasçının taşınmazı kullanması",
+    "secondaryKeywords": [
+      "Miras Hukuku",
+      "mirasçılar"
+    ],
+    "pillar": "Miras Hukuku",
+    "pillarSlug": "/adana-miras-avukati/",
+    "searchIntent": "informational",
+    "audience": "mirasçılar",
+    "priority": 7,
+    "suggestedSlug": "mirascinin-tasinmazi-kullanmasi",
+    "topicSimilarityKey": "miras-hukuku-mirascinin-tasinmazi-kullanmasi",
+    "internalLinks": [
+      "/adana-miras-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Miras kalan evde oturan mirasçı",
+    "primaryKeyword": "miras kalan evde oturan mirasçı",
+    "secondaryKeywords": [
+      "Miras Hukuku",
+      "mirasçılar"
+    ],
+    "pillar": "Miras Hukuku",
+    "pillarSlug": "/adana-miras-avukati/",
+    "searchIntent": "informational",
+    "audience": "mirasçılar",
+    "priority": 7,
+    "suggestedSlug": "miras-kalan-evde-oturan-mirasci",
+    "topicSimilarityKey": "miras-hukuku-miras-kalan-evde-oturan-mirasci",
+    "internalLinks": [
+      "/adana-miras-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Miras kalan evden kira alınması",
+    "primaryKeyword": "miras kalan evden kira alınması",
+    "secondaryKeywords": [
+      "Miras Hukuku",
+      "mirasçılar"
+    ],
+    "pillar": "Miras Hukuku",
+    "pillarSlug": "/adana-miras-avukati/",
+    "searchIntent": "informational",
+    "audience": "mirasçılar",
+    "priority": 7,
+    "suggestedSlug": "miras-kalan-evden-kira-alinmasi",
+    "topicSimilarityKey": "miras-hukuku-miras-kalan-evden-kira-alinmasi",
+    "internalLinks": [
+      "/adana-miras-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Miras kalan taşınmazın değer tespiti",
+    "primaryKeyword": "miras kalan taşınmazın değer tespiti",
+    "secondaryKeywords": [
+      "Miras Hukuku",
+      "mirasçılar"
+    ],
+    "pillar": "Miras Hukuku",
+    "pillarSlug": "/adana-miras-avukati/",
+    "searchIntent": "informational",
+    "audience": "mirasçılar",
+    "priority": 7,
+    "suggestedSlug": "miras-kalan-tasinmazin-deger-tespiti",
+    "topicSimilarityKey": "miras-hukuku-miras-kalan-tasinmazin-deger-tespiti",
+    "internalLinks": [
+      "/adana-miras-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Muris muvazaası davası",
+    "primaryKeyword": "muris muvazaası davası",
+    "secondaryKeywords": [
+      "Miras Hukuku",
+      "mirasçılar"
+    ],
+    "pillar": "Miras Hukuku",
+    "pillarSlug": "/adana-miras-avukati/",
+    "searchIntent": "informational",
+    "audience": "mirasçılar",
+    "priority": 7,
+    "suggestedSlug": "muris-muvazaasi-davasi",
+    "topicSimilarityKey": "miras-hukuku-muris-muvazaasi-davasi",
+    "internalLinks": [
+      "/adana-miras-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Mirastan mal kaçırma",
+    "primaryKeyword": "mirastan mal kaçırma",
+    "secondaryKeywords": [
+      "Miras Hukuku",
+      "mirasçılar"
+    ],
+    "pillar": "Miras Hukuku",
+    "pillarSlug": "/adana-miras-avukati/",
+    "searchIntent": "informational",
+    "audience": "mirasçılar",
+    "priority": 7,
+    "suggestedSlug": "mirastan-mal-kacirma",
+    "topicSimilarityKey": "miras-hukuku-mirastan-mal-kacirma",
+    "internalLinks": [
+      "/adana-miras-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Saklı pay davası",
+    "primaryKeyword": "saklı pay davası",
+    "secondaryKeywords": [
+      "Miras Hukuku",
+      "mirasçılar"
+    ],
+    "pillar": "Miras Hukuku",
+    "pillarSlug": "/adana-miras-avukati/",
+    "searchIntent": "informational",
+    "audience": "mirasçılar",
+    "priority": 7,
+    "suggestedSlug": "sakli-pay-davasi",
+    "topicSimilarityKey": "miras-hukuku-sakli-pay-davasi",
+    "internalLinks": [
+      "/adana-miras-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Tenkis davası",
+    "primaryKeyword": "tenkis davası",
+    "secondaryKeywords": [
+      "Miras Hukuku",
+      "mirasçılar"
+    ],
+    "pillar": "Miras Hukuku",
+    "pillarSlug": "/adana-miras-avukati/",
+    "searchIntent": "informational",
+    "audience": "mirasçılar",
+    "priority": 7,
+    "suggestedSlug": "tenkis-davasi",
+    "topicSimilarityKey": "miras-hukuku-tenkis-davasi",
+    "internalLinks": [
+      "/adana-miras-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Vasiyetnamenin iptali davası",
+    "primaryKeyword": "vasiyetnamenin iptali davası",
+    "secondaryKeywords": [
+      "Miras Hukuku",
+      "mirasçılar"
+    ],
+    "pillar": "Miras Hukuku",
+    "pillarSlug": "/adana-miras-avukati/",
+    "searchIntent": "informational",
+    "audience": "mirasçılar",
+    "priority": 7,
+    "suggestedSlug": "vasiyetnamenin-iptali-davasi",
+    "topicSimilarityKey": "miras-hukuku-vasiyetnamenin-iptali-davasi",
+    "internalLinks": [
+      "/adana-miras-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Mirasın reddi",
+    "primaryKeyword": "mirasın reddi",
+    "secondaryKeywords": [
+      "Miras Hukuku",
+      "mirasçılar"
+    ],
+    "pillar": "Miras Hukuku",
+    "pillarSlug": "/adana-miras-avukati/",
+    "searchIntent": "informational",
+    "audience": "mirasçılar",
+    "priority": 7,
+    "suggestedSlug": "mirasin-reddi",
+    "topicSimilarityKey": "miras-hukuku-mirasin-reddi",
+    "internalLinks": [
+      "/adana-miras-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Mirasçılık belgesi nasıl alınır",
+    "primaryKeyword": "mirasçılık belgesi nasıl alınır",
+    "secondaryKeywords": [
+      "Miras Hukuku",
+      "mirasçılar"
+    ],
+    "pillar": "Miras Hukuku",
+    "pillarSlug": "/adana-miras-avukati/",
+    "searchIntent": "informational",
+    "audience": "mirasçılar",
+    "priority": 7,
+    "suggestedSlug": "mirascilik-belgesi-nasil-alinir",
+    "topicSimilarityKey": "miras-hukuku-mirascilik-belgesi-nasil-alinir",
+    "internalLinks": [
+      "/adana-miras-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Veraset ilamı nedir",
+    "primaryKeyword": "veraset ilamı nedir",
+    "secondaryKeywords": [
+      "Miras Hukuku",
+      "mirasçılar"
+    ],
+    "pillar": "Miras Hukuku",
+    "pillarSlug": "/adana-miras-avukati/",
+    "searchIntent": "informational",
+    "audience": "mirasçılar",
+    "priority": 7,
+    "suggestedSlug": "veraset-ilami-nedir",
+    "topicSimilarityKey": "miras-hukuku-veraset-ilami-nedir",
+    "internalLinks": [
+      "/adana-miras-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Intikal işlemleri nasıl yapılır",
+    "primaryKeyword": "intikal işlemleri nasıl yapılır",
+    "secondaryKeywords": [
+      "Miras Hukuku",
+      "mirasçılar"
+    ],
+    "pillar": "Miras Hukuku",
+    "pillarSlug": "/adana-miras-avukati/",
+    "searchIntent": "informational",
+    "audience": "mirasçılar",
+    "priority": 7,
+    "suggestedSlug": "intikal-islemleri-nasil-yapilir",
+    "topicSimilarityKey": "miras-hukuku-intikal-islemleri-nasil-yapilir",
+    "internalLinks": [
+      "/adana-miras-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Tapuda miras intikali",
+    "primaryKeyword": "tapuda miras intikali",
+    "secondaryKeywords": [
+      "Miras Hukuku",
+      "mirasçılar"
+    ],
+    "pillar": "Miras Hukuku",
+    "pillarSlug": "/adana-miras-avukati/",
+    "searchIntent": "informational",
+    "audience": "mirasçılar",
+    "priority": 7,
+    "suggestedSlug": "tapuda-miras-intikali",
+    "topicSimilarityKey": "miras-hukuku-tapuda-miras-intikali",
+    "internalLinks": [
+      "/adana-miras-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Boşanmada mal paylaşımı nasıl yapılır",
+    "primaryKeyword": "boşanmada mal paylaşımı nasıl yapılır",
+    "secondaryKeywords": [
+      "Boşanmada Mal Paylaşımı",
+      "eşler"
+    ],
+    "pillar": "Boşanmada Mal Paylaşımı",
+    "pillarSlug": "/mal-paylasimi/",
+    "searchIntent": "informational",
+    "audience": "eşler",
+    "priority": 6,
+    "suggestedSlug": "bosanmada-mal-paylasimi-nasil-yapilir",
+    "topicSimilarityKey": "bosanmada-mal-paylasimi-bosanmada-mal-paylasimi-nasil-yapilir",
+    "internalLinks": [
+      "/mal-paylasimi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Boşanmada ev paylaşımı",
+    "primaryKeyword": "boşanmada ev paylaşımı",
+    "secondaryKeywords": [
+      "Boşanmada Mal Paylaşımı",
+      "eşler"
+    ],
+    "pillar": "Boşanmada Mal Paylaşımı",
+    "pillarSlug": "/mal-paylasimi/",
+    "searchIntent": "informational",
+    "audience": "eşler",
+    "priority": 6,
+    "suggestedSlug": "bosanmada-ev-paylasimi",
+    "topicSimilarityKey": "bosanmada-mal-paylasimi-bosanmada-ev-paylasimi",
+    "internalLinks": [
+      "/mal-paylasimi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Boşanmada araba paylaşımı",
+    "primaryKeyword": "boşanmada araba paylaşımı",
+    "secondaryKeywords": [
+      "Boşanmada Mal Paylaşımı",
+      "eşler"
+    ],
+    "pillar": "Boşanmada Mal Paylaşımı",
+    "pillarSlug": "/mal-paylasimi/",
+    "searchIntent": "informational",
+    "audience": "eşler",
+    "priority": 6,
+    "suggestedSlug": "bosanmada-araba-paylasimi",
+    "topicSimilarityKey": "bosanmada-mal-paylasimi-bosanmada-araba-paylasimi",
+    "internalLinks": [
+      "/mal-paylasimi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Boşanmada arsa paylaşımı",
+    "primaryKeyword": "boşanmada arsa paylaşımı",
+    "secondaryKeywords": [
+      "Boşanmada Mal Paylaşımı",
+      "eşler"
+    ],
+    "pillar": "Boşanmada Mal Paylaşımı",
+    "pillarSlug": "/mal-paylasimi/",
+    "searchIntent": "informational",
+    "audience": "eşler",
+    "priority": 6,
+    "suggestedSlug": "bosanmada-arsa-paylasimi",
+    "topicSimilarityKey": "bosanmada-mal-paylasimi-bosanmada-arsa-paylasimi",
+    "internalLinks": [
+      "/mal-paylasimi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Boşanmada şirket hissesi paylaşımı",
+    "primaryKeyword": "boşanmada şirket hissesi paylaşımı",
+    "secondaryKeywords": [
+      "Boşanmada Mal Paylaşımı",
+      "eşler"
+    ],
+    "pillar": "Boşanmada Mal Paylaşımı",
+    "pillarSlug": "/mal-paylasimi/",
+    "searchIntent": "informational",
+    "audience": "eşler",
+    "priority": 6,
+    "suggestedSlug": "bosanmada-sirket-hissesi-paylasimi",
+    "topicSimilarityKey": "bosanmada-mal-paylasimi-bosanmada-sirket-hissesi-paylasimi",
+    "internalLinks": [
+      "/mal-paylasimi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Boşanmada banka hesabı paylaşımı",
+    "primaryKeyword": "boşanmada banka hesabı paylaşımı",
+    "secondaryKeywords": [
+      "Boşanmada Mal Paylaşımı",
+      "eşler"
+    ],
+    "pillar": "Boşanmada Mal Paylaşımı",
+    "pillarSlug": "/mal-paylasimi/",
+    "searchIntent": "informational",
+    "audience": "eşler",
+    "priority": 6,
+    "suggestedSlug": "bosanmada-banka-hesabi-paylasimi",
+    "topicSimilarityKey": "bosanmada-mal-paylasimi-bosanmada-banka-hesabi-paylasimi",
+    "internalLinks": [
+      "/mal-paylasimi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Boşanmada ziynet eşyası",
+    "primaryKeyword": "boşanmada ziynet eşyası",
+    "secondaryKeywords": [
+      "Boşanmada Mal Paylaşımı",
+      "eşler"
+    ],
+    "pillar": "Boşanmada Mal Paylaşımı",
+    "pillarSlug": "/mal-paylasimi/",
+    "searchIntent": "informational",
+    "audience": "eşler",
+    "priority": 6,
+    "suggestedSlug": "bosanmada-ziynet-esyasi",
+    "topicSimilarityKey": "bosanmada-mal-paylasimi-bosanmada-ziynet-esyasi",
+    "internalLinks": [
+      "/mal-paylasimi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Mal rejiminin tasfiyesi davası",
+    "primaryKeyword": "mal rejiminin tasfiyesi davası",
+    "secondaryKeywords": [
+      "Boşanmada Mal Paylaşımı",
+      "eşler"
+    ],
+    "pillar": "Boşanmada Mal Paylaşımı",
+    "pillarSlug": "/mal-paylasimi/",
+    "searchIntent": "informational",
+    "audience": "eşler",
+    "priority": 6,
+    "suggestedSlug": "mal-rejiminin-tasfiyesi-davasi",
+    "topicSimilarityKey": "bosanmada-mal-paylasimi-mal-rejiminin-tasfiyesi-davasi",
+    "internalLinks": [
+      "/mal-paylasimi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Katılma alacağı davası",
+    "primaryKeyword": "katılma alacağı davası",
+    "secondaryKeywords": [
+      "Boşanmada Mal Paylaşımı",
+      "eşler"
+    ],
+    "pillar": "Boşanmada Mal Paylaşımı",
+    "pillarSlug": "/mal-paylasimi/",
+    "searchIntent": "informational",
+    "audience": "eşler",
+    "priority": 6,
+    "suggestedSlug": "katilma-alacagi-davasi",
+    "topicSimilarityKey": "bosanmada-mal-paylasimi-katilma-alacagi-davasi",
+    "internalLinks": [
+      "/mal-paylasimi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Değer artış payı alacağı",
+    "primaryKeyword": "değer artış payı alacağı",
+    "secondaryKeywords": [
+      "Boşanmada Mal Paylaşımı",
+      "eşler"
+    ],
+    "pillar": "Boşanmada Mal Paylaşımı",
+    "pillarSlug": "/mal-paylasimi/",
+    "searchIntent": "informational",
+    "audience": "eşler",
+    "priority": 6,
+    "suggestedSlug": "deger-artis-payi-alacagi",
+    "topicSimilarityKey": "bosanmada-mal-paylasimi-deger-artis-payi-alacagi",
+    "internalLinks": [
+      "/mal-paylasimi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Katkı payı alacağı",
+    "primaryKeyword": "katkı payı alacağı",
+    "secondaryKeywords": [
+      "Boşanmada Mal Paylaşımı",
+      "eşler"
+    ],
+    "pillar": "Boşanmada Mal Paylaşımı",
+    "pillarSlug": "/mal-paylasimi/",
+    "searchIntent": "informational",
+    "audience": "eşler",
+    "priority": 6,
+    "suggestedSlug": "katki-payi-alacagi",
+    "topicSimilarityKey": "bosanmada-mal-paylasimi-katki-payi-alacagi",
+    "internalLinks": [
+      "/mal-paylasimi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Edinilmiş mal nedir",
+    "primaryKeyword": "edinilmiş mal nedir",
+    "secondaryKeywords": [
+      "Boşanmada Mal Paylaşımı",
+      "eşler"
+    ],
+    "pillar": "Boşanmada Mal Paylaşımı",
+    "pillarSlug": "/mal-paylasimi/",
+    "searchIntent": "informational",
+    "audience": "eşler",
+    "priority": 6,
+    "suggestedSlug": "edinilmis-mal-nedir",
+    "topicSimilarityKey": "bosanmada-mal-paylasimi-edinilmis-mal-nedir",
+    "internalLinks": [
+      "/mal-paylasimi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Kişisel mal nedir",
+    "primaryKeyword": "kişisel mal nedir",
+    "secondaryKeywords": [
+      "Boşanmada Mal Paylaşımı",
+      "eşler"
+    ],
+    "pillar": "Boşanmada Mal Paylaşımı",
+    "pillarSlug": "/mal-paylasimi/",
+    "searchIntent": "informational",
+    "audience": "eşler",
+    "priority": 6,
+    "suggestedSlug": "kisisel-mal-nedir",
+    "topicSimilarityKey": "bosanmada-mal-paylasimi-kisisel-mal-nedir",
+    "internalLinks": [
+      "/mal-paylasimi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Evlilikten önce alınan ev paylaşılır mı",
+    "primaryKeyword": "evlilikten önce alınan ev paylaşılır mı",
+    "secondaryKeywords": [
+      "Boşanmada Mal Paylaşımı",
+      "eşler"
+    ],
+    "pillar": "Boşanmada Mal Paylaşımı",
+    "pillarSlug": "/mal-paylasimi/",
+    "searchIntent": "informational",
+    "audience": "eşler",
+    "priority": 6,
+    "suggestedSlug": "evlilikten-once-alinan-ev-paylasilir-mi",
+    "topicSimilarityKey": "bosanmada-mal-paylasimi-evlilikten-once-alinan-ev-paylasilir-mi",
+    "internalLinks": [
+      "/mal-paylasimi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Evlilik içinde alınan ev kime ait olur",
+    "primaryKeyword": "evlilik içinde alınan ev kime ait olur",
+    "secondaryKeywords": [
+      "Boşanmada Mal Paylaşımı",
+      "eşler"
+    ],
+    "pillar": "Boşanmada Mal Paylaşımı",
+    "pillarSlug": "/mal-paylasimi/",
+    "searchIntent": "informational",
+    "audience": "eşler",
+    "priority": 6,
+    "suggestedSlug": "evlilik-icinde-alinan-ev-kime-ait-olur",
+    "topicSimilarityKey": "bosanmada-mal-paylasimi-evlilik-icinde-alinan-ev-kime-ait-olur",
+    "internalLinks": [
+      "/mal-paylasimi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Krediyle alınan ev boşanmada nasıl paylaşılır",
+    "primaryKeyword": "krediyle alınan ev boşanmada nasıl paylaşılır",
+    "secondaryKeywords": [
+      "Boşanmada Mal Paylaşımı",
+      "eşler"
+    ],
+    "pillar": "Boşanmada Mal Paylaşımı",
+    "pillarSlug": "/mal-paylasimi/",
+    "searchIntent": "informational",
+    "audience": "eşler",
+    "priority": 6,
+    "suggestedSlug": "krediyle-alinan-ev-bosanmada-nasil-paylasilir",
+    "topicSimilarityKey": "bosanmada-mal-paylasimi-krediyle-alinan-ev-bosanmada-nasil-paylasilir",
+    "internalLinks": [
+      "/mal-paylasimi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Eş adına kayıtlı evde diğer eşin hakkı",
+    "primaryKeyword": "eş adına kayıtlı evde diğer eşin hakkı",
+    "secondaryKeywords": [
+      "Boşanmada Mal Paylaşımı",
+      "eşler"
+    ],
+    "pillar": "Boşanmada Mal Paylaşımı",
+    "pillarSlug": "/mal-paylasimi/",
+    "searchIntent": "informational",
+    "audience": "eşler",
+    "priority": 6,
+    "suggestedSlug": "es-adina-kayitli-evde-diger-esin-hakki",
+    "topicSimilarityKey": "bosanmada-mal-paylasimi-es-adina-kayitli-evde-diger-esin-hakki",
+    "internalLinks": [
+      "/mal-paylasimi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Boşanmada tapu kimin üzerindeyse ev onun mu",
+    "primaryKeyword": "boşanmada tapu kimin üzerindeyse ev onun mu",
+    "secondaryKeywords": [
+      "Boşanmada Mal Paylaşımı",
+      "eşler"
+    ],
+    "pillar": "Boşanmada Mal Paylaşımı",
+    "pillarSlug": "/mal-paylasimi/",
+    "searchIntent": "informational",
+    "audience": "eşler",
+    "priority": 6,
+    "suggestedSlug": "bosanmada-tapu-kimin-uzerindeyse-ev-onun-mu",
+    "topicSimilarityKey": "bosanmada-mal-paylasimi-bosanmada-tapu-kimin-uzerindeyse-ev-onun-mu",
+    "internalLinks": [
+      "/mal-paylasimi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Boşanmada mal kaçırma",
+    "primaryKeyword": "boşanmada mal kaçırma",
+    "secondaryKeywords": [
+      "Boşanmada Mal Paylaşımı",
+      "eşler"
+    ],
+    "pillar": "Boşanmada Mal Paylaşımı",
+    "pillarSlug": "/mal-paylasimi/",
+    "searchIntent": "informational",
+    "audience": "eşler",
+    "priority": 6,
+    "suggestedSlug": "bosanmada-mal-kacirma",
+    "topicSimilarityKey": "bosanmada-mal-paylasimi-bosanmada-mal-kacirma",
+    "internalLinks": [
+      "/mal-paylasimi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Boşanmadan önce mal devri",
+    "primaryKeyword": "boşanmadan önce mal devri",
+    "secondaryKeywords": [
+      "Boşanmada Mal Paylaşımı",
+      "eşler"
+    ],
+    "pillar": "Boşanmada Mal Paylaşımı",
+    "pillarSlug": "/mal-paylasimi/",
+    "searchIntent": "informational",
+    "audience": "eşler",
+    "priority": 6,
+    "suggestedSlug": "bosanmadan-once-mal-devri",
+    "topicSimilarityKey": "bosanmada-mal-paylasimi-bosanmadan-once-mal-devri",
+    "internalLinks": [
+      "/mal-paylasimi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Boşanma davası devam ederken mal satışı",
+    "primaryKeyword": "boşanma davası devam ederken mal satışı",
+    "secondaryKeywords": [
+      "Boşanmada Mal Paylaşımı",
+      "eşler"
+    ],
+    "pillar": "Boşanmada Mal Paylaşımı",
+    "pillarSlug": "/mal-paylasimi/",
+    "searchIntent": "informational",
+    "audience": "eşler",
+    "priority": 6,
+    "suggestedSlug": "bosanma-davasi-devam-ederken-mal-satisi",
+    "topicSimilarityKey": "bosanmada-mal-paylasimi-bosanma-davasi-devam-ederken-mal-satisi",
+    "internalLinks": [
+      "/mal-paylasimi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Anlaşmalı boşanmada mal paylaşımı",
+    "primaryKeyword": "anlaşmalı boşanmada mal paylaşımı",
+    "secondaryKeywords": [
+      "Boşanmada Mal Paylaşımı",
+      "eşler"
+    ],
+    "pillar": "Boşanmada Mal Paylaşımı",
+    "pillarSlug": "/mal-paylasimi/",
+    "searchIntent": "informational",
+    "audience": "eşler",
+    "priority": 6,
+    "suggestedSlug": "anlasmali-bosanmada-mal-paylasimi",
+    "topicSimilarityKey": "bosanmada-mal-paylasimi-anlasmali-bosanmada-mal-paylasimi",
+    "internalLinks": [
+      "/mal-paylasimi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Çekişmeli boşanmada mal paylaşımı",
+    "primaryKeyword": "çekişmeli boşanmada mal paylaşımı",
+    "secondaryKeywords": [
+      "Boşanmada Mal Paylaşımı",
+      "eşler"
+    ],
+    "pillar": "Boşanmada Mal Paylaşımı",
+    "pillarSlug": "/mal-paylasimi/",
+    "searchIntent": "informational",
+    "audience": "eşler",
+    "priority": 6,
+    "suggestedSlug": "cekismeli-bosanmada-mal-paylasimi",
+    "topicSimilarityKey": "bosanmada-mal-paylasimi-cekismeli-bosanmada-mal-paylasimi",
+    "internalLinks": [
+      "/mal-paylasimi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Mal paylaşımı davası ne zaman açılır",
+    "primaryKeyword": "mal paylaşımı davası ne zaman açılır",
+    "secondaryKeywords": [
+      "Boşanmada Mal Paylaşımı",
+      "eşler"
+    ],
+    "pillar": "Boşanmada Mal Paylaşımı",
+    "pillarSlug": "/mal-paylasimi/",
+    "searchIntent": "informational",
+    "audience": "eşler",
+    "priority": 6,
+    "suggestedSlug": "mal-paylasimi-davasi-ne-zaman-acilir",
+    "topicSimilarityKey": "bosanmada-mal-paylasimi-mal-paylasimi-davasi-ne-zaman-acilir",
+    "internalLinks": [
+      "/mal-paylasimi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Mal paylaşımı davası ne kadar sürer",
+    "primaryKeyword": "mal paylaşımı davası ne kadar sürer",
+    "secondaryKeywords": [
+      "Boşanmada Mal Paylaşımı",
+      "eşler"
+    ],
+    "pillar": "Boşanmada Mal Paylaşımı",
+    "pillarSlug": "/mal-paylasimi/",
+    "searchIntent": "informational",
+    "audience": "eşler",
+    "priority": 6,
+    "suggestedSlug": "mal-paylasimi-davasi-ne-kadar-surer",
+    "topicSimilarityKey": "bosanmada-mal-paylasimi-mal-paylasimi-davasi-ne-kadar-surer",
+    "internalLinks": [
+      "/mal-paylasimi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Mal paylaşımı davasında zamanaşımı",
+    "primaryKeyword": "mal paylaşımı davasında zamanaşımı",
+    "secondaryKeywords": [
+      "Boşanmada Mal Paylaşımı",
+      "eşler"
+    ],
+    "pillar": "Boşanmada Mal Paylaşımı",
+    "pillarSlug": "/mal-paylasimi/",
+    "searchIntent": "informational",
+    "audience": "eşler",
+    "priority": 6,
+    "suggestedSlug": "mal-paylasimi-davasinda-zamanasimi",
+    "topicSimilarityKey": "bosanmada-mal-paylasimi-mal-paylasimi-davasinda-zamanasimi",
+    "internalLinks": [
+      "/mal-paylasimi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Boşanmada miras kalan mal paylaşılır mı",
+    "primaryKeyword": "boşanmada miras kalan mal paylaşılır mı",
+    "secondaryKeywords": [
+      "Boşanmada Mal Paylaşımı",
+      "eşler"
+    ],
+    "pillar": "Boşanmada Mal Paylaşımı",
+    "pillarSlug": "/mal-paylasimi/",
+    "searchIntent": "informational",
+    "audience": "eşler",
+    "priority": 6,
+    "suggestedSlug": "bosanmada-miras-kalan-mal-paylasilir-mi",
+    "topicSimilarityKey": "bosanmada-mal-paylasimi-bosanmada-miras-kalan-mal-paylasilir-mi",
+    "internalLinks": [
+      "/mal-paylasimi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Boşanmada aileden kalan ev paylaşılır mı",
+    "primaryKeyword": "boşanmada aileden kalan ev paylaşılır mı",
+    "secondaryKeywords": [
+      "Boşanmada Mal Paylaşımı",
+      "eşler"
+    ],
+    "pillar": "Boşanmada Mal Paylaşımı",
+    "pillarSlug": "/mal-paylasimi/",
+    "searchIntent": "informational",
+    "audience": "eşler",
+    "priority": 6,
+    "suggestedSlug": "bosanmada-aileden-kalan-ev-paylasilir-mi",
+    "topicSimilarityKey": "bosanmada-mal-paylasimi-bosanmada-aileden-kalan-ev-paylasilir-mi",
+    "internalLinks": [
+      "/mal-paylasimi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Boşanmada şirket malları paylaşılır mı",
+    "primaryKeyword": "boşanmada şirket malları paylaşılır mı",
+    "secondaryKeywords": [
+      "Boşanmada Mal Paylaşımı",
+      "eşler"
+    ],
+    "pillar": "Boşanmada Mal Paylaşımı",
+    "pillarSlug": "/mal-paylasimi/",
+    "searchIntent": "informational",
+    "audience": "eşler",
+    "priority": 6,
+    "suggestedSlug": "bosanmada-sirket-mallari-paylasilir-mi",
+    "topicSimilarityKey": "bosanmada-mal-paylasimi-bosanmada-sirket-mallari-paylasilir-mi",
+    "internalLinks": [
+      "/mal-paylasimi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Boşanmada emekli ikramiyesi paylaşılır mı",
+    "primaryKeyword": "boşanmada emekli ikramiyesi paylaşılır mı",
+    "secondaryKeywords": [
+      "Boşanmada Mal Paylaşımı",
+      "eşler"
+    ],
+    "pillar": "Boşanmada Mal Paylaşımı",
+    "pillarSlug": "/mal-paylasimi/",
+    "searchIntent": "informational",
+    "audience": "eşler",
+    "priority": 6,
+    "suggestedSlug": "bosanmada-emekli-ikramiyesi-paylasilir-mi",
+    "topicSimilarityKey": "bosanmada-mal-paylasimi-bosanmada-emekli-ikramiyesi-paylasilir-mi",
+    "internalLinks": [
+      "/mal-paylasimi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Adana gayrimenkul avukatı",
+    "primaryKeyword": "Adana gayrimenkul avukatı",
+    "secondaryKeywords": [
+      "Gayrimenkul Hukuku",
+      "taşınmaz sahipleri"
+    ],
+    "pillar": "Gayrimenkul Hukuku",
+    "pillarSlug": "/adana-gayrimenkul-avukati/",
+    "searchIntent": "informational",
+    "audience": "taşınmaz sahipleri",
+    "priority": 8,
+    "suggestedSlug": "adana-gayrimenkul-avukati",
+    "topicSimilarityKey": "gayrimenkul-hukuku-adana-gayrimenkul-avukati",
+    "internalLinks": [
+      "/adana-gayrimenkul-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Adana ortaklığın giderilmesi avukatı",
+    "primaryKeyword": "Adana ortaklığın giderilmesi avukatı",
+    "secondaryKeywords": [
+      "Ortaklığın Giderilmesi Davası",
+      "taşınmaz sahipleri"
+    ],
+    "pillar": "Ortaklığın Giderilmesi Davası",
+    "pillarSlug": "/ortakligin-giderilmesi-davasi/",
+    "searchIntent": "informational",
+    "audience": "taşınmaz sahipleri",
+    "priority": 8,
+    "suggestedSlug": "adana-ortakligin-giderilmesi-avukati",
+    "topicSimilarityKey": "ortakligin-giderilmesi-adana-ortakligin-giderilmesi-avukati",
+    "internalLinks": [
+      "/ortakligin-giderilmesi-davasi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Adana izale-i şuyu avukatı",
+    "primaryKeyword": "Adana izale-i şuyu avukatı",
+    "secondaryKeywords": [
+      "İzale-i Şuyu Davası",
+      "taşınmaz sahipleri"
+    ],
+    "pillar": "İzale-i Şuyu Davası",
+    "pillarSlug": "/ortakligin-giderilmesi-davasi/",
+    "searchIntent": "informational",
+    "audience": "taşınmaz sahipleri",
+    "priority": 8,
+    "suggestedSlug": "adana-izale-i-suyu-avukati",
+    "topicSimilarityKey": "ortakligin-giderilmesi-adana-izale-i-suyu-avukati",
+    "internalLinks": [
+      "/ortakligin-giderilmesi-davasi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Adana miras avukatı",
+    "primaryKeyword": "Adana miras avukatı",
+    "secondaryKeywords": [
+      "Miras Hukuku",
+      "taşınmaz sahipleri"
+    ],
+    "pillar": "Miras Hukuku",
+    "pillarSlug": "/adana-miras-avukati/",
+    "searchIntent": "informational",
+    "audience": "taşınmaz sahipleri",
+    "priority": 8,
+    "suggestedSlug": "adana-miras-avukati",
+    "topicSimilarityKey": "miras-hukuku-adana-miras-avukati",
+    "internalLinks": [
+      "/adana-miras-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Adana mal paylaşımı avukatı",
+    "primaryKeyword": "Adana mal paylaşımı avukatı",
+    "secondaryKeywords": [
+      "Boşanmada Mal Paylaşımı",
+      "taşınmaz sahipleri"
+    ],
+    "pillar": "Boşanmada Mal Paylaşımı",
+    "pillarSlug": "/mal-paylasimi/",
+    "searchIntent": "informational",
+    "audience": "taşınmaz sahipleri",
+    "priority": 8,
+    "suggestedSlug": "adana-mal-paylasimi-avukati",
+    "topicSimilarityKey": "bosanmada-mal-paylasimi-adana-mal-paylasimi-avukati",
+    "internalLinks": [
+      "/mal-paylasimi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Adana tapu davası avukatı",
+    "primaryKeyword": "Adana tapu davası avukatı",
+    "secondaryKeywords": [
+      "Tapu İptal ve Tescil Davası",
+      "taşınmaz sahipleri"
+    ],
+    "pillar": "Tapu İptal ve Tescil Davası",
+    "pillarSlug": "/tapu-iptal-ve-tescil-davasi/",
+    "searchIntent": "informational",
+    "audience": "taşınmaz sahipleri",
+    "priority": 8,
+    "suggestedSlug": "adana-tapu-davasi-avukati",
+    "topicSimilarityKey": "tapu-iptal-tescil-adana-tapu-davasi-avukati",
+    "internalLinks": [
+      "/tapu-iptal-ve-tescil-davasi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Adana miras kalan taşınmaz davası",
+    "primaryKeyword": "Adana miras kalan taşınmaz davası",
+    "secondaryKeywords": [
+      "Miras Kalan Taşınmazlar",
+      "taşınmaz sahipleri"
+    ],
+    "pillar": "Miras Kalan Taşınmazlar",
+    "pillarSlug": "/adana-miras-avukati/",
+    "searchIntent": "informational",
+    "audience": "taşınmaz sahipleri",
+    "priority": 8,
+    "suggestedSlug": "adana-miras-kalan-tasinmaz-davasi",
+    "topicSimilarityKey": "miras-tasinmaz-paylasimi-adana-miras-kalan-tasinmaz-davasi",
+    "internalLinks": [
+      "/adana-miras-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Adana hisseli tapu davası",
+    "primaryKeyword": "Adana hisseli tapu davası",
+    "secondaryKeywords": [
+      "Gayrimenkul Hukuku",
+      "taşınmaz sahipleri"
+    ],
+    "pillar": "Gayrimenkul Hukuku",
+    "pillarSlug": "/adana-gayrimenkul-avukati/",
+    "searchIntent": "informational",
+    "audience": "taşınmaz sahipleri",
+    "priority": 8,
+    "suggestedSlug": "adana-hisseli-tapu-davasi",
+    "topicSimilarityKey": "gayrimenkul-hukuku-adana-hisseli-tapu-davasi",
+    "internalLinks": [
+      "/adana-gayrimenkul-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Adana boşanmada mal paylaşımı",
+    "primaryKeyword": "Adana boşanmada mal paylaşımı",
+    "secondaryKeywords": [
+      "Boşanmada Mal Paylaşımı",
+      "taşınmaz sahipleri"
+    ],
+    "pillar": "Boşanmada Mal Paylaşımı",
+    "pillarSlug": "/mal-paylasimi/",
+    "searchIntent": "informational",
+    "audience": "taşınmaz sahipleri",
+    "priority": 8,
+    "suggestedSlug": "adana-bosanmada-mal-paylasimi",
+    "topicSimilarityKey": "bosanmada-mal-paylasimi-adana-bosanmada-mal-paylasimi",
+    "internalLinks": [
+      "/mal-paylasimi/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  },
+  {
+    "title": "Adana gayrimenkul miras avukatı",
+    "primaryKeyword": "Adana gayrimenkul miras avukatı",
+    "secondaryKeywords": [
+      "Miras Hukuku",
+      "taşınmaz sahipleri"
+    ],
+    "pillar": "Miras Hukuku",
+    "pillarSlug": "/adana-miras-avukati/",
+    "searchIntent": "informational",
+    "audience": "taşınmaz sahipleri",
+    "priority": 8,
+    "suggestedSlug": "adana-gayrimenkul-miras-avukati",
+    "topicSimilarityKey": "miras-hukuku-adana-gayrimenkul-miras-avukati",
+    "internalLinks": [
+      "/adana-miras-avukati/",
+      "/makaleler/"
+    ],
+    "isPillar": false
+  }
+]

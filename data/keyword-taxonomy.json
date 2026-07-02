@@ -1,0 +1,111 @@
+{
+  "practiceAreas": [
+    "Gayrimenkul Hukuku",
+    "Miras Hukuku",
+    "Aile Hukuku",
+    "Mal Rejimi",
+    "Tapu Davaları",
+    "Ortaklığın Giderilmesi",
+    "İzale-i Şuyu"
+  ],
+  "legalActions": [
+    "ortaklığın giderilmesi",
+    "izale-i şuyu",
+    "tapu iptal ve tescil",
+    "miras paylaşımı",
+    "mal paylaşımı",
+    "katılma alacağı",
+    "ecrimisil",
+    "tenkis",
+    "muris muvazaası",
+    "miras intikali",
+    "tapu kaydının düzeltilmesi",
+    "kadastro tespitine itiraz",
+    "saklı pay davası",
+    "vasiyetnamenin iptali",
+    "mal rejiminin tasfiyesi"
+  ],
+  "assetTypes": [
+    "ev",
+    "daire",
+    "arsa",
+    "tarla",
+    "taşınmaz",
+    "hisseli tapu",
+    "miras kalan ev",
+    "miras kalan arsa",
+    "aile konutu",
+    "krediyle alınan ev",
+    "miras kalan tarla",
+    "hisseli arsa"
+  ],
+  "intentModifiers": [
+    "nasıl açılır",
+    "ne kadar sürer",
+    "masrafları nelerdir",
+    "kimler açabilir",
+    "hangi mahkemede açılır",
+    "satış nasıl yapılır",
+    "anlaşma mümkün mü",
+    "dava şartları nelerdir",
+    "karar sonrası ne olur",
+    "dikkat edilmesi gerekenler",
+    "sık yapılan hatalar",
+    "belge ve deliller nelerdir",
+    "avukatlık ücreti",
+    "bilirkişi süreci",
+    "istinaf süreci"
+  ],
+  "audiences": [
+    "mirasçılar",
+    "kardeşler",
+    "hissedarlar",
+    "eşler",
+    "paydaşlar",
+    "taşınmaz sahipleri",
+    "boşanma sürecindeki eşler"
+  ],
+  "lastResortModifiers": [
+    "2026 güncel süreç",
+    "dava masrafları",
+    "yetkili mahkeme",
+    "karar sonrası süreç",
+    "belge listesi",
+    "delil toplama",
+    "uzlaşma imkanı",
+    "zamanaşımı süresi"
+  ],
+  "localSeoPrefixes": [
+    "Adana",
+    "Adana'da"
+  ],
+  "questionPatterns": [
+    "{assetType} için {legalAction} davası nasıl açılır?",
+    "{legalAction} davası {assetType} bakımından ne kadar sürer?",
+    "{audience} arasında {assetType} paylaşımı nasıl yapılır?",
+    "{assetType} üzerinde hissedarlar anlaşamazsa ne olur?",
+    "{legalAction} davasında satış bedeli nasıl paylaşılır?",
+    "{assetType} için {legalAction} davasında hangi belgeler gerekir?",
+    "{legalAction} davasında mahkeme hangi hususlara bakar?",
+    "{assetType} nedeniyle çıkan uyuşmazlıklarda hangi dava açılır?",
+    "{audience} için {legalAction} sürecinde dikkat edilmesi gerekenler",
+    "{legalAction} davası açmadan önce bilinmesi gerekenler"
+  ],
+  "pillarMapping": {
+    "Gayrimenkul Hukuku": "gayrimenkul-hukuku",
+    "Ortaklığın Giderilmesi Davası": "ortakligin-giderilmesi",
+    "İzale-i Şuyu Davası": "ortakligin-giderilmesi",
+    "Miras Hukuku": "miras-hukuku",
+    "Miras Kalan Taşınmazlar": "miras-tasinmaz-paylasimi",
+    "Boşanmada Mal Paylaşımı": "bosanmada-mal-paylasimi",
+    "Mal Rejiminin Tasfiyesi": "mal-rejiminin-tasfiyesi",
+    "Katılma Alacağı": "mal-rejiminin-tasfiyesi",
+    "Tapu İptal ve Tescil Davası": "tapu-iptal-tescil",
+    "Paylı Mülkiyet ve Elbirliği Mülkiyeti": "payli-elbirligi-mulkiyet",
+    "Kira Hukuku": "gayrimenkul-hukuku",
+    "Arsa, Tarla, Ev ve Daire Paylaşımı": "ortakligin-giderilmesi",
+    "Mirasçılar Arasında Mal Paylaşımı": "miras-hukuku",
+    "Satış Suretiyle Ortaklığın Giderilmesi": "ortakligin-giderilmesi",
+    "Aynen Taksim Yoluyla Ortaklığın Giderilmesi": "ortakligin-giderilmesi"
+  }
+}

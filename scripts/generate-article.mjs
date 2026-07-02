@@ -2,105 +2,82 @@ import { GoogleGenerativeAI } from '@google/generative-ai';
 import {
   loadEnv,
   readArticles,
+  readServices,
+  readPages,
   writeArticle,
   updateSitemap,
   slugify,
 } from './lib.mjs';
-
-const TOPIC_POOL = [
-  "Adana'da ortaklığın giderilmesi davası nasıl açılır?",
-  'Tapu iptal ve tescil davası hangi durumlarda açılır?',
-  'Miras kalan taşınmazın satışı nasıl yapılır?',
-  'Hisseli tapuda ortaklığın giderilmesi',
-  'İzale-i şuyu davasında satış süreci',
-  'Muris muvazaası nedeniyle tapu iptal davası',
-  'Adana gayrimenkul avukatı hangi davalara bakar?',
-  'Tapu kayıtlarında hata varsa ne yapılır?',
-  'Mirasçılar arasında taşınmaz paylaşımı',
-  'Paylı mülkiyet ve elbirliği mülkiyeti arasındaki fark',
-  'Hisseli taşınmazda satışa itiraz edilebilir mi?',
-  'Miras kalan evde oturan mirasçının hukuki durumu',
-  'Tapuda isim yanlışlığı nasıl düzeltilir?',
-  'Ortaklığın giderilmesi davasında açık artırma süreci',
-  "Adana'da tapu ve miras uyuşmazlıklarında dava süreci",
-];
+import { pickNextTopic, readAllExistingArticles } from './topic-utils.mjs';
 
 const PROHIBITED_PHRASES = [
   'en iyi avukat',
   'garantili sonuç',
   'kesin kazanılır',
   'kesin kazanır',
+  'en başarılı',
   '%100 başarı',
   'mutlaka kazanırsınız',
 ];
 
-function normalizeTopic(text) {
-  return text
-    .toLowerCase()
-    .replace(/[''"]/g, '')
-    .replace(/\s+/g, ' ')
-    .trim();
-}
+const DRY_RUN = process.argv.includes('--dry-run-topic');
 
-function getUsedTopics(articles) {
-  const used = new Set();
-  for (const article of articles) {
-    if (article.sourceTopic) {
-      used.add(normalizeTopic(article.sourceTopic));
-    }
-    used.add(normalizeTopic(article.title));
-    if (article.slug) {
-      used.add(normalizeTopic(article.slug.replace(/-/g, ' ')));
-    }
-  }
-  return used;
-}
+function buildPrompt(topicMeta, env) {
+  const wordTarget = topicMeta.isPillar ? '1500-2500' : '900-1400';
+  const internalLinks = (topicMeta.internalLinks || [])
+    .map((l) => `- ${l}`)
+    .join('\n');
 
-function pickNextTopic(articles) {
-  const used = getUsedTopics(articles);
-  const available = TOPIC_POOL.filter((topic) => !used.has(normalizeTopic(topic)));
-
-  if (available.length === 0) {
-    console.error('Hata: Tüm konu havuzu kullanıldı. Yeni konu eklenmeden makale üretilemez.');
-    process.exit(1);
-  }
-
-  const index = Math.floor(Math.random() * available.length);
-  return available[index];
-}
-
-function buildPrompt(topic, env) {
-  return `Sen Türkiye'de gayrimenkul ve miras hukuku alanında uzman bir hukuk içerik yazarısın.
+  return `Sen Türkiye'de gayrimenkul, miras, tapu ve aile hukuku alanında uzman bir hukuk içerik yazarısın.
 "${env.siteName}" web sitesi için SEO uyumlu, bilgilendirici bir Türkçe hukuk makalesi yaz.
 
-KONU: ${topic}
+KONU BAŞLIĞI: ${topicMeta.title}
+PRIMARY KEYWORD: ${topicMeta.primaryKeyword}
+SECONDARY KEYWORDS: ${(topicMeta.secondaryKeywords || []).join(', ')}
+PILLAR ALAN: ${topicMeta.pillar}
+HEDEF KİTLE: ${topicMeta.audience || 'genel okuyucu'}
+ARAMA NİYETİ: ${topicMeta.searchIntent || 'informational'}
+
+İÇ LİNK ÖNERİLERİ (body içinde doğal şekilde kullan):
+${internalLinks}
 
 KURALLAR:
 - Makale tamamen Türkçe olmalı.
 - Avukatlık reklam yasağına uygun, bilgilendirici ve tarafsız bir dil kullan.
-- Şu ifadeleri ve benzerlerini ASLA kullanma: "en iyi avukat", "garantili sonuç", "kesin kazanılır", "kesin kazanır", "%100 başarı".
-- Hukuki süreçleri açıkla; kişiye özel hukuki tavsiye verme.
-- Adana ve çevresi gayrimenkul hukuku bağlamına uygun örnekler verebilirsin.
-- Makale 800-1200 kelime civarında olsun.
-- body alanı Markdown formatında olsun (## ve ### başlıklar, paragraflar).
-- En az 4, en fazla 6 FAQ sorusu ekle.
-- category: gayrimenkul hukuku, miras hukuku, tapu davaları veya ortaklığın giderilmesi gibi uygun bir kategori seç.
-- tags: 4-6 adet SEO uyumlu etiket.
-- slug: URL dostu, Türkçe karakter içermeyen, tire ile ayrılmış.
+- Şu ifadeleri ve benzerlerini ASLA kullanma: "en iyi avukat", "garantili sonuç", "kesin kazanılır", "en başarılı".
+- Kesin sonuç vaat etme; "Her somut olay farklıdır" uyarısını doğal şekilde ekle.
+- Keyword stuffing yapma; entity bazlı, anlaşılır ve profesyonel yaz.
+- Adana bağlamına uygun örnekler verebilirsin.
+- Makale ${wordTarget} kelime civarında olsun.
+- body Markdown formatında olsun (## ve ### başlıklar).
 
-Yanıtını YALNIZCA geçerli JSON olarak ver. Başka metin, açıklama veya markdown code fence ekleme.
+BODY YAPISI:
+1. Kısa giriş
+2. Hukuki çerçeve
+3. Süreç anlatımı (H2/H3)
+4. Pratik örnek
+5. Sık yapılan hatalar
+6. Hukuki destek neden önemlidir (abartısız, bilgilendirici)
+7. Sonuç
+
+- En az 5 FAQ sorusu ekle.
+- Pillar sayfasına en az 1 iç link ver: ${topicMeta.pillarSlug || '/makaleler/'}
+
+Yanıtını YALNIZCA geçerli JSON olarak ver. Başka metin veya markdown code fence ekleme.
 
 JSON şeması:
 {
-  "title": "SEO uyumlu makale başlığı",
+  "title": "SEO title",
   "slug": "url-dostu-slug",
-  "description": "150-160 karakter meta açıklama",
+  "description": "150-160 karakter meta description",
+  "excerpt": "2-3 cümle özet",
   "category": "Kategori adı",
   "tags": ["etiket1", "etiket2"],
   "body": "Markdown makale içeriği",
   "faq": [
     { "question": "Soru?", "answer": "Cevap." }
-  ]
+  ],
+  "internalLinkSuggestions": ["/ornek-link/"]
 }`;
 }
 
@@ -114,7 +91,7 @@ function parseGeminiJson(text) {
   return JSON.parse(cleaned);
 }
 
-function validateArticle(data, topic) {
+function validateArticle(data, topicMeta) {
   const required = ['title', 'slug', 'description', 'category', 'tags', 'body', 'faq'];
   for (const field of required) {
     if (!data[field]) {
@@ -126,8 +103,8 @@ function validateArticle(data, topic) {
     throw new Error('tags alanı geçerli bir dizi olmalı.');
   }
 
-  if (!Array.isArray(data.faq) || data.faq.length === 0) {
-    throw new Error('faq alanı geçerli bir dizi olmalı.');
+  if (!Array.isArray(data.faq) || data.faq.length < 4) {
+    throw new Error('faq alanı en az 4 soru içermeli.');
   }
 
   const combined = `${data.title} ${data.description} ${data.body}`.toLowerCase();
@@ -137,9 +114,42 @@ function validateArticle(data, topic) {
     }
   }
 
-  data.slug = slugify(data.slug || data.title);
-  data.sourceTopic = topic;
+  data.slug = slugify(data.slug || topicMeta.suggestedSlug || data.title);
+  data.sourceTopic = topicMeta.title;
+  data.primaryKeyword = topicMeta.primaryKeyword;
+  data.secondaryKeywords = topicMeta.secondaryKeywords || [];
+  data.pillar = topicMeta.pillar;
+  data.pillarSlug = topicMeta.pillarSlug;
+  data.topicSimilarityKey = topicMeta.topicSimilarityKey;
+  data.topicSource = topicMeta.source;
+  data.searchIntent = topicMeta.searchIntent;
+  data.audience = topicMeta.audience;
+  data.isPillar = topicMeta.isPillar || false;
   data.date = new Date().toISOString().split('T')[0];
+
+  if (!data.excerpt) {
+    data.excerpt = data.description;
+  }
+
+  const links = new Set([...(topicMeta.internalLinks || []), ...(data.internalLinkSuggestions || [])]);
+  data.internalLinks = [...links];
+  data.relatedArticles = (data.internalLinkSuggestions || [])
+    .filter((l) => l.startsWith('/makaleler/'))
+    .map((l) => l.replace('/makaleler/', '').replace(/\/$/, ''));
+
+  const pillarServiceMap = {
+    'Gayrimenkul Hukuku': 'adana-gayrimenkul-avukati',
+    'Ortaklığın Giderilmesi Davası': 'ortakligin-giderilmesi-davasi',
+    'İzale-i Şuyu Davası': 'izale-i-suyu-davasi',
+    'Miras Hukuku': 'adana-miras-avukati',
+    'Miras Kalan Taşınmazlar': 'adana-miras-avukati',
+    'Tapu İptal ve Tescil Davası': 'tapu-iptal-ve-tescil-davasi',
+    'Boşanmada Mal Paylaşımı': 'adana-gayrimenkul-avukati',
+    'Mal Rejiminin Tasfiyesi': 'adana-gayrimenkul-avukati',
+    'Paylı Mülkiyet ve Elbirliği Mülkiyeti': 'adana-gayrimenkul-avukati',
+  };
+  const serviceSlug = pillarServiceMap[topicMeta.pillar];
+  data.relatedServices = serviceSlug ? [serviceSlug] : [];
 
   return data;
 }
@@ -162,20 +172,30 @@ async function generateWithGemini(apiKey, prompt) {
 
 async function main() {
   const env = loadEnv();
+  const existingArticles = readAllExistingArticles();
+  const topicMeta = pickNextTopic(existingArticles);
+
+  console.log('Seçilen konu bilgileri:');
+  console.log(`  title: ${topicMeta.title}`);
+  console.log(`  primaryKeyword: ${topicMeta.primaryKeyword}`);
+  console.log(`  pillar: ${topicMeta.pillar}`);
+  console.log(`  source: ${topicMeta.source}`);
+
+  if (DRY_RUN) {
+    console.log('\nDry-run modu: API çağrısı yapılmadı.');
+    return;
+  }
 
   if (!env.geminiApiKey) {
     console.error(
       'Hata: GEMINI_API_KEY bulunamadı.\n' +
         'Lütfen proje kökünde .env dosyası oluşturup GEMINI_API_KEY değerini ekleyin.\n' +
+        'GitHub Actions için secret olarak GEMINI_API_KEY tanımlayın.\n' +
         'Örnek için .env.example dosyasına bakın.'
     );
     process.exit(1);
   }
 
-  const existingArticles = readArticles();
-  const topic = pickNextTopic(existingArticles);
-
-  console.log(`Seçilen konu: ${topic}`);
   console.log('Gemini API ile makale üretiliyor...');
 
   let article;
@@ -183,8 +203,8 @@ async function main() {
 
   for (let attempt = 1; attempt <= 3; attempt++) {
     try {
-      const raw = await generateWithGemini(env.geminiApiKey, buildPrompt(topic, env));
-      article = validateArticle(raw, topic);
+      const raw = await generateWithGemini(env.geminiApiKey, buildPrompt(topicMeta, env));
+      article = validateArticle(raw, topicMeta);
 
       const duplicate = existingArticles.some((a) => a.slug === article.slug);
       if (duplicate) {
@@ -209,12 +229,15 @@ async function main() {
   console.log(`Makale kaydedildi: ${filePath}`);
 
   const allArticles = readArticles();
-  updateSitemap(env.siteUrl, allArticles);
+  const services = readServices();
+  const pages = readPages();
+  updateSitemap(env.siteUrl, allArticles, services, pages);
   console.log('sitemap.xml güncellendi.');
 
   console.log(`\nBaşlık: ${article.title}`);
   console.log(`Slug: ${article.slug}`);
   console.log(`Kategori: ${article.category}`);
+  console.log(`Pillar: ${article.pillar}`);
 }
 
 main().catch((err) => {

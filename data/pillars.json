@@ -1,0 +1,90 @@
+[
+  {
+    "id": "gayrimenkul-hukuku",
+    "title": "Gayrimenkul Hukuku Nedir? Davalar, Süreçler ve Haklar",
+    "pillar": "Gayrimenkul Hukuku",
+    "primaryKeyword": "gayrimenkul hukuku",
+    "suggestedSlug": "gayrimenkul-hukuku-nedir-davalar-surecler-ve-haklar",
+    "internalLink": "/adana-gayrimenkul-avukati/",
+    "category": "Gayrimenkul Hukuku",
+    "isPillar": true,
+    "priority": 10
+  },
+  {
+    "id": "ortakligin-giderilmesi",
+    "title": "Ortaklığın Giderilmesi Davası Nedir? İzale-i Şuyu Rehberi",
+    "pillar": "Ortaklığın Giderilmesi Davası",
+    "primaryKeyword": "ortaklığın giderilmesi davası",
+    "suggestedSlug": "ortakligin-giderilmesi-davasi-nedir-izale-i-suyu-rehberi",
+    "internalLink": "/ortakligin-giderilmesi-davasi/",
+    "category": "Ortaklığın Giderilmesi",
+    "isPillar": true,
+    "priority": 10
+  },
+  {
+    "id": "miras-hukuku",
+    "title": "Miras Hukuku Nedir? Mirasçıların Hakları ve Dava Süreçleri",
+    "pillar": "Miras Hukuku",
+    "primaryKeyword": "miras hukuku",
+    "suggestedSlug": "miras-hukuku-nedir-mirascilarin-haklari-ve-dava-surecleri",
+    "internalLink": "/adana-miras-avukati/",
+    "category": "Miras Hukuku",
+    "isPillar": true,
+    "priority": 10
+  },
+  {
+    "id": "bosanmada-mal-paylasimi",
+    "title": "Boşanmada Mal Paylaşımı Nasıl Yapılır?",
+    "pillar": "Boşanmada Mal Paylaşımı",
+    "primaryKeyword": "boşanmada mal paylaşımı",
+    "suggestedSlug": "bosanmada-mal-paylasimi-nasil-yapilir",
+    "internalLink": "/mal-paylasimi/",
+    "category": "Aile Hukuku",
+    "isPillar": true,
+    "priority": 9
+  },
+  {
+    "id": "mal-rejiminin-tasfiyesi",
+    "title": "Mal Rejiminin Tasfiyesi ve Katılma Alacağı Rehberi",
+    "pillar": "Mal Rejiminin Tasfiyesi",
+    "primaryKeyword": "mal rejiminin tasfiyesi",
+    "suggestedSlug": "mal-rejiminin-tasfiyesi-ve-katilma-alacagi-rehberi",
+    "internalLink": "/mal-paylasimi/",
+    "category": "Aile Hukuku",
+    "isPillar": true,
+    "priority": 9
+  },
+  {
+    "id": "tapu-iptal-tescil",
+    "title": "Tapu İptal ve Tescil Davası Nedir?",
+    "pillar": "Tapu İptal ve Tescil Davası",
+    "primaryKeyword": "tapu iptal ve tescil davası",
+    "suggestedSlug": "tapu-iptal-ve-tescil-davasi-nedir",
+    "internalLink": "/tapu-iptal-ve-tescil-davasi/",
+    "category": "Tapu Davaları",
+    "isPillar": true,
+    "priority": 10
+  },
+  {
+    "id": "miras-tasinmaz-paylasimi",
+    "title": "Miras Kalan Taşınmazların Paylaşımı Nasıl Yapılır?",
+    "pillar": "Miras Kalan Taşınmazlar",
+    "primaryKeyword": "miras kalan taşınmaz paylaşımı",
+    "suggestedSlug": "miras-kalan-tasinmazlarin-paylasimi-nasil-yapilir",
+    "internalLink": "/adana-miras-avukati/",
+    "category": "Miras Hukuku",
+    "isPillar": true,
+    "priority": 9
+  },
+  {
+    "id": "payli-elbirligi-mulkiyet",
+    "title": "Paylı Mülkiyet ve Elbirliği Mülkiyeti Arasındaki Farklar",
+    "pillar": "Paylı Mülkiyet ve Elbirliği Mülkiyeti",
+    "primaryKeyword": "paylı mülkiyet elbirliği mülkiyeti farkı",
+    "suggestedSlug": "payli-mulkiyet-ve-elbirligi-mulkiyeti-arasindaki-farklar",
+    "internalLink": "/adana-gayrimenkul-avukati/",
+    "category": "Gayrimenkul Hukuku",
+    "isPillar": true,
+    "priority": 8
+  }
+]
