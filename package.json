@@ -1,0 +1,15 @@
+{
+  "name": "sumerhukuk-com",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "generate:article": "node scripts/generate-article.mjs",
+    "build": "node scripts/build-site.mjs",
+    "preview": "npx serve dist"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.0",
+    "dotenv": "^16.4.7"
+  }
+}
