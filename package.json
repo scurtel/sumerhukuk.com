@@ -6,6 +6,7 @@
   "scripts": {
     "generate:article": "node scripts/generate-article.mjs",
     "build": "node scripts/build-site.mjs",
+    "build:hostinger": "node scripts/build-site.mjs && node scripts/sync-dist-to-root.mjs",
     "preview": "npx serve dist"
   },
   "dependencies": {

@@ -465,6 +465,10 @@ function main() {
     cpSync(join(PUBLIC_DIR, 'robots.txt'), join(DIST, 'robots.txt'));
   }
 
+  if (existsSync(join(PUBLIC_DIR, '.htaccess'))) {
+    cpSync(join(PUBLIC_DIR, '.htaccess'), join(DIST, '.htaccess'));
+  }
+
   updateSitemap(env.siteUrl, articles, services, pages);
   if (existsSync(join(PUBLIC_DIR, 'sitemap.xml'))) {
     cpSync(join(PUBLIC_DIR, 'sitemap.xml'), join(DIST, 'sitemap.xml'));
