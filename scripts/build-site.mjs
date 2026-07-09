@@ -16,6 +16,7 @@ import {
   resolveHeroImage,
   resolveArticleImage,
   publicAssetExists,
+  preferWebpAsset,
 } from './lib.mjs';
 
 const DIST = join(ROOT, 'dist');
@@ -43,7 +44,7 @@ function renderImg({ src, alt, width, height, className, loading, fetchpriority,
   return `<img\n      ${parts.join('\n      ')}\n    >`;
 }
 
-function renderArticleThumbnail(article, { className = 'article-thumb', width = 96, height = 72 } = {}) {
+function renderArticleThumbnail(article, { className = 'article-thumb', width = 120, height = 80 } = {}) {
   const img = resolveArticleImage(article);
   return renderImg({
     src: img.src,
@@ -58,25 +59,63 @@ function renderArticleThumbnail(article, { className = 'article-thumb', width = 
 function renderServiceIcon(serviceLink) {
   const iconPath = serviceLink.icon;
   const hasFile = publicAssetExists(iconPath);
-  if (hasFile) {
-    return renderImg({
-      src: iconPath,
-      width: 40,
-      height: 40,
-      className: 'service-icon',
-      loading: 'lazy',
-      ariaHidden: true,
-    });
-  }
-  // CSS/SVG inline fallback — minimal line icon
-  return `<span class="service-icon service-icon-fallback" aria-hidden="true">
-    <svg viewBox="0 0 40 40" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const iconMarkup = hasFile
+    ? renderImg({
+        src: iconPath,
+        width: 32,
+        height: 32,
+        className: 'service-icon',
+        loading: 'lazy',
+        ariaHidden: true,
+      })
+    : `<span class="service-icon service-icon-fallback" aria-hidden="true">
+    <svg viewBox="0 0 40 40" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect x="6" y="8" width="20" height="26" rx="2" stroke="currentColor" stroke-width="1.5"/>
       <path d="M11 15h10M11 20h10M11 25h6" stroke="currentColor" stroke-width="1.25"/>
       <circle cx="30" cy="28" r="5" stroke="var(--color-accent, #c9a227)" stroke-width="1.5"/>
     </svg>
   </span>`;
+
+  return `<span class="service-icon-wrap">${iconMarkup}</span>`;
 }
+
+function renderIntroCardVisual(imagePath, imageAlt) {
+  const src = preferWebpAsset(imagePath);
+  return `<div class="intro-card-media">
+    ${renderImg({
+      src,
+      alt: imageAlt,
+      width: 400,
+      height: 225,
+      className: 'intro-card-img',
+      loading: 'lazy',
+    })}
+  </div>`;
+}
+
+const HOME_INTRO_BLOCKS = [
+  {
+    title: 'Gayrimenkul ve Tapu Hukuku',
+    image: '/images/placeholders/gayrimenkul-hukuku.svg',
+    imageAlt: 'Gayrimenkul hukuku ve tapu uyuşmazlıkları hakkında bilgilendirici görsel',
+    body:
+      'Hisseli tapu, tapu kayıt düzeltme, tapu iptal ve tescil davaları gibi taşınmaz mülkiyetine ilişkin uyuşmazlıklarda hukuki süreçlerin doğru yönetilmesi önem taşır. <a href="/adana-gayrimenkul-avukati/">Adana gayrimenkul avukatı</a> ve <a href="/adana-tapu-avukati/">tapu avukatı</a> hizmet sayfalarımızdan detaylı bilgi alabilirsiniz.',
+  },
+  {
+    title: 'Miras Hukuku',
+    image: '/images/placeholders/miras-hukuku.svg',
+    imageAlt: 'Miras hukuku ve miras kalan taşınmazlar hakkında bilgilendirici görsel',
+    body:
+      'Mirasın taksimi, mirasçılar arasında taşınmaz paylaşımı ve miras kalan gayrimenkulün devri konularında miras hukukunun özel kuralları uygulanır. <a href="/adana-miras-avukati/">Adana miras avukatı</a> sayfamızda süreçlere ilişkin genel bilgiler yer almaktadır.',
+  },
+  {
+    title: 'Ortaklığın Giderilmesi ve İzale-i Şuyu',
+    image: '/images/placeholders/ortakligin-giderilmesi.svg',
+    imageAlt: 'Ortaklığın giderilmesi ve paylı mülkiyet hakkında bilgilendirici görsel',
+    body:
+      'Paydaşlar arasında anlaşma sağlanamadığında <a href="/ortakligin-giderilmesi-davasi/">ortaklığın giderilmesi davası</a> veya <a href="/izale-i-suyu-davasi/">izale-i şuyu davası</a> yoluyla paylı mülkiyetin sona erdirilmesi talep edilebilir. Süreçler taşınmazın aynen taksimi veya satış yoluyla giderilmesi seçeneklerini içerebilir.',
+  },
+];
 
 function breadcrumbSchema(items, siteUrl) {
   return {
@@ -428,24 +467,23 @@ function renderHomePage(articles, services, env) {
           alt: heroImg.alt,
           width: heroImg.width,
           height: heroImg.height,
+          className: 'hero-img',
           fetchpriority: 'high',
         })}
       </div>
     </section>
 
     <section class="intro-blocks">
-      <div class="intro-card">
-        <h2>Gayrimenkul ve Tapu Hukuku</h2>
-        <p>Hisseli tapu, tapu kayıt düzeltme, tapu iptal ve tescil davaları gibi taşınmaz mülkiyetine ilişkin uyuşmazlıklarda hukuki süreçlerin doğru yönetilmesi önem taşır. <a href="/adana-gayrimenkul-avukati/">Adana gayrimenkul avukatı</a> ve <a href="/adana-tapu-avukati/">tapu avukatı</a> hizmet sayfalarımızdan detaylı bilgi alabilirsiniz.</p>
-      </div>
-      <div class="intro-card">
-        <h2>Miras Hukuku</h2>
-        <p>Mirasın taksimi, mirasçılar arasında taşınmaz paylaşımı ve miras kalan gayrimenkulün devri konularında miras hukukunun özel kuralları uygulanır. <a href="/adana-miras-avukati/">Adana miras avukatı</a> sayfamızda süreçlere ilişkin genel bilgiler yer almaktadır.</p>
-      </div>
-      <div class="intro-card">
-        <h2>Ortaklığın Giderilmesi ve İzale-i Şuyu</h2>
-        <p>Paydaşlar arasında anlaşma sağlanamadığında <a href="/ortakligin-giderilmesi-davasi/">ortaklığın giderilmesi davası</a> veya <a href="/izale-i-suyu-davasi/">izale-i şuyu davası</a> yoluyla paylı mülkiyetin sona erdirilmesi talep edilebilir. Süreçler taşınmazın aynen taksimi veya satış yoluyla giderilmesi seçeneklerini içerebilir.</p>
-      </div>
+      ${HOME_INTRO_BLOCKS.map(
+        (block) => `
+      <article class="intro-card">
+        ${renderIntroCardVisual(block.image, block.imageAlt)}
+        <div class="intro-card-body">
+          <h2>${escapeHtml(block.title)}</h2>
+          <p>${block.body}</p>
+        </div>
+      </article>`
+      ).join('')}
     </section>
 
     <section class="services">
