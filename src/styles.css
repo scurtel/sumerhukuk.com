@@ -9,6 +9,11 @@
   --font-sans: 'Segoe UI', system-ui, -apple-system, sans-serif;
   --max-width: 960px;
   --radius: 8px;
+  --space-12: 0.75rem;
+  --space-16: 1rem;
+  --space-24: 1.5rem;
+  --card-hover-shadow: 0 8px 22px rgba(26, 54, 93, 0.14);
+  --card-hover-border: #cbd5e0;
 }
 
 *,
@@ -168,6 +173,13 @@ main.container {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.intro-card:hover {
+  box-shadow: var(--card-hover-shadow);
+  border-color: var(--card-hover-border);
+  transform: translateY(-2px);
 }
 
 .intro-card-media {
@@ -182,16 +194,18 @@ main.container {
   height: 100%;
   object-fit: cover;
   object-position: center;
+  /* Subtle unified grading for premium visual consistency */
+  filter: saturate(0.92) contrast(1.04) brightness(0.98);
 }
 
 .intro-card-body {
-  padding: 1.15rem 1.35rem 1.4rem;
+  padding: var(--space-16) var(--space-16) var(--space-24);
 }
 
 .intro-card-body h2 {
   font-size: 1.1rem;
   color: var(--color-primary);
-  margin: 0 0 0.6rem;
+  margin: 0 0 var(--space-12);
   line-height: 1.35;
 }
 
@@ -199,6 +213,7 @@ main.container {
   margin: 0;
   font-size: 0.95rem;
   color: var(--color-text);
+  max-width: 68ch;
 }
 
 .cta-box {
@@ -215,8 +230,13 @@ main.container {
 }
 
 .cta-box .btn {
-  background: var(--color-accent);
-  color: var(--color-primary) !important;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.78);
+  color: var(--color-white) !important;
+}
+
+.cta-box .btn:hover {
+  background: rgba(255, 255, 255, 0.14);
 }
 
 .btn-outline {
@@ -293,7 +313,7 @@ main.container {
 .hero-content .lead {
   font-size: 1.05rem;
   color: var(--color-muted);
-  max-width: 36rem;
+  max-width: 66ch;
   margin: 0 0 1.25rem;
 }
 
@@ -313,6 +333,14 @@ main.container {
   min-height: 220px;
 }
 
+.hero-visual::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(112deg, rgba(26, 54, 93, 0.18), rgba(26, 54, 93, 0.03) 58%);
+}
+
 .hero-visual img,
 .hero-img {
   display: block;
@@ -321,6 +349,7 @@ main.container {
   aspect-ratio: 16 / 9;
   object-fit: cover;
   object-position: center 42%;
+  filter: saturate(0.9) contrast(1.03) brightness(0.98);
 }
 
 .services h2,
@@ -350,8 +379,8 @@ main.container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0.5rem;
-  padding: 1.25rem;
+  gap: var(--space-12);
+  padding: var(--space-16);
   background: var(--color-white);
   border-radius: var(--radius);
   border: 1px solid #e2e8f0;
@@ -364,8 +393,8 @@ main.container {
 }
 
 .service-card a:hover {
-  box-shadow: 0 6px 18px rgba(26, 54, 93, 0.12);
-  border-color: #cbd5e0;
+  box-shadow: var(--card-hover-shadow);
+  border-color: var(--card-hover-border);
   text-decoration: none;
   transform: translateY(-2px);
 }
@@ -410,6 +439,7 @@ main.container {
   color: var(--color-muted);
   line-height: 1.5;
   flex: 1;
+  max-width: 68ch;
 }
 
 .service-card .read-more {
@@ -436,7 +466,9 @@ main.container {
 }
 
 .article-list-item:hover {
-  box-shadow: 0 4px 14px rgba(26, 54, 93, 0.1);
+  box-shadow: var(--card-hover-shadow);
+  border-color: var(--card-hover-border);
+  transform: translateY(-2px);
 }
 
 .article-list-link {
@@ -461,6 +493,7 @@ main.container {
   flex-shrink: 0;
   background: var(--color-primary);
   border: 1px solid #e2e8f0;
+  filter: saturate(0.92) contrast(1.03) brightness(0.98);
 }
 
 .article-list-text {
@@ -494,12 +527,14 @@ main.container {
   border-radius: var(--radius);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
   border: 1px solid #edf2f7;
-  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
   overflow: hidden;
 }
 
 .article-card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--card-hover-shadow);
+  border-color: var(--card-hover-border);
+  transform: translateY(-2px);
 }
 
 .article-card-link {
@@ -523,6 +558,7 @@ main.container {
   border-radius: 6px;
   flex-shrink: 0;
   background: var(--color-primary);
+  filter: saturate(0.92) contrast(1.03) brightness(0.98);
 }
 
 .article-card-body {
