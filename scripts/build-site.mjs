@@ -13,6 +13,9 @@ import {
   LEGAL_DISCLAIMER,
   findArticlesBySlugs,
   findServicesBySlugs,
+  resolveHeroImage,
+  resolveArticleImage,
+  publicAssetExists,
 } from './lib.mjs';
 
 const DIST = join(ROOT, 'dist');
@@ -24,6 +27,55 @@ function escapeHtml(str) {
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;');
+}
+
+function renderImg({ src, alt, width, height, className, loading, fetchpriority, ariaHidden = false }) {
+  const parts = [
+    className ? `class="${className}"` : '',
+    `src="${escapeHtml(src)}"`,
+    ariaHidden ? 'alt="" aria-hidden="true"' : `alt="${escapeHtml(alt)}"`,
+    width ? `width="${width}"` : '',
+    height ? `height="${height}"` : '',
+    loading ? `loading="${loading}"` : '',
+    fetchpriority ? `fetchpriority="${fetchpriority}"` : '',
+    'decoding="async"',
+  ].filter(Boolean);
+  return `<img\n      ${parts.join('\n      ')}\n    >`;
+}
+
+function renderArticleThumbnail(article, { className = 'article-thumb', width = 96, height = 72 } = {}) {
+  const img = resolveArticleImage(article);
+  return renderImg({
+    src: img.src,
+    alt: img.alt,
+    width,
+    height,
+    className,
+    loading: 'lazy',
+  });
+}
+
+function renderServiceIcon(serviceLink) {
+  const iconPath = serviceLink.icon;
+  const hasFile = publicAssetExists(iconPath);
+  if (hasFile) {
+    return renderImg({
+      src: iconPath,
+      width: 40,
+      height: 40,
+      className: 'service-icon',
+      loading: 'lazy',
+      ariaHidden: true,
+    });
+  }
+  // CSS/SVG inline fallback — minimal line icon
+  return `<span class="service-icon service-icon-fallback" aria-hidden="true">
+    <svg viewBox="0 0 40 40" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="6" y="8" width="20" height="26" rx="2" stroke="currentColor" stroke-width="1.5"/>
+      <path d="M11 15h10M11 20h10M11 25h6" stroke="currentColor" stroke-width="1.25"/>
+      <circle cx="30" cy="28" r="5" stroke="var(--color-accent, #c9a227)" stroke-width="1.5"/>
+    </svg>
+  </span>`;
 }
 
 function breadcrumbSchema(items, siteUrl) {
@@ -237,12 +289,15 @@ function renderArticlePage(article, { articles, services, env }) {
     { name: article.title, url: `/makaleler/${article.slug}/` },
   ];
 
+  const featured = resolveArticleImage(article);
+
   const extraHead = `
   <script type="application/ld+json">${JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: article.title,
     description: article.description,
+    image: `${env.siteUrl}${featured.src}`,
     datePublished: article.date,
     author: { '@type': 'Organization', name: article.author || env.articleAuthor },
     publisher: { '@type': 'Organization', name: env.siteName },
@@ -262,6 +317,16 @@ function renderArticlePage(article, { articles, services, env }) {
         </p>
         <h1>${escapeHtml(article.title)}</h1>
         <p class="article-description">${escapeHtml(article.description)}</p>
+        <figure class="article-featured">
+          ${renderImg({
+            src: featured.src,
+            alt: featured.alt,
+            width: 720,
+            height: 405,
+            loading: 'eager',
+            fetchpriority: 'high',
+          })}
+        </figure>
         <div class="tags">${tags}</div>
       </header>
       <div class="article-body">${markdownToHtml(article.body)}</div>
@@ -294,12 +359,18 @@ function renderArticlePage(article, { articles, services, env }) {
 
 function renderHomePage(articles, services, env) {
   const latest = articles.slice(0, 6);
+  const heroImg = resolveHeroImage();
   const articleList = latest
     .map(
       (a) => `
-    <li>
-      <a href="/makaleler/${escapeHtml(a.slug)}/">${escapeHtml(a.title)}</a>
-      <span class="meta">${escapeHtml(a.category)} &middot; ${a.date}</span>
+    <li class="article-list-item">
+      <a href="/makaleler/${escapeHtml(a.slug)}/" class="article-list-link">
+        ${renderArticleThumbnail(a)}
+        <span class="article-list-text">
+          <span class="article-list-title">${escapeHtml(a.title)}</span>
+          <span class="meta">${escapeHtml(a.category)} &middot; ${a.date}</span>
+        </span>
+      </a>
     </li>`
     )
     .join('');
@@ -308,7 +379,9 @@ function renderHomePage(articles, services, env) {
     (s) => `
     <li class="service-card">
       <a href="/${s.slug}/">
+        ${renderServiceIcon(s)}
         <h3>${escapeHtml(s.label)}</h3>
+        <p class="service-summary">${escapeHtml(s.summary || '')}</p>
         <span class="read-more">Detaylı bilgi &rarr;</span>
       </a>
     </li>`
@@ -344,9 +417,20 @@ function renderHomePage(articles, services, env) {
 
   const body = `
     <section class="hero">
-      <h1>Adana Gayrimenkul, Tapu ve Miras Hukuku Avukatı</h1>
-      <p class="lead">Sümer Hukuk Bürosu; Adana ve çevresinde gayrimenkul hukuku, tapu uyuşmazlıkları, miras davaları, ortaklığın giderilmesi ve izale-i şuyu süreçlerinde bilgilendirici hukuki destek sunar.</p>
-      <p><a href="/iletisim/" class="btn">Hukuki Danışmanlık İçin İletişim</a></p>
+      <div class="hero-content">
+        <h1>Adana Gayrimenkul, Tapu ve Miras Hukuku Avukatı</h1>
+        <p class="lead">Sümer Hukuk Bürosu; Adana ve çevresinde gayrimenkul hukuku, tapu uyuşmazlıkları, miras davaları, ortaklığın giderilmesi ve izale-i şuyu süreçlerinde bilgilendirici hukuki destek sunar.</p>
+        <p class="hero-cta"><a href="/iletisim/" class="btn">Hukuki Danışmanlık İçin İletişim</a></p>
+      </div>
+      <div class="hero-visual">
+        ${renderImg({
+          src: heroImg.src,
+          alt: heroImg.alt,
+          width: heroImg.width,
+          height: heroImg.height,
+          fetchpriority: 'high',
+        })}
+      </div>
     </section>
 
     <section class="intro-blocks">
@@ -382,6 +466,11 @@ function renderHomePage(articles, services, env) {
 
     ${renderCta('Sümer Hukuk Bürosu, Adana\'da gayrimenkul, tapu, miras ve ortaklığın giderilmesi süreçlerinde hukuki danışmanlık ve dava takibi hizmeti sunar.')}`;
 
+  const heroPreload =
+    heroImg.src.endsWith('.webp')
+      ? `<link rel="preload" as="image" href="${escapeHtml(heroImg.src)}" fetchpriority="high">`
+      : '';
+
   return layout({
     pageTitle: `Adana Gayrimenkul, Tapu ve Miras Avukatı | ${env.siteName}`,
     description:
@@ -389,22 +478,33 @@ function renderHomePage(articles, services, env) {
     siteName: env.siteName,
     siteUrl: env.siteUrl,
     body,
-    extraHead: `<script type="application/ld+json">${JSON.stringify(faqSchema(homeFaq))}</script>`,
+    extraHead: `${heroPreload}${heroPreload ? '\n  ' : ''}<script type="application/ld+json">${JSON.stringify(faqSchema(homeFaq))}</script>`,
   });
 }
 
 function renderArticlesIndex(articles, env) {
   const list = articles
-    .map(
-      (a) => `
+    .map((a) => {
+      const thumb = resolveArticleImage(a);
+      return `
     <li class="article-card">
-      <a href="/makaleler/${escapeHtml(a.slug)}/">
-        <h2>${escapeHtml(a.title)}</h2>
-        <p>${escapeHtml(a.description)}</p>
-        <span class="meta">${escapeHtml(a.category)} &middot; ${a.date}</span>
+      <a href="/makaleler/${escapeHtml(a.slug)}/" class="article-card-link">
+        ${renderImg({
+          src: thumb.src,
+          alt: thumb.alt,
+          width: 120,
+          height: 90,
+          className: 'article-card-thumb',
+          loading: 'lazy',
+        })}
+        <span class="article-card-body">
+          <h2>${escapeHtml(a.title)}</h2>
+          <p>${escapeHtml(a.description)}</p>
+          <span class="meta">${escapeHtml(a.category)} &middot; ${a.date}</span>
+        </span>
       </a>
-    </li>`
-    )
+    </li>`;
+    })
     .join('');
 
   const body = `
@@ -467,6 +567,11 @@ function main() {
 
   if (existsSync(join(PUBLIC_DIR, '.htaccess'))) {
     cpSync(join(PUBLIC_DIR, '.htaccess'), join(DIST, '.htaccess'));
+  }
+
+  const imagesDir = join(PUBLIC_DIR, 'images');
+  if (existsSync(imagesDir)) {
+    cpSync(imagesDir, join(DIST, 'images'), { recursive: true });
   }
 
   updateSitemap(env.siteUrl, articles, services, pages);

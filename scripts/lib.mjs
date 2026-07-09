@@ -11,16 +11,190 @@ export const PUBLIC_DIR = join(ROOT, 'public');
 export const SITEMAP_PATH = join(PUBLIC_DIR, 'sitemap.xml');
 
 export const SERVICE_LINKS = [
-  { slug: 'adana-gayrimenkul-avukati', label: 'Adana Gayrimenkul Avukatı' },
-  { slug: 'adana-tapu-avukati', label: 'Adana Tapu Avukatı' },
-  { slug: 'adana-miras-avukati', label: 'Adana Miras Avukatı' },
-  { slug: 'ortakligin-giderilmesi-davasi', label: 'Ortaklığın Giderilmesi Davası' },
-  { slug: 'izale-i-suyu-davasi', label: 'İzale-i Şuyu Davası' },
-  { slug: 'tapu-iptal-ve-tescil-davasi', label: 'Tapu İptal ve Tescil Davası' },
+  {
+    slug: 'adana-gayrimenkul-avukati',
+    label: 'Adana Gayrimenkul Avukatı',
+    icon: '/images/services/gayrimenkul-hukuku.svg',
+    summary:
+      'Taşınmaz alım-satım, hisseli tapu ve gayrimenkul uyuşmazlıklarında hukuki destek.',
+  },
+  {
+    slug: 'adana-tapu-avukati',
+    label: 'Adana Tapu Avukatı',
+    icon: '/images/services/tapu-hukuku.svg',
+    summary: 'Tapu kayıt düzeltme, iptal ve tescil süreçlerinde bilgilendirici danışmanlık.',
+  },
+  {
+    slug: 'adana-miras-avukati',
+    label: 'Adana Miras Avukatı',
+    icon: '/images/services/miras-hukuku.svg',
+    summary: 'Mirasın taksimi ve miras kalan taşınmaz paylaşımında hukuki süreç yönetimi.',
+  },
+  {
+    slug: 'ortakligin-giderilmesi-davasi',
+    label: 'Ortaklığın Giderilmesi Davası',
+    icon: '/images/services/ortakligin-giderilmesi.svg',
+    summary: 'Paydaşlar arasında aynen taksim veya satış yoluyla ortaklığın sona erdirilmesi.',
+  },
+  {
+    slug: 'izale-i-suyu-davasi',
+    label: 'İzale-i Şuyu Davası',
+    icon: '/images/services/izale-i-suyu.svg',
+    summary: 'Paylı mülkiyette izale-i şuyu ve satış yoluyla paylaşım süreçleri.',
+  },
+  {
+    slug: 'tapu-iptal-ve-tescil-davasi',
+    label: 'Tapu İptal ve Tescil Davası',
+    icon: '/images/services/tapu-iptal-tescil.svg',
+    summary: 'Hatalı veya geçersiz tapu kayıtlarının iptali ve yeniden tescili.',
+  },
 ];
 
 export const LEGAL_DISCLAIMER =
   'Bu sayfadaki bilgiler genel niteliktedir; somut olayın özelliklerine göre hukuki değerlendirme yapılmalıdır.';
+
+/** Kategori → placeholder görsel eşlemesi */
+export const CATEGORY_IMAGE_MAP = [
+  {
+    match: /gayrimenkul/i,
+    image: '/images/placeholders/gayrimenkul-hukuku.svg',
+    imageAlt: 'Gayrimenkul hukuku ve tapu uyuşmazlıkları hakkında bilgilendirici görsel',
+  },
+  {
+    match: /tapu/i,
+    image: '/images/placeholders/tapu-hukuku.svg',
+    imageAlt: 'Tapu hukuku ve tapu kayıt süreçleri hakkında bilgilendirici görsel',
+  },
+  {
+    match: /miras/i,
+    image: '/images/placeholders/miras-hukuku.svg',
+    imageAlt: 'Miras hukuku ve miras kalan taşınmazlar hakkında bilgilendirici görsel',
+  },
+  {
+    match: /ortakl[iı][gğ][iı]n giderilmesi|izale/i,
+    image: '/images/placeholders/ortakligin-giderilmesi.svg',
+    imageAlt: 'Ortaklığın giderilmesi ve paylı mülkiyet hakkında bilgilendirici görsel',
+  },
+  {
+    match: /mal payla[sş]|mal rejimi/i,
+    image: '/images/placeholders/mal-paylasimi.svg',
+    imageAlt: 'Boşanmada mal paylaşımı hakkında bilgilendirici görsel',
+  },
+  {
+    match: /aile|bo[sş]anma/i,
+    image: '/images/placeholders/aile-hukuku.svg',
+    imageAlt: 'Aile hukuku hakkında bilgilendirici görsel',
+  },
+];
+
+export const DEFAULT_ARTICLE_IMAGE = {
+  image: '/images/placeholders/hukuk-genel.svg',
+  imageAlt: 'Hukuki bilgilendirme görseli',
+};
+
+export const HERO_IMAGE = {
+  webp: '/images/hero/hero-gayrimenkul-miras-hukuku.webp',
+  svg: '/images/hero/hero-gayrimenkul-miras-hukuku.svg',
+  alt: 'Adana gayrimenkul, tapu ve miras hukuku danışmanlığı görseli',
+  width: 640,
+  height: 360,
+};
+
+/** SVG yolunun WebP karşılığını döndürür */
+export function svgToWebpPath(urlPath) {
+  if (!urlPath || typeof urlPath !== 'string') return urlPath;
+  return urlPath.replace(/\.svg$/i, '.webp');
+}
+
+/**
+ * Aynı isimli WebP dosyası varsa onu, yoksa orijinal yolu (genelde SVG) döndürür.
+ * SVG fallback sistemi korunur.
+ */
+export function preferWebpAsset(urlPath) {
+  if (!urlPath || typeof urlPath !== 'string') return urlPath;
+  if (urlPath.endsWith('.webp')) {
+    return publicAssetExists(urlPath) ? urlPath : svgToWebpPath(urlPath).replace(/\.webp$/i, '.svg');
+  }
+  const webpPath = svgToWebpPath(urlPath);
+  if (publicAssetExists(webpPath)) return webpPath;
+  return urlPath;
+}
+
+/**
+ * public/ altındaki bir görsel yolu (URL path) mevcut mu?
+ * Eksik dosya build'i kırmaz; false döner.
+ */
+export function publicAssetExists(urlPath) {
+  if (!urlPath || typeof urlPath !== 'string') return false;
+  const normalized = urlPath.replace(/^\//, '');
+  return existsSync(join(PUBLIC_DIR, ...normalized.split('/')));
+}
+
+/** Hero: WebP varsa onu, yoksa SVG fallback */
+export function resolveHeroImage() {
+  if (publicAssetExists(HERO_IMAGE.webp)) {
+    return {
+      src: HERO_IMAGE.webp,
+      alt: HERO_IMAGE.alt,
+      width: HERO_IMAGE.width,
+      height: HERO_IMAGE.height,
+    };
+  }
+  return {
+    src: HERO_IMAGE.svg,
+    alt: HERO_IMAGE.alt,
+    width: 640,
+    height: 480,
+  };
+}
+
+/** Kategoriye göre placeholder görsel (WebP varsa öncelikli) */
+export function getCategoryImage(category = '') {
+  const cat = String(category || '');
+  for (const entry of CATEGORY_IMAGE_MAP) {
+    if (entry.match.test(cat)) {
+      return { image: preferWebpAsset(entry.image), imageAlt: entry.imageAlt };
+    }
+  }
+  return { image: preferWebpAsset(DEFAULT_ARTICLE_IMAGE.image), imageAlt: DEFAULT_ARTICLE_IMAGE.imageAlt };
+}
+
+/**
+ * Makale görseli: article.image veya kategori fallback.
+ * WebP varsa SVG yerine WebP kullanılır. Eksik dosya build'i kırmaz.
+ */
+export function resolveArticleImage(article) {
+  const fallback = getCategoryImage(article?.category);
+  const custom = article?.image?.trim();
+  const alt =
+    article?.imageAlt?.trim() ||
+    fallback.imageAlt ||
+    (article?.title ? `${article.title} görseli` : 'Hukuki bilgilendirme görseli');
+
+  if (custom) {
+    const resolvedCustom = preferWebpAsset(custom);
+    if (publicAssetExists(resolvedCustom)) {
+      return { src: resolvedCustom, alt };
+    }
+  }
+
+  return { src: fallback.image, alt };
+}
+
+/** Yeni makale üretiminde kategoriye göre image alanları (SVG taban yolu) */
+export function assignArticleImageFields(article) {
+  const cat = String(article.category || article.pillar || '');
+  for (const entry of CATEGORY_IMAGE_MAP) {
+    if (entry.match.test(cat)) {
+      if (!article.image) article.image = entry.image;
+      if (!article.imageAlt) article.imageAlt = entry.imageAlt;
+      return article;
+    }
+  }
+  if (!article.image) article.image = DEFAULT_ARTICLE_IMAGE.image;
+  if (!article.imageAlt) article.imageAlt = DEFAULT_ARTICLE_IMAGE.imageAlt;
+  return article;
+}
 
 export function loadEnv() {
   const envPath = join(ROOT, '.env');

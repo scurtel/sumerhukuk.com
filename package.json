@@ -5,12 +5,15 @@
   "type": "module",
   "scripts": {
     "generate:article": "node scripts/generate-article.mjs",
+    "generate:images": "node scripts/generate-images-once.mjs",
     "build": "node scripts/build-site.mjs",
     "build:hostinger": "node scripts/build-site.mjs && node scripts/sync-dist-to-root.mjs",
     "preview": "npx serve dist"
   },
   "dependencies": {
+    "@google/genai": "^2.10.0",
     "@google/generative-ai": "^0.24.0",
-    "dotenv": "^16.4.7"
+    "dotenv": "^16.4.7",
+    "sharp": "^0.35.3"
   }
 }

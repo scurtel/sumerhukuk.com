@@ -7,6 +7,7 @@ import {
   writeArticle,
   updateSitemap,
   slugify,
+  assignArticleImageFields,
 } from './lib.mjs';
 import { pickNextTopic, readAllExistingArticles } from './topic-utils.mjs';
 
@@ -150,6 +151,8 @@ function validateArticle(data, topicMeta) {
   };
   const serviceSlug = pillarServiceMap[topicMeta.pillar];
   data.relatedServices = serviceSlug ? [serviceSlug] : [];
+
+  assignArticleImageFields(data);
 
   return data;
 }
