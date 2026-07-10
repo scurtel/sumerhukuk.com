@@ -201,6 +201,10 @@ function layout({ pageTitle, description, siteName, siteUrl, body, extraHead = '
   <title>${escapeHtml(pageTitle)}</title>
   <meta name="description" content="${escapeHtml(description)}">
   <link rel="canonical" href="${escapeHtml(siteUrl)}">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="stylesheet" href="/styles.css">
   ${extraHead}
 </head>
@@ -610,6 +614,19 @@ function main() {
   const imagesDir = join(PUBLIC_DIR, 'images');
   if (existsSync(imagesDir)) {
     cpSync(imagesDir, join(DIST, 'images'), { recursive: true });
+  }
+
+  for (const name of [
+    'favicon.ico',
+    'favicon.png',
+    'favicon-16x16.png',
+    'favicon-32x32.png',
+    'apple-touch-icon.png',
+  ]) {
+    const src = join(PUBLIC_DIR, name);
+    if (existsSync(src)) {
+      cpSync(src, join(DIST, name));
+    }
   }
 
   updateSitemap(env.siteUrl, articles, services, pages);
