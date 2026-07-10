@@ -10,26 +10,57 @@ export const PAGES_DIR = join(ROOT, 'content', 'pages');
 export const PUBLIC_DIR = join(ROOT, 'public');
 export const SITEMAP_PATH = join(PUBLIC_DIR, 'sitemap.xml');
 
-export const SERVICE_LINKS = [
+export const SITE_CONFIG = {
+  phone: '0543 251 54 38',
+  phoneTel: '+905432515438',
+  areaServed: 'Adana',
+  serviceCategory: 'Gayrimenkul ve Miras Hukuku',
+  defaultCta:
+    'Dosyanızın hukuki durumunun değerlendirilmesi için Sümer Hukuk Bürosu ile iletişime geçebilirsiniz.',
+};
+
+/** Ana sayfa kartları — Adana avukat hizmet sayfaları */
+export const ADANA_LAWYER_SERVICES = [
   {
     slug: 'adana-gayrimenkul-avukati',
     label: 'Adana Gayrimenkul Avukatı',
     icon: '/images/services/gayrimenkul-hukuku.svg',
+    image: '/images/services/adana-gayrimenkul-avukati.webp',
+    imageAlt: 'Adana gayrimenkul avukatı ve taşınmaz hukuku',
     summary:
-      'Taşınmaz alım-satım, hisseli tapu ve gayrimenkul uyuşmazlıklarında hukuki destek.',
-  },
-  {
-    slug: 'adana-tapu-avukati',
-    label: 'Adana Tapu Avukatı',
-    icon: '/images/services/tapu-hukuku.svg',
-    summary: 'Tapu kayıt düzeltme, iptal ve tescil süreçlerinde bilgilendirici danışmanlık.',
+      'Gayrimenkul, taşınmaz, mülkiyet, ecrimisil ve diğer gayrimenkul uyuşmazlıklarına ilişkin hukuki süreçler.',
   },
   {
     slug: 'adana-miras-avukati',
     label: 'Adana Miras Avukatı',
     icon: '/images/services/miras-hukuku.svg',
-    summary: 'Mirasın taksimi ve miras kalan taşınmaz paylaşımında hukuki süreç yönetimi.',
+    image: '/images/services/adana-miras-avukati.webp',
+    imageAlt: 'Adana miras avukatı ve miras paylaşımı',
+    summary:
+      'Miras paylaşımı, tereke, muris muvazaası, tenkis ve miras kalan taşınmazlara ilişkin hukuki süreçler.',
   },
+  {
+    slug: 'adana-ortakligin-giderilmesi-avukati',
+    label: 'Adana Ortaklığın Giderilmesi Avukatı',
+    icon: '/images/services/ortakligin-giderilmesi.svg',
+    image: '/images/services/adana-ortakligin-giderilmesi-avukati.webp',
+    imageAlt: 'Adana ortaklığın giderilmesi avukatı',
+    summary:
+      'Hisseli taşınmazlarda aynen taksim veya satış yoluyla ortaklığın giderilmesine ilişkin süreçler.',
+  },
+  {
+    slug: 'adana-tapu-avukati',
+    label: 'Adana Tapu Avukatı',
+    icon: '/images/services/tapu-hukuku.svg',
+    image: '/images/services/adana-tapu-avukati.webp',
+    imageAlt: 'Adana tapu avukatı ve tapu uyuşmazlıkları',
+    summary:
+      'Tapu iptal ve tescil, yolsuz tescil ve taşınmaz kayıtlarından doğan uyuşmazlıklara ilişkin süreçler.',
+  },
+];
+
+export const SERVICE_LINKS = [
+  ...ADANA_LAWYER_SERVICES,
   {
     slug: 'ortakligin-giderilmesi-davasi',
     label: 'Ortaklığın Giderilmesi Davası',
@@ -163,6 +194,30 @@ export function getCategoryImage(category = '') {
  * Makale görseli: article.image veya kategori fallback.
  * WebP varsa SVG yerine WebP kullanılır. Eksik dosya build'i kırmaz.
  */
+/** Hizmet sayfası görseli: service.image veya kategori SVG fallback */
+export function resolveServiceImage(service) {
+  const fallbackIcon =
+    ADANA_LAWYER_SERVICES.find((s) => s.slug === service?.slug)?.icon ||
+    '/images/placeholders/hukuk-genel.svg';
+  const custom = service?.image?.trim();
+  const alt =
+    service?.imageAlt?.trim() ||
+    ADANA_LAWYER_SERVICES.find((s) => s.slug === service?.slug)?.imageAlt ||
+    `${service?.h1 || service?.title || 'Hizmet'} görseli`;
+
+  if (custom) {
+    const resolved = preferWebpAsset(custom);
+    if (publicAssetExists(resolved)) {
+      return { src: resolved, alt };
+    }
+  }
+
+  const fallback = preferWebpAsset(
+    ADANA_LAWYER_SERVICES.find((s) => s.slug === service?.slug)?.image || fallbackIcon
+  );
+  return { src: publicAssetExists(fallback) ? fallback : fallbackIcon, alt };
+}
+
 export function resolveArticleImage(article) {
   const fallback = getCategoryImage(article?.category);
   const custom = article?.image?.trim();

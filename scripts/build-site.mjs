@@ -10,11 +10,14 @@ import {
   updateSitemap,
   PUBLIC_DIR,
   SERVICE_LINKS,
+  ADANA_LAWYER_SERVICES,
+  SITE_CONFIG,
   LEGAL_DISCLAIMER,
   findArticlesBySlugs,
   findServicesBySlugs,
   resolveHeroImage,
   resolveArticleImage,
+  resolveServiceImage,
   publicAssetExists,
   preferWebpAsset,
 } from './lib.mjs';
@@ -113,7 +116,7 @@ const HOME_INTRO_BLOCKS = [
     image: '/images/placeholders/ortakligin-giderilmesi.svg',
     imageAlt: 'Ortaklığın giderilmesi ve paylı mülkiyet hakkında bilgilendirici görsel',
     body:
-      'Paydaşlar arasında anlaşma sağlanamadığında <a href="/ortakligin-giderilmesi-davasi/">ortaklığın giderilmesi davası</a> veya <a href="/izale-i-suyu-davasi/">izale-i şuyu davası</a> yoluyla paylı mülkiyetin sona erdirilmesi talep edilebilir. Süreçler taşınmazın aynen taksimi veya satış yoluyla giderilmesi seçeneklerini içerebilir.',
+      'Paydaşlar arasında anlaşma sağlanamadığında <a href="/adana-ortakligin-giderilmesi-avukati/">Adana ortaklığın giderilmesi avukatı</a> sayfamız ve <a href="/ortakligin-giderilmesi-davasi/">ortaklığın giderilmesi davası</a> içeriklerimiz süreç hakkında genel bilgi sunar. Aynen taksim veya satış yoluyla giderilme seçenekleri taşınmazın niteliğine göre değerlendirilir.',
   },
 ];
 
@@ -176,11 +179,79 @@ function renderRelatedLinks({ services, articles, serviceSlugs = [], articleSlug
   return html;
 }
 
-function renderCta(text) {
+function renderServiceCardVisual(serviceLink) {
+  const imagePath = serviceLink.image || serviceLink.icon;
+  const src = preferWebpAsset(imagePath);
+  if (publicAssetExists(src)) {
+    return `<div class="service-card-media">
+      ${renderImg({
+        src,
+        alt: serviceLink.imageAlt || serviceLink.label,
+        width: 400,
+        height: 400,
+        className: 'service-card-img',
+        loading: 'lazy',
+      })}
+    </div>`;
+  }
+  return renderServiceIcon(serviceLink);
+}
+
+function renderSocialMeta({ title, description, url, image, siteName }) {
+  const imageUrl = image?.startsWith('http') ? image : image ? new URL(image, url).href : '';
+  const tags = [
+    `<meta property="og:type" content="website">`,
+    `<meta property="og:site_name" content="${escapeHtml(siteName)}">`,
+    `<meta property="og:title" content="${escapeHtml(title)}">`,
+    `<meta property="og:description" content="${escapeHtml(description)}">`,
+    `<meta property="og:url" content="${escapeHtml(url)}">`,
+    imageUrl ? `<meta property="og:image" content="${escapeHtml(imageUrl)}">` : '',
+    `<meta name="twitter:card" content="summary_large_image">`,
+    `<meta name="twitter:title" content="${escapeHtml(title)}">`,
+    `<meta name="twitter:description" content="${escapeHtml(description)}">`,
+    imageUrl ? `<meta name="twitter:image" content="${escapeHtml(imageUrl)}">` : '',
+  ].filter(Boolean);
+  return tags.join('\n  ');
+}
+
+function legalServiceSchema(service, env, imageSrc) {
+  const pageUrl = `${env.siteUrl}/${service.slug}/`;
+  const imageUrl = imageSrc ? `${env.siteUrl}${imageSrc}` : undefined;
+  const base = {
+    '@context': 'https://schema.org',
+    name: service.h1 || service.title,
+    description: service.description,
+    url: pageUrl,
+    serviceType: service.serviceType || service.category || SITE_CONFIG.serviceCategory,
+    areaServed: { '@type': 'City', name: SITE_CONFIG.areaServed },
+    provider: {
+      '@type': 'LegalService',
+      name: env.siteName,
+      url: env.siteUrl,
+      telephone: SITE_CONFIG.phoneTel,
+      areaServed: SITE_CONFIG.areaServed,
+    },
+  };
+  if (imageUrl) base.image = imageUrl;
+  return [
+    { ...base, '@type': 'LegalService' },
+    { ...base, '@type': 'Service' },
+  ];
+}
+
+function renderCtaActions() {
+  return `<div class="cta-actions">
+      <a href="/iletisim/" class="btn">İletişime Geç</a>
+      <a href="tel:${SITE_CONFIG.phoneTel}" class="btn btn-outline">Telefonla Ara</a>
+    </div>`;
+}
+
+function renderCta(text, { showRelatedLink = false } = {}) {
   return `
     <section class="cta-box">
-      <p>${escapeHtml(text)}</p>
-      <p><a href="/iletisim/" class="btn">İletişime Geçin</a></p>
+      <p>${escapeHtml(text || SITE_CONFIG.defaultCta)}</p>
+      ${renderCtaActions()}
+      ${showRelatedLink ? '<p class="cta-related"><a href="/#hizmetler">İlgili Hizmetleri İncele</a></p>' : ''}
     </section>`;
 }
 
@@ -192,7 +263,14 @@ function renderBreadcrumbHtml(items) {
   return `<nav class="breadcrumb" aria-label="Breadcrumb">${parts.join(' &rsaquo; ')}</nav>`;
 }
 
-function layout({ pageTitle, description, siteName, siteUrl, body, extraHead = '' }) {
+function layout({ pageTitle, description, siteName, siteUrl, body, extraHead = '', ogImage }) {
+  const socialMeta = renderSocialMeta({
+    title: pageTitle,
+    description,
+    url: siteUrl,
+    image: ogImage,
+    siteName,
+  });
   return `<!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -201,6 +279,7 @@ function layout({ pageTitle, description, siteName, siteUrl, body, extraHead = '
   <title>${escapeHtml(pageTitle)}</title>
   <meta name="description" content="${escapeHtml(description)}">
   <link rel="canonical" href="${escapeHtml(siteUrl)}">
+  ${socialMeta}
   <link rel="icon" href="/favicon.ico" sizes="48x48">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -255,18 +334,42 @@ function layout({ pageTitle, description, siteName, siteUrl, body, extraHead = '
 function renderServicePage(service, { articles, services, env }) {
   const crumbs = [
     { name: 'Ana Sayfa', url: '/' },
+    ...(service.category
+      ? [{ name: service.category, url: '/#hizmetler' }]
+      : []),
     { name: service.h1 || service.title, url: `/${service.slug}/` },
   ];
-  const extraHead = `
-  <script type="application/ld+json">${JSON.stringify(breadcrumbSchema(crumbs, env.siteUrl))}</script>
-  <script type="application/ld+json">${JSON.stringify(faqSchema(service.faq))}</script>`;
+  const featured = resolveServiceImage(service);
+  const pageUrl = `${env.siteUrl}/${service.slug}/`;
+  const schemas = [
+    breadcrumbSchema(crumbs, env.siteUrl),
+    ...legalServiceSchema(service, env, featured.src),
+    faqSchema(service.faq),
+  ];
+  const extraHead = schemas
+    .map((s) => `<script type="application/ld+json">${JSON.stringify(s)}</script>`)
+    .join('\n  ');
 
   const body = `
     ${renderBreadcrumbHtml(crumbs)}
     <article class="service-page">
-      <header class="page-header">
-        <h1>${escapeHtml(service.h1)}</h1>
-        <p class="lead">${escapeHtml(service.intro)}</p>
+      <header class="service-hero">
+        <div class="service-hero-text">
+          <p class="service-category">${escapeHtml(service.category || SITE_CONFIG.serviceCategory)}</p>
+          <h1>${escapeHtml(service.h1)}</h1>
+          <p class="lead">${escapeHtml(service.intro)}</p>
+        </div>
+        <figure class="service-hero-media">
+          ${renderImg({
+            src: featured.src,
+            alt: featured.alt,
+            width: 600,
+            height: 600,
+            className: 'service-hero-img',
+            loading: 'eager',
+            fetchpriority: 'high',
+          })}
+        </figure>
       </header>
       <div class="article-body">${markdownToHtml(service.body)}</div>
       <p class="legal-note"><em>${escapeHtml(LEGAL_DISCLAIMER)}</em></p>
@@ -280,16 +383,24 @@ function renderServicePage(service, { articles, services, env }) {
         serviceSlugs: service.relatedServices,
         articleSlugs: service.relatedArticles,
       })}
-      ${renderCta(service.cta)}
+      ${renderCta(service.cta || SITE_CONFIG.defaultCta, { showRelatedLink: true })}
+      <p class="legal-note service-disclaimer"><em>Bu sayfadaki bilgiler genel bilgilendirme amacı taşır; her uyuşmazlık kendi somut koşullarına göre ayrıca değerlendirilmelidir.</em></p>
     </article>`;
 
+  const pageTitle =
+    service.pageTitle ||
+    (service.metaTitle?.includes(env.siteName)
+      ? service.metaTitle
+      : `${service.metaTitle || service.title} | ${env.siteName}`);
+
   return layout({
-    pageTitle: `${service.metaTitle || service.title} | ${env.siteName}`,
+    pageTitle,
     description: service.description,
     siteName: env.siteName,
-    siteUrl: `${env.siteUrl}/${service.slug}/`,
+    siteUrl: pageUrl,
     body,
     extraHead,
+    ogImage: featured.src,
   });
 }
 
@@ -418,17 +529,24 @@ function renderHomePage(articles, services, env) {
     )
     .join('');
 
-  const serviceCards = SERVICE_LINKS.map(
+  const serviceCards = ADANA_LAWYER_SERVICES.map(
     (s) => `
     <li class="service-card">
       <a href="/${s.slug}/">
-        ${renderServiceIcon(s)}
+        ${renderServiceCardVisual(s)}
         <h3>${escapeHtml(s.label)}</h3>
         <p class="service-summary">${escapeHtml(s.summary || '')}</p>
-        <span class="read-more">Detaylı bilgi &rarr;</span>
+        <span class="read-more">Detaylı Bilgi &rarr;</span>
       </a>
     </li>`
   ).join('');
+
+  const otherServices = SERVICE_LINKS.filter(
+    (s) => !ADANA_LAWYER_SERVICES.some((a) => a.slug === s.slug)
+  );
+  const otherServiceLinks = otherServices
+    .map((s) => `<li><a href="/${s.slug}/">${escapeHtml(s.label)}</a></li>`)
+    .join('');
 
   const homeFaq = [
     {
@@ -490,9 +608,18 @@ function renderHomePage(articles, services, env) {
       ).join('')}
     </section>
 
-    <section class="services">
+    <section class="services" id="hizmetler">
       <h2>Hizmet Alanlarımız</h2>
-      <ul class="service-grid">${serviceCards}</ul>
+      <p class="section-lead">Adana'da gayrimenkul, miras, ortaklığın giderilmesi ve tapu uyuşmazlıklarına ilişkin bilgilendirici hukuki destek.</p>
+      <ul class="service-grid service-grid-primary">${serviceCards}</ul>
+      ${
+        otherServiceLinks
+          ? `<div class="other-services">
+        <p class="other-services-label">Diğer hizmet konuları:</p>
+        <ul class="other-services-list">${otherServiceLinks}</ul>
+      </div>`
+          : ''
+      }
     </section>
 
     <section class="latest-articles">
