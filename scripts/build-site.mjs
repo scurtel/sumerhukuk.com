@@ -285,7 +285,7 @@ function renderLocationSection() {
             style="border:0;"
             allowfullscreen=""
             loading="lazy"
-            referrerpolicy="strict-origin-when-cross-origin"
+            referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
       </div>
@@ -452,6 +452,7 @@ function renderStaticPage(page, { env }) {
   const faqBlock = page.faq
     ? `<section class="faq-section"><h2>Sıkça Sorulan Sorular</h2>${renderFaqHtml(page.faq)}</section>`
     : '';
+  const locationBlock = page.slug === 'iletisim' ? renderLocationSection() : '';
 
   const body = `
     ${renderBreadcrumbHtml(crumbs)}
@@ -460,6 +461,7 @@ function renderStaticPage(page, { env }) {
       <div class="article-body">${markdownToHtml(page.body)}</div>
       <p class="legal-note"><em>${escapeHtml(LEGAL_DISCLAIMER)}</em></p>
       ${faqBlock}
+      ${locationBlock}
       ${page.cta ? renderCta(page.cta) : ''}
     </article>`;
 
