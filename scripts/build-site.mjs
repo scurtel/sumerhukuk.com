@@ -255,6 +255,43 @@ function renderCta(text, { showRelatedLink = false } = {}) {
     </section>`;
 }
 
+function renderLocationSection() {
+  return `
+    <section class="location-section" id="konum" aria-labelledby="location-heading">
+      <div class="location-grid">
+        <div class="location-info">
+          <h2 id="location-heading">Sümer Hukuk Bürosu'na Nasıl Ulaşabilirsiniz?</h2>
+          <p class="location-lead">Adana Seyhan'daki Sümer Hukuk Bürosu'nu ziyaret etmek veya yol tarifi almak için aşağıdaki haritayı kullanabilirsiniz.</p>
+          <address class="location-address">
+            <span class="location-address-label">Adres</span>
+            ${escapeHtml(SITE_CONFIG.address)}
+          </address>
+          <p class="location-actions">
+            <a
+              class="btn location-directions-btn"
+              href="${escapeHtml(SITE_CONFIG.mapsDirectionsUrl)}"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Google Maps'te Yol Tarifi Al</a>
+          </p>
+        </div>
+        <div class="location-map-wrap">
+          <iframe
+            class="location-map"
+            src="${escapeHtml(SITE_CONFIG.mapsEmbedSrc)}"
+            title="Sümer Hukuk Bürosu Google Maps Konumu"
+            width="600"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+          ></iframe>
+        </div>
+      </div>
+    </section>`;
+}
+
 function renderBreadcrumbHtml(items) {
   const parts = items.map((item, i) => {
     if (i === items.length - 1) return `<span>${escapeHtml(item.name)}</span>`;
@@ -633,7 +670,9 @@ function renderHomePage(articles, services, env) {
       ${renderFaqHtml(homeFaq)}
     </section>
 
-    ${renderCta('Sümer Hukuk Bürosu, Adana\'da gayrimenkul, tapu, miras ve ortaklığın giderilmesi süreçlerinde hukuki danışmanlık ve dava takibi hizmeti sunar.')}`;
+    ${renderCta('Sümer Hukuk Bürosu, Adana\'da gayrimenkul, tapu, miras ve ortaklığın giderilmesi süreçlerinde hukuki danışmanlık ve dava takibi hizmeti sunar.')}
+
+    ${renderLocationSection()}`;
 
   const heroPreload =
     heroImg.src.endsWith('.webp')

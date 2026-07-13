@@ -14,9 +14,14 @@ export const SITE_CONFIG = {
   phone: '0543 251 54 38',
   phoneTel: '+905432515438',
   areaServed: 'Adana',
+  address: 'Kayalıbağ Mahallesi, Çolakoğlu İş Merkezi Kat: 2 No: 1, Seyhan / Adana',
   serviceCategory: 'Gayrimenkul ve Miras Hukuku',
   defaultCta:
     'Dosyanızın hukuki durumunun değerlendirilmesi için Sümer Hukuk Bürosu ile iletişime geçebilirsiniz.',
+  mapsEmbedSrc:
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12747.41170045247!2d35.311796087158214!3d36.98944369999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15288f9873af45f1%3A0xc06d0b3a21f42fe7!2sAdana%20Tapu%20Gayrimenkul%20Miras%20ve%20Ortakl%C4%B1%C4%9F%C4%B1n%20Giderilmesi%20Avukat%C4%B1%20-%20S%C3%BCmer%20Hukuk!5e0!3m2!1str!2str!4v1783936721804!5m2!1str!2str',
+  mapsDirectionsUrl:
+    'https://www.google.com/maps/dir/?api=1&destination=Kayal%C4%B1ba%C4%9F%20Mahallesi%2C%20%C3%87olako%C4%9Flu%20%C4%B0%C5%9F%20Merkezi%20Kat%3A%202%20No%3A%201%2C%20Seyhan%20%2F%20Adana',
 };
 
 /** Ana sayfa kartları — Adana avukat hizmet sayfaları */

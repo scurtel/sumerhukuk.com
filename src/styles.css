@@ -747,6 +747,99 @@ main.container {
   text-decoration: none;
 }
 
+.location-section {
+  margin-top: 2.5rem;
+  padding: var(--space-24);
+  background: var(--color-white);
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.location-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-24);
+  align-items: start;
+}
+
+.location-info h2 {
+  margin: 0 0 var(--space-12);
+  color: var(--color-primary);
+  font-size: 1.35rem;
+  line-height: 1.35;
+}
+
+.location-lead {
+  margin: 0 0 var(--space-16);
+  color: var(--color-text);
+  max-width: 68ch;
+}
+
+.location-address {
+  display: block;
+  margin: 0 0 var(--space-16);
+  font-style: normal;
+  color: var(--color-text);
+  line-height: 1.6;
+  padding: var(--space-12) var(--space-16);
+  background: #f8fafc;
+  border-left: 4px solid var(--color-accent);
+  border-radius: var(--radius);
+}
+
+.location-address-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 0.35rem;
+}
+
+.location-actions {
+  margin: 0;
+}
+
+.location-directions-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 44px;
+}
+
+.location-map-wrap {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 14px rgba(26, 54, 93, 0.08);
+  background: #edf2f7;
+}
+
+.location-map {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (min-width: 768px) {
+  .location-grid {
+    grid-template-columns: minmax(240px, 0.9fr) minmax(280px, 1.1fr);
+    gap: var(--space-24);
+    align-items: center;
+  }
+
+  .location-map-wrap {
+    height: 440px;
+  }
+}
+
 .article-header {
   margin-bottom: 2rem;
 }
@@ -875,6 +968,14 @@ main.container {
     height: auto;
     aspect-ratio: 16 / 9;
     max-height: 160px;
+  }
+
+  .location-directions-btn {
+    width: 100%;
+  }
+
+  .location-map-wrap {
+    height: 310px;
   }
 }
 
