@@ -160,8 +160,10 @@ function validateArticle(data, topicMeta) {
 async function generateWithGemini(apiKey, prompt) {
   const genAI = new GoogleGenerativeAI(apiKey);
   const modelName = process.env.GEMINI_MODEL || 'gemini-2.5-flash';
+  const searchEnabled = process.env.GEMINI_GOOGLE_SEARCH_ENABLED === 'true';
   const model = genAI.getGenerativeModel({
     model: modelName,
+    tools: searchEnabled ? [{ googleSearch: {} }] : undefined,
     generationConfig: {
       temperature: 0.7,
       maxOutputTokens: 8192,
@@ -170,7 +172,27 @@ async function generateWithGemini(apiKey, prompt) {
 
   const result = await model.generateContent(prompt);
   const text = result.response.text();
-  return parseGeminiJson(text);
+  const data = parseGeminiJson(text);
+
+  const gm =
+    result?.response?.candidates?.[0]?.groundingMetadata ||
+    result?.response?.groundingMetadata;
+  if (gm?.groundingChunks?.length && data?.body) {
+    const sources = gm.groundingChunks
+      .map((chunk) => ({
+        title: chunk.web?.title || chunk.retrievedContext?.title || null,
+        url: chunk.web?.uri || chunk.retrievedContext?.uri || null,
+      }))
+      .filter((s) => s.url);
+    if (sources.length) {
+      const lines = sources.map(
+        (s, i) => `- [${s.title || `Kaynak ${i + 1}`}](${s.url})`
+      );
+      data.body = `${String(data.body).trim()}\n\n## Kaynaklar\n\n${lines.join('\n')}\n`;
+    }
+  }
+
+  return data;
 }
 
 async function main() {

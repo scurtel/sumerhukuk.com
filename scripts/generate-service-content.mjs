@@ -72,12 +72,36 @@ Konular: ${spec.topics}
 /adana-gayrimenkul-avukati/ /adana-miras-avukati/ /adana-ortakligin-giderilmesi-avukati/ /adana-tapu-avukati/
 /ortakligin-giderilmesi-davasi/ /tapu-iptal-ve-tescil-davasi/ /makaleler/ altındaki ilgili makaleler`;
 
-    const response = await ai.models.generateContent({ model, contents: prompt });
-    const body = response?.candidates?.[0]?.content?.parts?.map((p) => p.text).join('')?.trim();
+    const response = await ai.models.generateContent({
+      model,
+      contents: prompt,
+      config:
+        process.env.GEMINI_GOOGLE_SEARCH_ENABLED === 'true'
+          ? { tools: [{ googleSearch: {} }] }
+          : undefined,
+    });
+    let body = response?.candidates?.[0]?.content?.parts?.map((p) => p.text).join('')?.trim();
     if (!body || body.length < 500) {
       console.warn(`  Atlandı: yetersiz çıktı`);
       continue;
     }
+
+    const gm = response?.candidates?.[0]?.groundingMetadata;
+    if (gm?.groundingChunks?.length) {
+      const sources = gm.groundingChunks
+        .map((chunk) => ({
+          title: chunk.web?.title || chunk.retrievedContext?.title || null,
+          url: chunk.web?.uri || chunk.retrievedContext?.uri || null,
+        }))
+        .filter((s) => s.url);
+      if (sources.length) {
+        const lines = sources.map(
+          (s, i) => `- [${s.title || `Kaynak ${i + 1}`}](${s.url})`
+        );
+        body = `${body.trim()}\n\n## Kaynaklar\n\n${lines.join('\n')}\n`;
+      }
+    }
+
     data.body = body;
     data.date = new Date().toISOString().split('T')[0];
     writeFileSync(path, JSON.stringify(data, null, 2) + '\n', 'utf-8');
