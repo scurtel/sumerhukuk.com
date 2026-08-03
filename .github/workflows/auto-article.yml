@@ -55,6 +55,11 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # Kalite uyarıları generate adımını düşürmez; dosya varsa commit/push devam eder.
+          if ! ls content/articles/*.json >/dev/null 2>&1; then
+            echo "::error title=Teknik hata::content/articles altında makale dosyası yok"
+            exit 1
+          fi
           git add content/articles public/sitemap.xml
           git diff --staged --quiet || git commit -m "chore: otomatik hukuk makalesi eklendi"
           git push

@@ -92,30 +92,100 @@ function parseGeminiJson(text) {
   return JSON.parse(cleaned);
 }
 
+function warnQuality(message) {
+  console.warn(`::warning title=Makale kalite uyarısı::${message}`);
+}
+
+function countWords(text) {
+  return String(text || '')
+    .replace(/[#>*_\-`\[\]()]/g, ' ')
+    .split(/\s+/)
+    .filter(Boolean).length;
+}
+
 function validateArticle(data, topicMeta) {
-  const required = ['title', 'slug', 'description', 'category', 'tags', 'body', 'faq'];
-  for (const field of required) {
-    if (!data[field]) {
-      throw new Error(`Gemini yanıtında eksik alan: ${field}`);
+  // Teknik zorunlu alanlar — eksikse üretim başarısız (retry)
+  const technicalRequired = ['title', 'body'];
+  for (const field of technicalRequired) {
+    if (!data[field] || (typeof data[field] === 'string' && !String(data[field]).trim())) {
+      throw new Error(`Gemini yanıtında zorunlu alan eksik: ${field}`);
     }
+  }
+
+  if (!data.slug && !topicMeta.suggestedSlug && !data.title) {
+    throw new Error('Gemini yanıtında slug ve title yok — dosya adı üretilemez');
+  }
+
+  // Kalite: description / category / tags / faq — yoksa tamamla + uyar
+  if (!data.description || !String(data.description).trim()) {
+    data.description = String(data.excerpt || data.title || topicMeta.title).slice(0, 160);
+    warnQuality('description eksikti; title/excerpt’tan türetildi.');
+  } else {
+    const descLen = String(data.description).length;
+    if (descLen < 120 || descLen > 180) {
+      warnQuality(
+        `Meta description uzunluğu hedef dışı (${descLen} karakter; hedef ~150-160).`,
+      );
+    }
+  }
+
+  if (!data.category || !String(data.category).trim()) {
+    data.category = topicMeta.pillar || 'Hukuk';
+    warnQuality(`category eksikti; pillar/default atandı: ${data.category}`);
   }
 
   if (!Array.isArray(data.tags) || data.tags.length === 0) {
-    throw new Error('tags alanı geçerli bir dizi olmalı.');
+    data.tags = [
+      topicMeta.primaryKeyword,
+      ...(topicMeta.secondaryKeywords || []).slice(0, 3),
+    ].filter(Boolean);
+    if (data.tags.length === 0) data.tags = [topicMeta.pillar || 'hukuk'];
+    warnQuality(
+      `tags alanı eksik/boştu; primary/secondary keyword’lerden tamamlandı (${data.tags.length} etiket).`,
+    );
   }
 
-  if (!Array.isArray(data.faq) || data.faq.length < 4) {
-    throw new Error('faq alanı en az 4 soru içermeli.');
+  if (!Array.isArray(data.faq)) {
+    data.faq = [];
+  }
+  if (data.faq.length < 4) {
+    warnQuality(
+      `FAQ sayısı hedefin altında (${data.faq.length}; hedef ≥4). Makale yine de kaydedilecek.`,
+    );
   }
 
-  const combined = `${data.title} ${data.description} ${data.body}`.toLowerCase();
-  for (const phrase of PROHIBITED_PHRASES) {
-    if (combined.includes(phrase)) {
-      throw new Error(`Yasaklı ifade tespit edildi: "${phrase}"`);
-    }
+  // Yasaklı ifadeler: yalnızca tespit + GHA warning. İçerik değiştirilmez, retry yok, red yok.
+  const articleText = `${data.title || ''} ${data.description || ''} ${data.body || ''} ${data.excerpt || ''}`;
+  const detectedPhrases = PROHIBITED_PHRASES.filter((phrase) =>
+    articleText.toLocaleLowerCase('tr-TR').includes(phrase.toLocaleLowerCase('tr-TR')),
+  );
+  for (const phrase of detectedPhrases) {
+    console.warn(
+      `::warning title=Yasaklı ifade uyarısı::"${phrase}" bulundu. Makale değiştirilmeden kaydedilecek ve push edilecek.`,
+    );
+  }
+
+  const words = countWords(data.body);
+  const wordTargetMin = topicMeta.isPillar ? 1500 : 900;
+  const wordTargetMax = topicMeta.isPillar ? 2500 : 1400;
+  if (words < 50) {
+    throw new Error(`Makale gövdesi neredeyse boş (${words} kelime) — teknik hata`);
+  }
+  if (words < wordTargetMin) {
+    warnQuality(
+      `Kelime sayısı hedef altında. Hedef ≥${wordTargetMin}, mevcut: ${words}. Makale yine de commit ve push edilecek.`,
+    );
+  } else if (words > wordTargetMax) {
+    warnQuality(
+      `Kelime sayısı hedef üstünde. Hedef ≤${wordTargetMax}, mevcut: ${words}. Makale yine de kaydedilecek.`,
+    );
   }
 
   data.slug = slugify(data.slug || topicMeta.suggestedSlug || data.title);
+  if (!data.slug) {
+    throw new Error('Geçerli slug üretilemedi');
+  }
+
   data.sourceTopic = topicMeta.title;
   data.primaryKeyword = topicMeta.primaryKeyword;
   data.secondaryKeywords = topicMeta.secondaryKeywords || [];
@@ -127,6 +197,7 @@ function validateArticle(data, topicMeta) {
   data.audience = topicMeta.audience;
   data.isPillar = topicMeta.isPillar || false;
   data.date = new Date().toISOString().split('T')[0];
+  data.wordCount = words;
 
   if (!data.excerpt) {
     data.excerpt = data.description;
@@ -134,6 +205,10 @@ function validateArticle(data, topicMeta) {
 
   const links = new Set([...(topicMeta.internalLinks || []), ...(data.internalLinkSuggestions || [])]);
   data.internalLinks = [...links];
+  if (data.internalLinks.length === 0) {
+    warnQuality('İç link önerisi yok; gövdede site içi link olmayabilir.');
+  }
+
   data.relatedArticles = (data.internalLinkSuggestions || [])
     .filter((l) => l.startsWith('/makaleler/'))
     .map((l) => l.replace('/makaleler/', '').replace(/\/$/, ''));
@@ -263,6 +338,9 @@ async function main() {
   console.log(`Slug: ${article.slug}`);
   console.log(`Kategori: ${article.category}`);
   console.log(`Pillar: ${article.pillar}`);
+  if (article.wordCount != null) {
+    console.log(`Kelime: ${article.wordCount}`);
+  }
 }
 
 main().catch((err) => {
