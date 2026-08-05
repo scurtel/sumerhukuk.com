@@ -145,6 +145,125 @@ function faqSchema(faq) {
   };
 }
 
+/**
+ * Hakkımızda / İletişim sayfaları için tutarlı kurumsal entity grafiği.
+ * Primary: Sümer Hukuk Bürosu (Organization + LegalService)
+ * Secondary: Avukat Ceren Sümer Cilli (Person · worksFor)
+ */
+function entityId(siteUrl, fragment) {
+  const id = fragment.startsWith('#') ? fragment : `#${fragment}`;
+  const base = String(siteUrl).replace(/\/$/, '');
+  return `${base}/${id}`;
+}
+
+function postalAddressSchema() {
+  return {
+    '@type': 'PostalAddress',
+    streetAddress: SITE_CONFIG.address,
+    addressLocality: SITE_CONFIG.areaServed,
+    addressCountry: 'TR',
+  };
+}
+
+function logoSchema(siteUrl) {
+  const logoPath = SITE_CONFIG.logoPath;
+  if (!logoPath || !publicAssetExists(logoPath)) return undefined;
+  return {
+    '@type': 'ImageObject',
+    url: `${siteUrl}${logoPath}`,
+  };
+}
+
+/**
+ * @param {'about'|'contact'} pageKind
+ * @param {{ name: string, description: string, url: string }} pageMeta
+ */
+function corporateEntityGraph(env, pageKind, pageMeta) {
+  const siteUrl = env.siteUrl;
+  const orgId = entityId(siteUrl, SITE_CONFIG.entityIds.organization);
+  const legalId = entityId(siteUrl, SITE_CONFIG.entityIds.legalService);
+  const personId = entityId(siteUrl, SITE_CONFIG.entityIds.person);
+  const websiteId = entityId(siteUrl, SITE_CONFIG.entityIds.website);
+  const pageId =
+    pageKind === 'about'
+      ? `${siteUrl}/hakkimizda/#webpage`
+      : `${siteUrl}/iletisim/#webpage`;
+
+  const address = postalAddressSchema();
+  const logo = logoSchema(siteUrl);
+  const sameAs = [...SITE_CONFIG.sameAs];
+
+  const organization = {
+    '@type': 'Organization',
+    '@id': orgId,
+    name: env.siteName,
+    url: `${siteUrl}/`,
+    telephone: SITE_CONFIG.phoneTel,
+    address,
+    sameAs,
+    employee: { '@id': personId },
+  };
+  if (logo) organization.logo = logo;
+
+  const legalService = {
+    '@type': 'LegalService',
+    '@id': legalId,
+    name: env.siteName,
+    url: `${siteUrl}/`,
+    telephone: SITE_CONFIG.phoneTel,
+    address,
+    areaServed: { '@type': 'City', name: SITE_CONFIG.areaServed },
+    knowsAbout: [...SITE_CONFIG.knowsAbout],
+    parentOrganization: { '@id': orgId },
+    employee: { '@id': personId },
+  };
+  if (logo) legalService.image = logo.url;
+
+  const person = {
+    '@type': 'Person',
+    '@id': personId,
+    name: SITE_CONFIG.lawyer.name,
+    jobTitle: SITE_CONFIG.lawyer.jobTitle,
+    worksFor: { '@id': orgId },
+  };
+
+  const website = {
+    '@type': 'WebSite',
+    '@id': websiteId,
+    name: env.siteName,
+    url: `${siteUrl}/`,
+    publisher: { '@id': orgId },
+  };
+
+  const pageNode =
+    pageKind === 'about'
+      ? {
+          '@type': 'AboutPage',
+          '@id': pageId,
+          url: pageMeta.url,
+          name: pageMeta.name,
+          description: pageMeta.description,
+          isPartOf: { '@id': websiteId },
+          about: { '@id': orgId },
+          mainEntity: { '@id': orgId },
+        }
+      : {
+          '@type': 'ContactPage',
+          '@id': pageId,
+          url: pageMeta.url,
+          name: pageMeta.name,
+          description: pageMeta.description,
+          isPartOf: { '@id': websiteId },
+          about: { '@id': orgId },
+          mainEntity: { '@id': orgId },
+        };
+
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [organization, legalService, person, website, pageNode],
+  };
+}
+
 function renderFaqHtml(faq) {
   return faq
     .map(
@@ -255,17 +374,44 @@ function renderCta(text, { showRelatedLink = false } = {}) {
     </section>`;
 }
 
-function renderLocationSection() {
+function renderLocationSection({ showExternalProfiles = false } = {}) {
+  const contactRow = showExternalProfiles
+    ? `
+          <p class="location-phone">
+            <span class="location-address-label">Telefon</span>
+            <a href="tel:${escapeHtml(SITE_CONFIG.phoneTel)}">${escapeHtml(SITE_CONFIG.phone)}</a>
+          </p>`
+    : '';
+  const externalProfiles = showExternalProfiles
+    ? `
+          <p class="location-actions location-actions-profiles">
+            <a
+              class="btn btn-outline location-directions-btn"
+              href="${escapeHtml(SITE_CONFIG.yandexMapsUrl)}"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Yandex Haritalar'da görüntüle</a>
+            <a
+              class="btn btn-outline location-directions-btn"
+              href="${escapeHtml(SITE_CONFIG.facebookUrl)}"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Sümer Hukuk Bürosu Facebook sayfası</a>
+          </p>`
+    : '';
+
   return `
     <section class="location-section" id="konum" aria-labelledby="location-heading">
       <div class="location-grid">
         <div class="location-info">
           <h2 id="location-heading">Sümer Hukuk Bürosu'na Nasıl Ulaşabilirsiniz?</h2>
           <p class="location-lead">Adana Seyhan'daki Sümer Hukuk Bürosu'nu ziyaret etmek veya yol tarifi almak için aşağıdaki haritayı kullanabilirsiniz.</p>
+          <p class="location-org-name"><strong>${escapeHtml('Sümer Hukuk Bürosu')}</strong></p>
           <address class="location-address">
             <span class="location-address-label">Adres</span>
             ${escapeHtml(SITE_CONFIG.address)}
           </address>
+          ${contactRow}
           <p class="location-actions">
             <a
               class="btn location-directions-btn"
@@ -274,6 +420,7 @@ function renderLocationSection() {
               rel="noopener noreferrer"
             >Google Maps'te Yol Tarifi Al</a>
           </p>
+          ${externalProfiles}
         </div>
         <div class="location-map-wrap">
           <iframe
@@ -446,17 +593,47 @@ function renderStaticPage(page, { env }) {
     { name: 'Ana Sayfa', url: '/' },
     { name: page.title, url: `/${page.slug}/` },
   ];
-  const extraHead = page.faq
-    ? `<script type="application/ld+json">${JSON.stringify(faqSchema(page.faq))}</script>`
-    : '';
+  const pageUrl = `${env.siteUrl}/${page.slug}/`;
+  const pageTitle =
+    page.pageTitle ||
+    (page.metaTitle?.includes('|')
+      ? page.metaTitle
+      : `${page.metaTitle || page.title} | ${env.siteName}`);
+
+  const schemaBlocks = [];
+  if (page.slug === 'hakkimizda') {
+    schemaBlocks.push(
+      corporateEntityGraph(env, 'about', {
+        name: page.h1 || page.title,
+        description: page.description,
+        url: pageUrl,
+      })
+    );
+  } else if (page.slug === 'iletisim') {
+    schemaBlocks.push(
+      corporateEntityGraph(env, 'contact', {
+        name: page.h1 || page.title,
+        description: page.description,
+        url: pageUrl,
+      })
+    );
+  }
+  if (page.faq) schemaBlocks.push(faqSchema(page.faq));
+  schemaBlocks.push(breadcrumbSchema(crumbs, env.siteUrl));
+
+  const extraHead = schemaBlocks
+    .map((s) => `<script type="application/ld+json">${JSON.stringify(s)}</script>`)
+    .join('\n  ');
+
   const faqBlock = page.faq
     ? `<section class="faq-section"><h2>Sıkça Sorulan Sorular</h2>${renderFaqHtml(page.faq)}</section>`
     : '';
-  const locationBlock = page.slug === 'iletisim' ? renderLocationSection() : '';
+  const locationBlock =
+    page.slug === 'iletisim' ? renderLocationSection({ showExternalProfiles: true }) : '';
 
   const body = `
     ${renderBreadcrumbHtml(crumbs)}
-    <article>
+    <article class="${page.slug === 'hakkimizda' || page.slug === 'iletisim' ? 'entity-page' : ''}">
       <header class="page-header"><h1>${escapeHtml(page.h1 || page.title)}</h1></header>
       <div class="article-body">${markdownToHtml(page.body)}</div>
       <p class="legal-note"><em>${escapeHtml(LEGAL_DISCLAIMER)}</em></p>
@@ -466,10 +643,10 @@ function renderStaticPage(page, { env }) {
     </article>`;
 
   return layout({
-    pageTitle: `${page.metaTitle || page.title} | ${env.siteName}`,
+    pageTitle,
     description: page.description,
     siteName: env.siteName,
-    siteUrl: `${env.siteUrl}/${page.slug}/`,
+    siteUrl: pageUrl,
     body,
     extraHead,
   });

@@ -18,6 +18,34 @@ export const SITE_CONFIG = {
   serviceCategory: 'Gayrimenkul ve Miras Hukuku',
   defaultCta:
     'Dosyanızın hukuki durumunun değerlendirilmesi için Sümer Hukuk Bürosu ile iletişime geçebilirsiniz.',
+  logoPath: '/images/brand/sumer-hukuk-burosu-logo.png',
+  /** Kurumsal entity @id sabitleri (site köküne bağlı) */
+  entityIds: {
+    organization: '#organization',
+    legalService: '#legalservice',
+    person: '#ceren-sumer-cilli',
+    website: '#website',
+  },
+  /** Doğrulanmış dış dijital profiller — Organization/LegalService sameAs */
+  sameAs: [
+    'https://yandex.com.tr/maps/org/adana_tapu_gayrimenkul_miras_ve_ortakligin_giderilmesi_avukati_sumer_hukuk/111348760653/?ll=35.330767%2C36.989510&z=16',
+    'https://www.facebook.com/SumerHukukBurosuAdana/',
+  ],
+  yandexMapsUrl:
+    'https://yandex.com.tr/maps/org/adana_tapu_gayrimenkul_miras_ve_ortakligin_giderilmesi_avukati_sumer_hukuk/111348760653/?ll=35.330767%2C36.989510&z=16',
+  facebookUrl: 'https://www.facebook.com/SumerHukukBurosuAdana/',
+  knowsAbout: [
+    'Gayrimenkul Hukuku',
+    'Tapu Hukuku',
+    'Miras Hukuku',
+    'Ortaklığın Giderilmesi',
+    'Taşınmaz Uyuşmazlıkları',
+  ],
+  /** İkincil profesyonel entity — profil URL’si sitede yok */
+  lawyer: {
+    name: 'Avukat Ceren Sümer Cilli',
+    jobTitle: 'Avukat',
+  },
   mapsEmbedSrc:
     'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12747.41170045247!2d35.311796087158214!3d36.98944369999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15288f9873af45f1%3A0xc06d0b3a21f42fe7!2sAdana%20Tapu%20Gayrimenkul%20Miras%20ve%20Ortakl%C4%B1%C4%9F%C4%B1n%20Giderilmesi%20Avukat%C4%B1%20-%20S%C3%BCmer%20Hukuk!5e0!3m2!1str!2str!4v1783936721804!5m2!1str!2str',
   mapsDirectionsUrl:
@@ -389,7 +417,14 @@ export function markdownToHtml(markdown) {
     .replace(/^# (.+)$/gm, '<h2>$1</h2>')
     .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
     .replace(/\*(.+?)\*/g, '<em>$1</em>')
-    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, label, href) => {
+      const safeHref = String(href);
+      const isExternal = /^https?:\/\//i.test(safeHref);
+      const attrs = isExternal
+        ? ` href="${safeHref}" target="_blank" rel="noopener noreferrer"`
+        : ` href="${safeHref}"`;
+      return `<a${attrs}>${label}</a>`;
+    });
 
   const blocks = html.split(/\n\n+/);
   return blocks

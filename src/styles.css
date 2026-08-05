@@ -802,12 +802,42 @@ main.container {
   margin: 0;
 }
 
+.location-actions-profiles {
+  margin-top: var(--space-12);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.location-org-name {
+  margin: 0 0 var(--space-12);
+  color: var(--color-primary);
+  font-size: 1.05rem;
+}
+
+.location-phone {
+  margin: 0 0 var(--space-16);
+  padding: var(--space-12) var(--space-16);
+  background: #f8fafc;
+  border-left: 4px solid var(--color-primary-light);
+  border-radius: var(--radius);
+}
+
+.location-phone a {
+  font-weight: 600;
+}
+
 .location-directions-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   min-height: 44px;
+}
+
+.entity-page .article-body a[href*="yandex.com"],
+.entity-page .article-body a[href*="facebook.com"] {
+  font-weight: 600;
 }
 
 .location-map-wrap {
