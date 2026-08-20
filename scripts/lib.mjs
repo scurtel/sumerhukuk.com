@@ -362,8 +362,9 @@ export function updateSitemap(siteUrl, articles, services = [], pages = []) {
   ensureDirs();
   const today = new Date().toISOString().split('T')[0];
 
+  // Prefer trailing slash on homepage to match live Google canonical (https://sumerhukuk.com/)
   const staticPages = [
-    { loc: siteUrl, changefreq: 'weekly', priority: '1.0', lastmod: today },
+    { loc: `${siteUrl}/`, changefreq: 'weekly', priority: '1.0', lastmod: today },
     { loc: `${siteUrl}/makaleler/`, changefreq: 'daily', priority: '0.9', lastmod: today },
     ...pages.map((p) => ({
       loc: `${siteUrl}/${p.slug}/`,

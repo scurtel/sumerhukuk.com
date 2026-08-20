@@ -336,26 +336,111 @@ function renderSocialMeta({ title, description, url, image, siteName }) {
 function legalServiceSchema(service, env, imageSrc) {
   const pageUrl = `${env.siteUrl}/${service.slug}/`;
   const imageUrl = imageSrc ? `${env.siteUrl}${imageSrc}` : undefined;
-  const base = {
+  const schema = {
     '@context': 'https://schema.org',
+    '@type': 'LegalService',
     name: service.h1 || service.title,
     description: service.description,
     url: pageUrl,
     serviceType: service.serviceType || service.category || SITE_CONFIG.serviceCategory,
     areaServed: { '@type': 'City', name: SITE_CONFIG.areaServed },
     provider: {
-      '@type': 'LegalService',
+      '@type': 'Organization',
       name: env.siteName,
-      url: env.siteUrl,
+      url: `${env.siteUrl}/`,
       telephone: SITE_CONFIG.phoneTel,
       areaServed: SITE_CONFIG.areaServed,
     },
   };
-  if (imageUrl) base.image = imageUrl;
-  return [
-    { ...base, '@type': 'LegalService' },
-    { ...base, '@type': 'Service' },
-  ];
+  if (imageUrl) schema.image = imageUrl;
+  return [schema];
+}
+
+function homeGraphSchema(env, homeFaq) {
+  const homeUrl = `${env.siteUrl}/`;
+  const orgId = `${homeUrl}#organization`;
+  const legalId = `${homeUrl}#legalservice`;
+  const postalAddress = {
+    '@type': 'PostalAddress',
+    streetAddress: 'Kayalıbağ Mahallesi, Çolakoğlu İş Merkezi Kat: 2 No: 1',
+    addressLocality: 'Seyhan',
+    addressRegion: 'Adana',
+    addressCountry: 'TR',
+  };
+
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Organization',
+        '@id': orgId,
+        name: env.siteName,
+        url: homeUrl,
+        telephone: SITE_CONFIG.phoneTel,
+        address: postalAddress,
+        areaServed: { '@type': 'City', name: SITE_CONFIG.areaServed },
+      },
+      {
+        '@type': 'LegalService',
+        '@id': legalId,
+        name: env.siteName,
+        url: homeUrl,
+        telephone: SITE_CONFIG.phoneTel,
+        address: postalAddress,
+        areaServed: { '@type': 'City', name: SITE_CONFIG.areaServed },
+        serviceType: SITE_CONFIG.serviceCategory,
+        provider: { '@id': orgId },
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': `${homeUrl}#faq`,
+        mainEntity: homeFaq.map((item) => ({
+          '@type': 'Question',
+          name: item.question,
+          acceptedAnswer: { '@type': 'Answer', text: item.answer },
+        })),
+      },
+    ],
+  };
+}
+
+function render404Page(env) {
+  return `<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sayfa Bulunamadı | ${escapeHtml(env.siteName)}</title>
+  <meta name="robots" content="noindex, follow">
+  <meta name="description" content="Aradığınız sayfa bulunamadı.">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">${escapeHtml(env.siteName)}</a>
+      <nav class="main-nav">
+        <a href="/">Ana Sayfa</a>
+        <a href="/makaleler/">Makaleler</a>
+        <a href="/hakkimizda/">Hakkımızda</a>
+        <a href="/iletisim/">İletişim</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container main-content">
+    <section class="page-header">
+      <h1>Sayfa Bulunamadı</h1>
+      <p>Aradığınız sayfa taşınmış veya hiç var olmamış olabilir.</p>
+      <p><a href="/" class="btn">Ana Sayfaya Dön</a> <a href="/makaleler/" class="btn btn-outline">Makalelere Git</a></p>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <p>&copy; ${new Date().getFullYear()} ${escapeHtml(env.siteName)}. Tüm hakları saklıdır.</p>
+    </div>
+  </footer>
+</body>
+</html>`;
 }
 
 function renderCtaActions() {
@@ -863,9 +948,9 @@ function renderHomePage(articles, services, env) {
     description:
       'Sümer Hukuk Bürosu, Adana\'da gayrimenkul hukuku, tapu davaları, miras hukuku, ortaklığın giderilmesi ve izale-i şuyu davalarında hukuki danışmanlık ve avukatlık hizmeti sunar.',
     siteName: env.siteName,
-    siteUrl: env.siteUrl,
+    siteUrl: `${env.siteUrl}/`,
     body,
-    extraHead: `${heroPreload}${heroPreload ? '\n  ' : ''}<script type="application/ld+json">${JSON.stringify(faqSchema(homeFaq))}</script>`,
+    extraHead: `${heroPreload}${heroPreload ? '\n  ' : ''}<script type="application/ld+json">${JSON.stringify(homeGraphSchema(env, homeFaq))}</script>`,
   });
 }
 
@@ -933,6 +1018,7 @@ function main() {
 
   writePage('index.html', renderHomePage(articles, services, env));
   writePage(join('makaleler', 'index.html'), renderArticlesIndex(articles, env));
+  writeFileSync(join(DIST, '404.html'), render404Page(env), 'utf-8');
 
   for (const service of services) {
     writePage(join(service.slug, 'index.html'), renderServicePage(service, ctx));
