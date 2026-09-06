@@ -1,0 +1,23 @@
+DirectoryIndex index.html
+Options -Indexes
+
+ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Single preferred host: HTTPS + non-www (path and query preserved via QSA)
+  RewriteCond %{HTTP_HOST} ^www\.sumerhukuk\.com$ [NC,OR]
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP_HOST} ^(www\.)?sumerhukuk\.com$ [NC]
+  RewriteRule ^(.*)$ https://sumerhukuk.com/$1 [R=301,L,QSA]
+
+  # Unused WordPress/legacy query params -> same path without query (utm/gclid/fbclid alone untouched)
+  RewriteCond %{QUERY_STRING} (?:^|&)(?:s|p|page_id|attachment_id|preview|cat|tag_id|author|author_name|name|m|year|monthnum|day|feed|paged|replytocom|doing_wp_cron)= [NC]
+  RewriteRule ^(.*)$ /$1? [R=301,L]
+
+  # Trailing slash for existing directories
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^(.+[^/])$ %{REQUEST_URI}/ [R=301,L]
+</IfModule>

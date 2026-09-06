@@ -1,0 +1,10 @@
+# Hero görselleri
+#
+# Öncelikli dosya (ileride Gemini veya tasarım ile üretilebilir):
+#   hero-gayrimenkul-miras-hukuku.webp
+#
+# Bu dosya yoksa site otomatik olarak şunu kullanır:
+#   hero-gayrimenkul-miras-hukuku.svg
+#
+# Not: WebP dosyasını bu klasöre koyduğunuzda build sırasında
+# SVG fallback yerine WebP tercih edilir. Build kırılmaz.
