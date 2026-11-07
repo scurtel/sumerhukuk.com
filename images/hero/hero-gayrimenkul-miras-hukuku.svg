@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#243b66"/>
+      <stop offset="100%" stop-color="#1a365d"/>
+    </linearGradient>
+    <pattern id="motif" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M24 6l6 10H18l6-10zm0 36l6-10H18l6 10zM6 24l10 6V18L6 24zm36 0l-10 6V18l10 6z" fill="none" stroke="#c9a227" stroke-width="0.75" opacity="0.18"/>
+    </pattern>
+  </defs>
+  <rect width="640" height="480" fill="url(#sky)"/>
+  <rect width="640" height="480" fill="url(#motif)"/>
+  <!-- abstract legal arc lines -->
+  <path d="M40 120c80-40 160-40 240 0s160 40 240 0" fill="none" stroke="#c9a227" stroke-width="1" opacity="0.35"/>
+  <path d="M80 160c70-30 140-30 210 0s140 30 210 0" fill="none" stroke="#e2e8f0" stroke-width="1" opacity="0.2"/>
+  <!-- Adana-inspired skyline silhouette -->
+  <path d="M0 360h40v-36h18v36h28v-58h14v-22h18v22h12v58h36v-44h22v-70h16v-18h20v18h14v70h18v44h30v-28h40v28h24v-52h18v-90l28-20 28 20v90h16v52h34v-40h48v40h30v-24h40v24h50v40H0z" fill="#152a4a"/>
+  <path d="M0 400h640v80H0z" fill="#12243d"/>
+  <!-- deed document stack -->
+  <g transform="translate(72,210)">
+    <rect x="8" y="12" width="132" height="168" rx="4" fill="#f7fafc" opacity="0.92"/>
+    <rect x="0" y="0" width="132" height="168" rx="4" fill="#ffffff"/>
+    <rect x="0" y="0" width="132" height="168" rx="4" fill="none" stroke="#c9a227" stroke-width="1.5"/>
+    <path d="M22 36h88M22 56h88M22 76h64M22 96h88M22 116h72" stroke="#1a365d" stroke-width="2" opacity="0.45"/>
+    <circle cx="98" cy="140" r="16" fill="none" stroke="#c9a227" stroke-width="1.5"/>
+    <circle cx="98" cy="140" r="8" fill="none" stroke="#c9a227" stroke-width="1"/>
+  </g>
+  <!-- inheritance / deed folder -->
+  <g transform="translate(250,248)">
+    <path d="M0 28h48l12-14h96v128H0V28z" fill="#edf2f7"/>
+    <path d="M0 28h48l12-14h96v128H0V28z" fill="none" stroke="#c9a227" stroke-width="1.5"/>
+    <path d="M24 56h100M24 76h100M24 96h70" stroke="#1a365d" stroke-width="1.75" opacity="0.4"/>
+    <!-- subtle family-tree mark -->
+    <circle cx="74" cy="118" r="5" fill="none" stroke="#1a365d" stroke-width="1.25" opacity="0.55"/>
+    <path d="M74 123v14M58 145v-8l16-6 16 6v8" fill="none" stroke="#1a365d" stroke-width="1.25" opacity="0.55"/>
+  </g>
+  <!-- geometric Sumerian accent -->
+  <g transform="translate(480,90)" opacity="0.55">
+    <path d="M40 0l28 48H12L40 0z" fill="none" stroke="#c9a227" stroke-width="1.25"/>
+    <path d="M40 18l14 24H26l14-24z" fill="none" stroke="#c9a227" stroke-width="1"/>
+    <rect x="28" y="72" width="24" height="56" fill="none" stroke="#e2e8f0" stroke-width="1" opacity="0.7"/>
+    <path d="M28 90h24M28 108h24" stroke="#e2e8f0" stroke-width="1" opacity="0.5"/>
+  </g>
+  <!-- light landmark tower hint -->
+  <g transform="translate(520,250)" opacity="0.7">
+    <rect x="18" y="40" width="36" height="110" fill="#1a365d"/>
+    <path d="M12 40h48v8H12z" fill="#c9a227" opacity="0.65"/>
+    <path d="M36 8l8 32H28l8-32z" fill="#c9a227" opacity="0.55"/>
+    <path d="M28 70h16M28 90h16M28 110h16" stroke="#e2e8f0" stroke-width="1.25" opacity="0.35"/>
+  </g>
+</svg>
